@@ -15,11 +15,11 @@ const Hero = () => (
       }
       description={
         <>
-          I'm Akhil G Krishnan, a 25-year old technical enthusiast who does
-          full-stack web development in Ruby on Rails and ReactJS, security
-          security research and ML/DL development. Passionate to contribute
-          open-source projects and make cool products. Currently working as a
-          Senior Software Developer in Saeloun Technologies.
+          I'm a 25-year old technical enthusiast who does full-stack web
+          development in Ruby on Rails, NodeJS and ReactJS, security research
+          development. Passionate to contribute open-source projects and make
+          cool products. Currently working as a Senior Software Developer in
+          Saeloun Technologies.
         </>
       }
       avatar={
