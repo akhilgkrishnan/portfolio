@@ -1,4 +1,8 @@
 ---
+import { CTA } from '@partials/CTA';
+import Base from '@templates/Base.astro';
+import { AppConfig } from '@utils/AppConfig';
+import { sortByDate } from '@utils/Posts';
 import type {
   FrontmatterPage,
   IFrontmatter,
@@ -9,11 +13,6 @@ import {
   PaginationHeader,
   Section,
 } from 'astro-boilerplate-components';
-
-import { CTA } from '@/partials/CTA';
-import Base from '@/templates/Base.astro';
-import { AppConfig } from '@/utils/AppConfig';
-import { sortByDate } from '@/utils/Posts';
 
 type GetStaticPaths = {
   paginate: any;
@@ -42,8 +41,8 @@ const description =
 <Base head={{ title, description }}>
   <Section>
     <PaginationHeader
-      title='Random title here'
-      description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      title="Random title here"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     />
   </Section>
 

@@ -37,9 +37,13 @@
     // Add type definitions for our Vite runtime.
     "types": ["vite/client"],
 
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@/*": ["./src/*"]
+      "@pages/*": ["pages/*"],
+      "@partials/*": ["partials/*"],
+      "@templates/*": ["templates/*"],
+      "@images/*": ["images/*"],
+      "@utils/*": ["utils/*"],
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro"]

@@ -1,6 +1,5 @@
 import rss from '@astrojs/rss';
-
-import { AppConfig } from '@/utils/AppConfig';
+import { AppConfig } from '@utils/AppConfig';
 
 export const get = () =>
   rss({
