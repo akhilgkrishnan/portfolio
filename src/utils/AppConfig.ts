@@ -1,5 +1,5 @@
 export const AppConfig = {
-  site_name: 'Akhil Portfolio',
+  site_name: 'Akhil G Krishnan',
   title:
     'Akhil G Krishnan | Software Developer | CyberSecurity researcher | AI/ML Enthusiast',
   description:
