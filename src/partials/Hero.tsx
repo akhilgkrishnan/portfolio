@@ -16,10 +16,9 @@ const Hero = () => (
       description={
         <>
           I'm a 25-year old technical enthusiast who does full-stack web
-          development in Ruby on Rails, NodeJS and ReactJS, security research
-          development. Passionate to contribute open-source projects and make
-          cool products. Currently working as a Senior Software Developer in
-          Saeloun Technologies.
+          development in Ruby on Rails, NodeJS and ReactJS. Passionate to
+          contribute open-source projects and make cool products. Currently
+          working as a Senior Software Developer in Saeloun Technologies.
         </>
       }
       avatar={
