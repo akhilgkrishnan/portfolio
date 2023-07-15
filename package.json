@@ -2,6 +2,9 @@
   "name": "Akhil-Portfolio",
   "version": "1.0.0",
   "private": true,
+  "description": "Akhil G Krishnan's Portfolio",
+  "license": "MIT",
+  "author": "Akhil G Krishnan (https://github.com/akhilgkrishnan)",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -54,6 +57,5 @@
   },
   "volta": {
     "node": "18.16.1"
-  },
-  "author": "Akhil G Krishnan (https://github.com/akhilgkrishnan)"
+  }
 }
