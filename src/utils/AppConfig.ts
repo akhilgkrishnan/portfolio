@@ -1,6 +1,7 @@
 export const AppConfig = {
   site_name: 'Akhil Portfolio',
-  title: 'Akhil G Krishnan',
+  title:
+    'Akhil G Krishnan | Software Developer | CyberSecurity researcher | AI/ML Enthusiast',
   description:
     'Akhil G Krishnan is an Indian Software Developer, CyberSecurity researcher, AI/ML Enthusiast',
   keywords:
