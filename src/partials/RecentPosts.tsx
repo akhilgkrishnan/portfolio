@@ -1,13 +1,14 @@
+import { BlogGallery } from '@components/BlogGallery';
 import type { MarkdownInstance } from 'astro';
 import type { IFrontmatter } from 'astro-boilerplate-components';
-import {
-  BlogGallery,
-  GradientText,
-  Section,
-} from 'astro-boilerplate-components';
+import { GradientText, Section } from 'astro-boilerplate-components';
+
+interface BlogPostFrontmatter extends IFrontmatter {
+  url: string;
+}
 
 type IRecentPostsProps = {
-  postList: MarkdownInstance<IFrontmatter>[];
+  postList: MarkdownInstance<BlogPostFrontmatter>[];
 };
 
 const RecentPosts = (props: IRecentPostsProps) => (

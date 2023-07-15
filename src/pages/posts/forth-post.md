@@ -1,10 +1,10 @@
 ---
 layout: '@templates/BasePost.astro'
-title: 4th Lorem ipsum dolor sit
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi.
-pubDate: 2020-02-04T00:00:00Z
+title: Ruby 3.1 allows value omission in hash literals
+description: Ruby 3.1 adds the ability to use hash literals without having a value.
+pubDate: 2021-09-28T00:00:00Z
 imgSrc: '/assets/images/image-post3.jpeg'
+href: "https://blog.saeloun.com/2021/09/28/ruby-allow-value-omission-in-hash-literals/"
 imgAlt: 'Image post 3'
 ---
 
-Full typography example at [this page](../sixth-post/).

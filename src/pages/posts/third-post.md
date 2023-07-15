@@ -1,10 +1,10 @@
 ---
 layout: '@templates/BasePost.astro'
-title: 3rd Lorem ipsum dolor sit
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi.
-pubDate: 2020-02-03T00:00:00Z
+title: Rails 7 replaced byebug with ruby/debug
+description: Rails 7 removed byebug from their default debugger and replaced it with ruby/debug.
+pubDate: 2021-09-29T00:00:00Z
+href: "https://blog.saeloun.com/2021/09/29/rails-7-ruby-debug-replaces-byebug/"
 imgSrc: '/assets/images/image-post4.jpeg'
 imgAlt: 'Image post 4'
 ---
 
-Full typography example at [this page](../sixth-post/).

@@ -8,7 +8,11 @@ import { AppConfig } from '@utils/AppConfig';
 import { sortByDate } from '@utils/Posts';
 import type { IFrontmatter } from 'astro-boilerplate-components';
 
-const allPosts = await Astro.glob<IFrontmatter>('./posts/*.md');
+interface BlogPostFrontmatter extends IFrontmatter {
+  url: string;
+}
+
+const allPosts = await Astro.glob<BlogPostFrontmatter>('./posts/*.md');
 const sortedPosts = sortByDate(allPosts);
 const lastThreePosts = sortedPosts.slice(0, 3);
 

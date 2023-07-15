@@ -3,7 +3,10 @@ import type {
   MarkdownInstance,
 } from 'astro-boilerplate-components';
 
-export const sortByDate = (posts: MarkdownInstance<IFrontmatter>[]) => {
+interface BlogPostFrontmatter extends IFrontmatter {
+  url: string;
+}
+export const sortByDate = (posts: MarkdownInstance<BlogPostFrontmatter>[]) => {
   return posts.sort(
     (a, b) =>
       new Date(b.frontmatter.pubDate).valueOf() -

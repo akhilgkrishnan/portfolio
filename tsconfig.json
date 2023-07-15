@@ -33,7 +33,8 @@
       "@templates/*": ["templates/*"],
       "@images/*": ["images/*"],
       "@utils/*": ["utils/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@components/*": ["components/*"]
     },
     "jsxImportSource": "react"
   },

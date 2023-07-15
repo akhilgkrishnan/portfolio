@@ -1,10 +1,10 @@
 ---
 layout: '@templates/BasePost.astro'
-title: 1st Lorem ipsum dolor sit
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi.
-pubDate: 2020-02-01T00:00:00Z
+title: How to configure a Next.js app with TypeScript and Tailwind CSS?
+description: A step-by-step guide on how to build a Next.js application with Typescript and Tailwind CSS.
+pubDate: 2022-02-03T00:00:00Z
+url: "https://blog.saeloun.com/2022/02/03/create-typescript-next-js-tailwind-application/"
 imgSrc: '/assets/images/image-post7.jpeg'
 imgAlt: 'Image post 7'
 ---
 
-Full typography example at [this page](../sixth-post/).

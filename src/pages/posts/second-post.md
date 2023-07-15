@@ -1,10 +1,10 @@
 ---
 layout: '@templates/BasePost.astro'
-title: 2nd Lorem ipsum dolor sit
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi.
-pubDate: 2020-02-02T00:00:00Z
+title: Rails 7 added --css app generator
+description: Rails 7 added --css app generator for configuring CSS processors.
+pubDate: 2021-11-17T00:00:00Z
+href: "https://blog.saeloun.com/2021/11/17/rails-7-added-css-app-generator/"
 imgSrc: '/assets/images/image-post5.jpeg'
 imgAlt: 'Image post 5'
 ---
 
-Full typography example at [this page](../sixth-post/).

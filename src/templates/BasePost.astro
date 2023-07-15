@@ -5,8 +5,11 @@ import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
 import type { IFrontmatter } from 'astro-boilerplate-components';
 
+interface BlogPostFrontmatter extends IFrontmatter {
+  url: string;
+}
 export interface Props {
-  content: IFrontmatter;
+  content: BlogPostFrontmatter;
 }
 
 const { content } = Astro.props as Props;

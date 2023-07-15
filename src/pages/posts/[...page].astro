@@ -1,14 +1,15 @@
 ---
+import { BlogGallery } from '@components/BlogGallery';
 import { CTA } from '@partials/CTA';
 import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
 import { sortByDate } from '@utils/Posts';
 import type {
-  FrontmatterPage,
   IFrontmatter,
+  MarkdownInstance,
+  Page,
 } from 'astro-boilerplate-components';
 import {
-  BlogGallery,
   NewerOlderPagination,
   PaginationHeader,
   Section,
@@ -18,8 +19,12 @@ type GetStaticPaths = {
   paginate: any;
 }; // Overrides `GetStaticPathsOptions` types from Astro
 
+interface BlogPostFrontmatter extends IFrontmatter {
+  url: string;
+}
+
 export async function getStaticPaths({ paginate }: GetStaticPaths) {
-  const allPosts = await Astro.glob<IFrontmatter>('./*.md');
+  const allPosts = await Astro.glob<BlogPostFrontmatter>('./*.md');
   const sortedPosts = sortByDate(allPosts);
 
   // Return a paginated collection of paths for all posts
@@ -27,7 +32,7 @@ export async function getStaticPaths({ paginate }: GetStaticPaths) {
 }
 
 interface Props {
-  page: FrontmatterPage;
+  page: Page<MarkdownInstance<BlogPostFrontmatter>>;
 }
 
 const { page } = Astro.props as Props;
@@ -35,14 +40,14 @@ const titleSuffix = ` - ${AppConfig.site_name}`;
 const titleBase = `Blog page ${page.currentPage}`;
 const title = titleBase + titleSuffix;
 const description =
-  'Pagination example built with Astro styled with Tailwind CSS.';
+  'Explore a collection of insightful articles and resources in our web development blog. Stay updated with the latest trends, technologies, and best practices in web development. Gain valuable knowledge, tips, and tricks to enhance your skills and create stunning websites. Join our community and unlock the potential of the digital world.';
 ---
 
 <Base head={{ title, description }}>
   <Section>
     <PaginationHeader
-      title="Random title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      title="Insights and Inspiration: The Blog"
+      description="Explore the world of web development through my blog section. Gain valuable insights, tips, and tricks on the latest trends, technologies, and best practices in the ever-evolving realm of web development.  Let's embark on a journey together and unlock the limitless potential of the digital world."
     />
   </Section>
 
