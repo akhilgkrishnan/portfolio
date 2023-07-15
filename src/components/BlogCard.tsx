@@ -11,7 +11,11 @@ type IBlogCardProps = {
 };
 
 const BlogCard = (props: IBlogCardProps) => (
-  <a className="hover:translate-y-1" href={props.instance.frontmatter.url}>
+  <a
+    className="hover:translate-y-1"
+    href={props.instance.frontmatter.url}
+    target="_blank"
+  >
     <div className="overflow-hidden rounded-md bg-slate-800">
       <div className="aspect-h-2 aspect-w-3">
         <img
