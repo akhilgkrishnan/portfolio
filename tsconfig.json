@@ -25,32 +25,17 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
     "isolatedModules": true,
-    "types": [
-      "vite/client"
-    ],
+    "types": ["vite/client"],
     "baseUrl": "src",
     "paths": {
-      "@pages/*": [
-        "pages/*"
-      ],
-      "@partials/*": [
-        "partials/*"
-      ],
-      "@templates/*": [
-        "templates/*"
-      ],
-      "@images/*": [
-        "images/*"
-      ],
-      "@utils/*": [
-        "utils/*"
-      ]
+      "@pages/*": ["pages/*"],
+      "@partials/*": ["partials/*"],
+      "@templates/*": ["templates/*"],
+      "@images/*": ["images/*"],
+      "@utils/*": ["utils/*"],
+      "@styles/*": ["styles/*"]
     },
     "jsxImportSource": "react"
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.astro"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro"]
 }
