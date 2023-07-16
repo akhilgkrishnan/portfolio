@@ -1,5 +1,4 @@
 ---
-import { Image } from '@astrojs/image/components';
 import { ProjectGallery } from '@components/ProjectGallery';
 import { CTA } from '@partials/CTA';
 import Base from '@templates/Base.astro';
@@ -39,12 +38,11 @@ const description =
       description="Welcome to my web development projects section! Here you will find a showcase of my diverse range of web development projects, highlighting my skills and expertise as a web developer. Get inspired and let's collaborate to bring your next digital venture to life!"
     />
     <div class="flex justify-center">
-      <Image
-        src="assets/images/studying.png"
+      <img
+        src="/assets/images/studying.png"
         alt="Project image"
         width={300}
         height={300}
-        format="png"
         loading="lazy"
       />
     </div>
