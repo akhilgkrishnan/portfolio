@@ -1,17 +1,10 @@
 import { ProjectCard } from '@components/ProjectCard';
 import type { MarkdownInstance } from 'astro';
 
-type IProjectProps = {
-  imgSrc: string;
-  imgAlt: string;
-  name: string;
-  description: string;
-  link: string;
-  category: string;
-};
+import type { Project } from '../types/project';
 
 type IRecentProjectProps = {
-  projectList: MarkdownInstance<IProjectProps>[];
+  projectList: MarkdownInstance<Project>[];
 };
 
 const ProjectGallery = (props: IRecentProjectProps) => (

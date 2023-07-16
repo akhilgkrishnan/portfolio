@@ -34,7 +34,8 @@
       "@images/*": ["images/*"],
       "@utils/*": ["utils/*"],
       "@styles/*": ["styles/*"],
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@types/*": ["types/*"]
     },
     "jsxImportSource": "react"
   },

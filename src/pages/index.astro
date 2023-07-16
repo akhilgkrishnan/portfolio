@@ -8,25 +8,16 @@ import { AppConfig } from '@utils/AppConfig';
 import { sortByDate } from '@utils/Posts';
 import type { IFrontmatter } from 'astro-boilerplate-components';
 
+import type { Project } from '../types/project';
+
 interface BlogPostFrontmatter extends IFrontmatter {
   url: string;
-}
-
-interface ProjectProps {
-  name: string;
-  description: string;
-  link: string;
-  img: {
-    src: string;
-    alt: string;
-  };
-  category: string;
 }
 
 const allPosts = await Astro.glob<BlogPostFrontmatter>('./posts/*.md');
 const sortedPosts = sortByDate(allPosts);
 const lastThreePosts = sortedPosts.slice(0, 3);
-const allProjects = await Astro.glob<ProjectProps>('./projects/*.md');
+const allProjects = await Astro.glob<Project>('./projects/*.md');
 const projects = allProjects.slice(0, 3);
 
 const { title } = AppConfig;

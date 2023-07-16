@@ -1,15 +1,8 @@
 import { ColorTags, Tags } from 'astro-boilerplate-components';
 
-type IProjectProps = {
-  imgSrc: string;
-  imgAlt: string;
-  name: string;
-  description: string;
-  link: string;
-  category: string;
-};
+import type { Project } from '../types/project';
 
-const ProjectCard = (props: IProjectProps) => {
+const ProjectCard = (props: Project) => {
   const categories = props.category.split(', ');
 
   return (

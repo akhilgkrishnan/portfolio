@@ -6,20 +6,11 @@ import { AppConfig } from '@utils/AppConfig';
 import type { MarkdownInstance, Page } from 'astro-boilerplate-components';
 import { Section } from 'astro-boilerplate-components';
 
+import type { Project } from '../../types/project';
+
 type GetStaticPaths = {
   paginate: any;
 }; // Overrides `GetStaticPathsOptions` types from Astro
-
-interface ProjectProps {
-  name: string;
-  description: string;
-  link: string;
-  img: {
-    src: string;
-    alt: string;
-  };
-  category: string;
-}
 
 export async function getStaticPaths({ paginate }: GetStaticPaths) {
   const allProjects = await Astro.glob('./*.md');
@@ -29,7 +20,7 @@ export async function getStaticPaths({ paginate }: GetStaticPaths) {
 }
 
 interface Props {
-  page: Page<MarkdownInstance<ProjectProps>>;
+  page: Page<MarkdownInstance<Project>>;
 }
 
 const { page } = Astro.props as Props;

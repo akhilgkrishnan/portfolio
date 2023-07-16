@@ -2,17 +2,10 @@ import { ProjectGallery } from '@components/ProjectGallery';
 import type { MarkdownInstance } from 'astro';
 import { GradientText, Section } from 'astro-boilerplate-components';
 
-interface ProjectProps {
-  name: string;
-  description: string;
-  link: string;
-  imgSrc: string;
-  imgAlt: string;
-  category: string;
-}
+import type { Project as IProject } from '../types/project';
 
 type IRecentProjectProps = {
-  projectList: MarkdownInstance<ProjectProps>[];
+  projectList: MarkdownInstance<IProject>[];
 };
 
 const ProjectList = (props: IRecentProjectProps) => {
