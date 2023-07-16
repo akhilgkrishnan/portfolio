@@ -12,9 +12,22 @@ interface BlogPostFrontmatter extends IFrontmatter {
   url: string;
 }
 
+interface ProjectProps {
+  name: string;
+  description: string;
+  link: string;
+  img: {
+    src: string;
+    alt: string;
+  };
+  category: string;
+}
+
 const allPosts = await Astro.glob<BlogPostFrontmatter>('./posts/*.md');
 const sortedPosts = sortByDate(allPosts);
 const lastThreePosts = sortedPosts.slice(0, 3);
+const allProjects = await Astro.glob<ProjectProps>('./projects/*.md');
+const projects = allProjects.slice(0, 3);
 
 const { title } = AppConfig;
 const { description } = AppConfig;
@@ -22,7 +35,7 @@ const { description } = AppConfig;
 
 <Base head={{ title, description }}>
   <Hero />
-  <ProjectList />
+  <ProjectList projectList={projects} />
   <RecentPosts postList={lastThreePosts} />
   <CTA />
 </Base>

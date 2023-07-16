@@ -1,0 +1,49 @@
+---
+import { ProjectGallery } from '@components/ProjectGallery';
+import { CTA } from '@partials/CTA';
+import Base from '@templates/Base.astro';
+import { AppConfig } from '@utils/AppConfig';
+import type { MarkdownInstance, Page } from 'astro-boilerplate-components';
+import { Section } from 'astro-boilerplate-components';
+
+type GetStaticPaths = {
+  paginate: any;
+}; // Overrides `GetStaticPathsOptions` types from Astro
+
+interface ProjectProps {
+  name: string;
+  description: string;
+  link: string;
+  img: {
+    src: string;
+    alt: string;
+  };
+  category: string;
+}
+
+export async function getStaticPaths({ paginate }: GetStaticPaths) {
+  const allProjects = await Astro.glob('./*.md');
+
+  // Return a paginated collection of paths for all posts
+  return paginate(allProjects, { pageSize: 6 });
+}
+
+interface Props {
+  page: Page<MarkdownInstance<ProjectProps>>;
+}
+
+const { page } = Astro.props as Props;
+const titleSuffix = ` - ${AppConfig.site_name}`;
+const titleBase = `Project page ${page.currentPage}`;
+const title = titleBase + titleSuffix;
+const description =
+  'Explore a collection of insightful articles and resources in our web development blog. Stay updated with the latest trends, technologies, and best practices in web development. Gain valuable knowledge, tips, and tricks to enhance your skills and create stunning websites. Join our community and unlock the potential of the digital world.';
+---
+
+<Base head={{ title, description }}>
+  <Section>
+    <ProjectGallery projectList={page.data} />
+  </Section>
+
+  <CTA />
+</Base>

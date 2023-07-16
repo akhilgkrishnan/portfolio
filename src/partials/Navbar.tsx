@@ -15,6 +15,7 @@ const Navbar = () => (
 
       <NavMenu>
         <NavMenuItem href="/posts/">Blogs</NavMenuItem>
+        <NavMenuItem href="/projects/">Projects</NavMenuItem>
         <NavMenuItem href="https://github.com/akhilgkrishnan">
           GitHub
         </NavMenuItem>
