@@ -4,9 +4,11 @@ import { CTA } from '@partials/CTA';
 import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
 import type { MarkdownInstance, Page } from 'astro-boilerplate-components';
-import { Section } from 'astro-boilerplate-components';
+import { PaginationHeader, Section } from 'astro-boilerplate-components';
 
 import type { Project } from '../../types/project';
+import {Image} from '@astrojs/image/components';
+import projectImage  from '/assets/images/studying.png';
 
 type GetStaticPaths = {
   paginate: any;
@@ -32,6 +34,22 @@ const description =
 ---
 
 <Base head={{ title, description }}>
+  <Section>
+    <PaginationHeader
+      title="Showcasing Web Development Mastery"
+      description="Welcome to my web development projects section! Here you will find a showcase of my diverse range of web development projects, highlighting my skills and expertise as a web developer. Get inspired and let's collaborate to bring your next digital venture to life!"
+    />
+    <div class="flex justify-center">
+      <Image
+        src={projectImage}
+        alt="Project image"
+        width={300}
+        height={300}
+        format='png'
+        loading="eager"
+      />
+    </div>
+  </Section>
   <Section>
     <ProjectGallery projectList={page.data} />
   </Section>
