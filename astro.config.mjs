@@ -5,6 +5,8 @@ import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 import { astroImageTools } from 'astro-imagetools';
 
+import image from "@astrojs/image"
+
 // https://astro.build/config
 export default defineConfig({
   // base: '.', // Set a path prefix.
@@ -27,5 +29,6 @@ export default defineConfig({
     sitemap(),
     robotsTxt(),
     astroImageTools,
+    image(),
   ],
 });

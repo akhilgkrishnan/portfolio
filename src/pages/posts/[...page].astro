@@ -15,6 +15,10 @@ import {
   Section,
 } from 'astro-boilerplate-components';
 
+import {Image} from '@astrojs/image/components';
+
+import readingImage from '/assets/images/reading.png';
+
 type GetStaticPaths = {
   paginate: any;
 }; // Overrides `GetStaticPathsOptions` types from Astro
@@ -49,6 +53,17 @@ const description =
       title="Insights and Inspiration: The Blog"
       description="Explore the world of web development through my blog section. Gain valuable insights, tips, and tricks on the latest trends, technologies, and best practices in the ever-evolving realm of web development.  Let's embark on a journey together and unlock the limitless potential of the digital world."
     />
+    <div class="flex justify-center">
+      <Image
+        src={readingImage}
+        alt="Blog"
+        width={300}
+        height={300}
+        format='png'
+        loading="eager"
+      />
+    </div>
+
   </Section>
 
   <Section>
