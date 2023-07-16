@@ -9,6 +9,7 @@ import { sortByDate } from '@utils/Posts';
 import type { IFrontmatter } from 'astro-boilerplate-components';
 
 import type { Project } from '../types/project';
+import BackToTop from '@components/BackToTop.astro';
 
 interface BlogPostFrontmatter extends IFrontmatter {
   url: string;
@@ -29,4 +30,5 @@ const { description } = AppConfig;
   <ProjectList projectList={projects} />
   <RecentPosts postList={lastThreePosts} />
   <CTA />
+  <BackToTop />
 </Base>
