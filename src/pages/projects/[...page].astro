@@ -1,4 +1,5 @@
 ---
+import { Image } from '@astrojs/image/components';
 import { ProjectGallery } from '@components/ProjectGallery';
 import { CTA } from '@partials/CTA';
 import Base from '@templates/Base.astro';
@@ -7,8 +8,6 @@ import type { MarkdownInstance, Page } from 'astro-boilerplate-components';
 import { PaginationHeader, Section } from 'astro-boilerplate-components';
 
 import type { Project } from '../../types/project';
-import {Image} from '@astrojs/image/components';
-import projectImage  from '/assets/images/studying.png';
 
 type GetStaticPaths = {
   paginate: any;
@@ -41,12 +40,12 @@ const description =
     />
     <div class="flex justify-center">
       <Image
-        src={projectImage}
+        src="assets/images/studying.png"
         alt="Project image"
         width={300}
         height={300}
-        format='png'
-        loading="eager"
+        format="png"
+        loading="lazy"
       />
     </div>
   </Section>
