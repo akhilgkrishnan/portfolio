@@ -12,7 +12,7 @@ const ProjectGallery = (props: IRecentProjectProps) => (
     {props.projectList.map((elt) => (
       <ProjectCard
         key={elt.frontmatter.link}
-        name={elt.frontmatter.name}
+        title={elt.frontmatter.title}
         description={elt.frontmatter.description}
         link={elt.frontmatter.link}
         imgSrc={elt.frontmatter.imgSrc}

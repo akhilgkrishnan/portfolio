@@ -21,7 +21,7 @@ const ProjectCard = (props: Project) => {
       <div>
         <div className="flex flex-col items-center gap-y-2 md:flex-row">
           <a className="hover:text-cyan-400" href={props.link}>
-            <div className="text-xl font-semibold">{props.name}</div>
+            <div className="text-xl font-semibold">{props.title}</div>
           </a>
 
           <div className="ml-3 flex flex-wrap gap-2">
