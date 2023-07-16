@@ -25,9 +25,13 @@ const ProjectCard = (props: Project) => {
           </a>
 
           <div className="ml-3 flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <Tags color={ColorTags.SLATE}>{category}</Tags>
-            ))}
+            {categories.map((category) => {
+              const color =
+                Object.values(ColorTags)[
+                  Math.floor(Math.random() * Object.values(ColorTags).length)
+                ];
+              return <Tags color={color}>{category}</Tags>;
+            })}
           </div>
         </div>
 
