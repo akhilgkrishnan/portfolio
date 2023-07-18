@@ -15,16 +15,30 @@ const Hero = () => (
         </>
       }
       description={
-        <>
-          I'm a 25-year old technical enthusiast who does full-stack web
-          development in Ruby on Rails, NodeJS and ReactJS. Passionate to
-          contribute open-source projects and make cool products. Currently
-          working as a Senior Software Developer in Saeloun Technologies.
-        </>
+        <div className="mt-6 text-xl leading-9">
+          <p>
+            I am a Full Stack Developer with over 4+ years of experience in
+            application development.
+          </p>{' '}
+          <p>
+            Currently, I hold the position of{' '}
+            <strong>Senior Software Developer at Saeloun Inc.</strong>, where my
+            primary focus is on building web applications using Ruby on Rails,
+            ReactJS, and NodeJS.
+          </p>{' '}
+          <p>
+            My typical day revolves around coding, staying updated with new
+            technologies, engaging in continuous learning through books, and
+            actively contributing to open source projects. I also have a passion
+            for writing technical articles, sharing my knowledge with the
+            community, and mentoring aspiring developers to help them enhance
+            their skills and become better professionals.
+          </p>
+        </div>
       }
       avatar={
         <img
-          className="w-70 h-80"
+          className="h-96 w-96"
           src="/assets/images/avatar.png"
           alt="Avatar image"
           loading="lazy"

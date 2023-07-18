@@ -6,7 +6,10 @@ const ProjectCard = (props: Project) => {
   const categories = props.category.split(', ');
 
   return (
-    <div className="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row">
+    <div
+      key={props.link}
+      className="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row"
+    >
       <div className="shrink-0">
         <a href={props.link}>
           <img
