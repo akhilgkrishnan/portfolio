@@ -16,7 +16,7 @@ export async function getStaticPaths({ paginate }: GetStaticPaths) {
   const allProjects = await Astro.glob('./*.md');
 
   // Return a paginated collection of paths for all posts
-  return paginate(allProjects, { pageSize: 6 });
+  return paginate(allProjects, { pageSize: 8 });
 }
 
 interface Props {
