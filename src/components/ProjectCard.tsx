@@ -8,7 +8,7 @@ const ProjectCard = (props: Project) => {
   return (
     <div
       key={props.link}
-      className="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row"
+      className="flex flex-col items-center gap-x-8 rounded-md bg-slate-200 p-3 dark:bg-slate-800 md:flex-row"
     >
       <div className="shrink-0">
         <a href={props.link}>
@@ -38,7 +38,9 @@ const ProjectCard = (props: Project) => {
           </div>
         </div>
 
-        <p className="mt-3 text-gray-400">{props.description}</p>
+        <p className="mt-3 text-gray-800 dark:text-gray-400">
+          {props.description}
+        </p>
       </div>
     </div>
   );

@@ -1,10 +1,6 @@
-import {
-  Logo,
-  NavbarTwoColumns,
-  NavMenu,
-  NavMenuItem,
-  Section,
-} from 'astro-boilerplate-components';
+import DarkModeToggleButton from '@components/DarkModeToggleButton';
+import NavMenuItem from '@components/NavMenuItem';
+import { Logo, NavbarTwoColumns, Section } from 'astro-boilerplate-components';
 
 const Navbar = () => (
   <Section>
@@ -13,7 +9,7 @@ const Navbar = () => (
         <Logo icon="" name="< Akhil G Krishnan />" />
       </a>
 
-      <NavMenu>
+      <ul className="flex gap-x-3 font-medium text-gray-800 dark:text-gray-200">
         <NavMenuItem href="/posts/">Blogs</NavMenuItem>
         <NavMenuItem href="/projects/">Projects</NavMenuItem>
         <NavMenuItem href="https://github.com/akhilgkrishnan">
@@ -23,7 +19,10 @@ const Navbar = () => (
         <NavMenuItem href="mailto:akhilgkrishnan4us@gmail.com">
           Contact
         </NavMenuItem>
-      </NavMenu>
+        <li>
+          <DarkModeToggleButton />
+        </li>
+      </ul>
     </NavbarTwoColumns>
   </Section>
 );
