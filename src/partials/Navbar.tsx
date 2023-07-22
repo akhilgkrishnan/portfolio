@@ -1,15 +1,16 @@
 import DarkModeToggleButton from '@components/DarkModeToggleButton';
 import Logo from '@components/Logo';
 import NavMenuItem from '@components/NavMenuItem';
-import { NavbarTwoColumns, Section } from 'astro-boilerplate-components';
+import { Section } from 'astro-boilerplate-components';
 
 const Navbar = () => (
   <Section>
-    <NavbarTwoColumns>
-      <a href="/">
-        <Logo />
-      </a>
-
+    <div className="navbar flex flex-col gap-y-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex-1">
+        <a href="/" className="flex-none">
+          <Logo />
+        </a>
+      </div>
       <ul className="flex items-center gap-x-3 font-medium text-gray-800 dark:text-gray-200">
         <NavMenuItem href="/posts/">Blogs</NavMenuItem>
         <NavMenuItem href="/projects/">Projects</NavMenuItem>
@@ -24,7 +25,7 @@ const Navbar = () => (
           <DarkModeToggleButton />
         </li>
       </ul>
-    </NavbarTwoColumns>
+    </div>
   </Section>
 );
 
