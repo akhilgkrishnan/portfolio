@@ -17,6 +17,7 @@ const Navbar = () => (
           GitHub
         </NavMenuItem>
         <NavMenuItem href="https://twitter.com/mrakhilg">Twitter</NavMenuItem>
+        <NavMenuItem href="/cv/">Resume</NavMenuItem>
         <NavMenuItem href="mailto:akhilgkrishnan4us@gmail.com">
           Contact
         </NavMenuItem>

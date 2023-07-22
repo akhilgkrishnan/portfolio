@@ -16,3 +16,7 @@
    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
   100% { transform: rotate( 0.0deg) }
 }
+
+.time-line-container>div:last-child .education__time>.education__line {
+  display: none;
+}

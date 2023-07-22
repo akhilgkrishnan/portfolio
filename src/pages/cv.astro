@@ -1,0 +1,125 @@
+---
+import TimeLine from '@components/Timeline';
+import Base from '@templates/Base.astro';
+import { AppConfig } from '@utils/AppConfig';
+import { Section } from 'astro-boilerplate-components';
+
+const titleSuffix = ` - ${AppConfig.site_name}`;
+const title = `Resume${titleSuffix}`;
+const description =
+  'Experienced and passionate developer skilled in full-stack web development and mobile app creation. Proficient in multiple programming languages and frameworks, including Ruby on Rails, React, NextJS, and NodeJS. Adept at problem-solving and collaborating in agile teams to deliver robust and scalable solutions. Check out my portfolio to see my latest projects and accomplishments.';
+---
+
+<Base head={{ title, description }}>
+  <Section>
+    <div class="mb-5">
+      <div class="w-full text-3xl font-bold">Profile</div>
+    </div>
+
+    <div class="mb-10 text-justify">
+      I'm a Senior Software Developer at Saeloun Inc, with over 4+ years of
+      experience in web development. I've experience with Ruby on Rails, and
+      ReactJS. Over the course of my career, I've led a five-member team to
+      build an application from scratch. I contribute to Open Source and have
+      contributed to Ruby on Rails.
+    </div>
+
+    <div class="mb-5">
+      <div class="w-full text-3xl font-bold">Education</div>
+    </div>
+
+    <div class="time-line-container mb-10 grid gap-4">
+      <TimeLine
+        title="Bachelor of Technology (BTech) in Computer Science and Engineering"
+        subtitle="2016 to 2020 at Providence College of Engineering, Chengannur, India"
+      />
+      <TimeLine
+        title="Plus Two (Higher Secondary Education)"
+        subtitle="2014 to 2016 at Nair Samajam HSS, Mannar, India"
+      />
+      <TimeLine
+        title="Secondary School Leaving Certificate (SSLC)"
+        subtitle="2009 to 2014 at Nair Samajam HSS, Mannar, India"
+      />
+      <TimeLine
+        title="Primary School"
+        subtitle="2002 to 2008 at Akshara EM School, Mannar, India"
+      />
+    </div>
+
+    <div class="mb-5">
+      <div class="w-full text-3xl font-bold">Experience</div>
+    </div>
+
+    <div class="time-line-container mb-10">
+      <TimeLine
+        title="Senior Software Developer"
+        subtitle="From September 2021 to Present at Saeloun, Remote"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident.
+      </TimeLine>
+      <TimeLine
+        title="Software Engineer"
+        subtitle="From July 2021 to September 2021 at Bigbinary Solutions, Remote"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident.
+      </TimeLine>
+      <TimeLine
+        title="Junior Software Developer"
+        subtitle="From August 2020 to July 2021 at Sapaad Pvt Lmt, Kochi, India"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident.
+      </TimeLine>
+    </div>
+
+    <div class="mb-5">
+      <div class="w-full text-3xl font-bold">Certifications</div>
+    </div>
+
+    <ul class="mx-6 mb-10 grid list-disc gap-2">
+      <li>
+        <a href="#" target="_blank"> Certification Name (with link)</a>
+      </li>
+      <li>
+        <a href="#" target="_blank"> Certification Name (with link)</a>
+      </li>
+    </ul>
+
+    <div class="mb-5">
+      <div class="w-full text-3xl font-bold">Skills</div>
+    </div>
+
+    <ul class="mx-6 list-disc columns-2 md:columns-5">
+      <li>Ruby on Rails</li>
+      <li>Ruby</li>
+      <li>ReactJS</li>
+      <li>NodeJS</li>
+      <li>Express</li>
+      <li>PostgreSQL</li>
+      <li>MongoDB</li>
+      <li>Typescript</li>
+      <li>NextJS</li>
+      <li>AstroJS</li>
+      <li>Tailwind</li>
+      <li>Bootstrap</li>
+      <li>Kubernates</li>
+      <li>Docker</li>
+      <li>AWS</li>
+    </ul>
+  </Section>
+</Base>
