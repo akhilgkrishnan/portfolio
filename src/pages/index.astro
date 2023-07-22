@@ -2,8 +2,9 @@
 import BackToTop from '@components/BackToTop.astro';
 import { CTA } from '@partials/CTA';
 import { Hero } from '@partials/Hero';
-import { ProjectList } from '@partials/ProjectList';
+import { RecentOssProjects } from '@partials/RecentOssProjects';
 import { RecentPosts } from '@partials/RecentPosts';
+import { RecentProjects } from '@partials/RecentProjects';
 import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
 import { sortByDate } from '@utils/Posts';
@@ -19,7 +20,12 @@ const allPosts = await Astro.glob<BlogPostFrontmatter>('./posts/*.md');
 const sortedPosts = sortByDate(allPosts);
 const lastThreePosts = sortedPosts.slice(0, 3);
 const allProjects = await Astro.glob<Project>('./projects/*.md');
-const projects = allProjects.slice(0, 3);
+const openSourceProjects = allProjects
+  .filter((project) => project.frontmatter.openSource)
+  .slice(0, 4);
+const myProjects = allProjects
+  .filter((project) => !project.frontmatter.openSource)
+  .slice(0, 3);
 
 const { title } = AppConfig;
 const { description } = AppConfig;
@@ -27,8 +33,9 @@ const { description } = AppConfig;
 
 <Base head={{ title, description }}>
   <Hero />
-  <ProjectList projectList={projects} />
+  <RecentProjects projectList={myProjects} />
+  <RecentOssProjects projectList={openSourceProjects} />
   <RecentPosts postList={lastThreePosts} />
   <CTA />
   <BackToTop />
-</Base>
+</Base>@partials/RecentProjects

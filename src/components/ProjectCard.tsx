@@ -10,7 +10,7 @@ const ProjectCard = (props: Project) => {
       key={props.link}
       className="flex flex-col items-center gap-x-8 rounded-md bg-slate-200 p-3 dark:bg-slate-800 md:flex-row"
     >
-      <div className="shrink-0">
+      <div className="relative shrink-0">
         <a href={props.link}>
           <img
             className="h-36 w-36 hover:translate-y-1"
@@ -18,6 +18,11 @@ const ProjectCard = (props: Project) => {
             alt={props.imgAlt}
             loading="lazy"
           />
+          {props.openSource && (
+            <div className="absolute left-0 top-0 -translate-y-3/4 rotate-0 rounded bg-green-500 px-2 py-1 text-white">
+              Open Source
+            </div>
+          )}
         </a>
       </div>
 

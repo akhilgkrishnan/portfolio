@@ -22,9 +22,18 @@ const Hero = () => (
           </p>{' '}
           <p>
             Currently, I hold the position of{' '}
-            <strong>Senior Software Developer at Saeloun Inc.</strong>, where my
-            primary focus is on building web applications using Ruby on Rails,
-            ReactJS, and NodeJS.
+            <strong>
+              Senior Software Developer at{' '}
+              <a
+                className="underline"
+                href="http://saeloun.com"
+                target="_blank"
+              >
+                Saeloun Inc.
+              </a>
+            </strong>
+            , where my primary focus is on building web applications using Ruby
+            on Rails, ReactJS, and NodeJS.
           </p>{' '}
           <p>
             My typical day revolves around coding, staying updated with new

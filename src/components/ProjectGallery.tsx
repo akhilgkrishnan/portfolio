@@ -17,6 +17,7 @@ const ProjectGallery = (props: IRecentProjectProps) => (
         link={elt.frontmatter.link}
         imgSrc={elt.frontmatter.imgSrc}
         imgAlt={elt.frontmatter.imgAlt}
+        openSource={elt.frontmatter.openSource}
         category={elt.frontmatter.category}
       />
     ))}

@@ -1,8 +1,9 @@
 ---
-title: 'Miru Web'
-description: 'Miru is an open-source tool, designed to make time tracking, invoice management, and accounting easy for small businesses worldwide. It is a platform for organizations to help them streamline their workflow.'
-link: 'https://github.com/saeloun/miru-web/commits?author=akhilgkrishnan'
-imgSrc: '/assets/images/projects/miru.svg'
-imgAlt: 'Miru Logo'
-category: Ruby on Rails, React, Typescript, PostgreSQL, ElasticSearch
+title: 'Tooljet'
+description: 'ToolJet is an open-source low-code framework to build and deploy internal tools quickly with minimal engineering effort. ToolJet drag and drop frontend builder allows you to build complicated responsive frontends within minutes.'
+link: 'https://github.com/ToolJet/ToolJet/commits?author=akhilgkrishnan'
+imgSrc: '/assets/images/projects/tooljet.png'
+imgAlt: 'Project Maps'
+openSource: true
+category: NestJS, React, Typescript
 ---

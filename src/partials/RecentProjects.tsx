@@ -8,7 +8,7 @@ type IRecentProjectProps = {
   projectList: MarkdownInstance<IProject>[];
 };
 
-const ProjectList = (props: IRecentProjectProps) => {
+const RecentProjects = (props: IRecentProjectProps) => {
   return (
     <Section
       title={
@@ -28,4 +28,4 @@ const ProjectList = (props: IRecentProjectProps) => {
   );
 };
 
-export { ProjectList };
+export { RecentProjects };

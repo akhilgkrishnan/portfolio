@@ -1,8 +1,9 @@
 ---
-title: 'Chatwoot'
-description: 'Chatwoot is an open-source, self-hosted customer engagement suite. Chatwoot lets you view and manage your customer data, communicate with them irrespective of which medium they use, and re-engage them based on their profile.'
-link: 'https://github.com/chatwoot/chatwoot/commits?author=akhilgkrishnan'
-imgSrc: '/assets/images/projects/chatwoot.png'
+title: 'Ruby On Rails'
+description: 'Rails is a web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC) pattern.'
+link: 'https://contributors.rubyonrails.org/contributors/akhilgkrishnan/commits'
+imgSrc: '/assets/images/projects/rails.png'
 imgAlt: 'Project Maps'
-category: Ruby on Rails, VueJS, Typescript, PostgreSQL
+openSource: true
+category: Ruby
 ---

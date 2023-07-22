@@ -4,5 +4,6 @@ export type Project = {
   imgSrc: string;
   imgAlt: string;
   link: string;
+  openSource: boolean;
   category: string;
 };
