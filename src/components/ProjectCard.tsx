@@ -28,7 +28,7 @@ const ProjectCard = (props: Project) => {
 
       <div>
         <div className="flex flex-col items-center gap-y-2 md:flex-row">
-          <a className="hover:text-cyan-400" href={props.link}>
+          <a className="hover:text-cyan-400" href={props.link} target="_blank">
             <div className="text-xl font-semibold">{props.title}</div>
           </a>
 

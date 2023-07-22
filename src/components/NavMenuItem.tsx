@@ -4,7 +4,7 @@ type INavMenuItemProps = {
 };
 
 const NavMenuItem = (props: INavMenuItemProps) => (
-  <li className="hover:text-white">
+  <li className="hover:text-gray-500 dark:hover:text-white">
     <a href={props.href}>{props.children}</a>
   </li>
 );

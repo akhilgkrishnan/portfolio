@@ -1,12 +1,13 @@
 import DarkModeToggleButton from '@components/DarkModeToggleButton';
+import Logo from '@components/Logo';
 import NavMenuItem from '@components/NavMenuItem';
-import { Logo, NavbarTwoColumns, Section } from 'astro-boilerplate-components';
+import { NavbarTwoColumns, Section } from 'astro-boilerplate-components';
 
 const Navbar = () => (
   <Section>
     <NavbarTwoColumns>
       <a href="/">
-        <Logo icon="" name="< Akhil G Krishnan />" />
+        <Logo />
       </a>
 
       <ul className="flex items-center gap-x-3 font-medium text-gray-800 dark:text-gray-200">
