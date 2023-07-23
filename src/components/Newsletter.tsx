@@ -1,17 +1,16 @@
-import type { ReactNode } from 'react';
+import { GradientText } from 'astro-boilerplate-components';
 
-type INewsletterProps = {
-  title: ReactNode;
-  description: ReactNode;
-};
-
-const Newsletter = (props: INewsletterProps) => (
+const Newsletter = () => (
   <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
     <div className="sm:w-7/12">
-      <div className="text-3xl font-bold">{props.title}</div>
+      <div className="text-3xl font-bold">
+        Subscribe to my <GradientText>Newsletters</GradientText>
+      </div>
 
       <p className="mt-3 text-gray-950 dark:text-gray-300">
-        {props.description}
+        Stay ahead of the curve in web development, technology trends, and
+        industry news. Don't miss the opportunity to expand your knowledge and
+        stay informed. Sign up now and be part of my growing community!
       </p>
     </div>
 

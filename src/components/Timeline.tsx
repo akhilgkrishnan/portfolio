@@ -1,7 +1,7 @@
 type ITimeLineProps = {
   title: string;
   subtitle: string;
-  children?: string;
+  children?: React.ReactNode;
 };
 
 const TimeLine = (props: ITimeLineProps) => (

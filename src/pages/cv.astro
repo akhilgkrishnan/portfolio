@@ -3,6 +3,7 @@ import TimeLine from '@components/Timeline';
 import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
 import { Section } from 'astro-boilerplate-components';
+import SkillItem from '@components/SkillItem';
 
 const titleSuffix = ` - ${AppConfig.site_name}`;
 const title = `Resume${titleSuffix}`;
@@ -21,7 +22,7 @@ const description =
       experience in web development. I've experience with Ruby on Rails, and
       ReactJS. Over the course of my career, I've led a five-member team to
       build an application from scratch. I contribute to Open Source and have
-      contributed to Ruby on Rails.
+      contributed to Ruby on Rails, Webpack, SaaS.
     </div>
 
     <div class="mb-5">
@@ -56,47 +57,54 @@ const description =
         title="Senior Software Developer"
         subtitle="From September 2021 to Present at Saeloun, Remote"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident.
+        Experienced consultant with expertise in Rails and React, showcasing a proven track record of leading
+        successful projects. Highly skilled in designing robust architectures, developing and maintaining web
+        applications, and adept at team management. Demonstrated proficiency in implementing new features,
+        resolving bugs, and overseeing deployment processes for various clients and internal projects, including Miru,
+        ActivateCare, Wanderwhale, GoMethodology, and InfluenceKit.
+        <p>
+          Technology Used: Rails, React, NextJS, PostgreSQL, NodeJS, TypeScript, Redis, Tailwind, Bootstrap, Kubernates, Docker, ElasticSearch, AWS
+        </p>
       </TimeLine>
       <TimeLine
         title="Software Engineer"
-        subtitle="From July 2021 to September 2021 at Bigbinary Solutions, Remote"
+        subtitle="From June 2021 to September 2021 at Bigbinary Solutions, Remote"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident.
+        Bigbinary is a consulting company specializing in Ruby on Rails and ReactJS. I worked on various internal projects.
+        <p>Technology Used: Rails, React, PostgreSQL</p>
       </TimeLine>
       <TimeLine
         title="Junior Software Developer"
         subtitle="From August 2020 to July 2021 at Sapaad Pvt Lmt, Kochi, India"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident.
+        Sapaad is a SaaS company having a cloud-based restaurant management
+        point of sale system.
+        Experienced software engineer specialized in SaaS development, with expertise in AGILE Scrum-based product
+        life cycle. Proficient in building and integrating microservice apps. Worked on various projects,
+        including POS system with GPay integration and multilingual support, BYOD platform with PayTabs and PayU
+        integration, delivery manager application with Kafka data handling, and trial application management system
+        as lead developer. Skilled in Ruby on Rails and ReactJS for backend and frontend development, delivering
+        robust and scalable solutions within tight deadlines.
+        <p>Technology Used: Rails, React, PostgreSQL, Bootstrap, Redis, Docker, AWS, ApacheKafka, Heroku, GoLang</p>
       </TimeLine>
     </div>
 
     <div class="mb-5">
-      <div class="w-full text-3xl font-bold">Certifications</div>
+      <div class="w-full text-3xl font-bold">Achievements</div>
     </div>
 
     <ul class="mx-6 mb-10 grid list-disc gap-2">
       <li>
-        <a href="#" target="_blank"> Certification Name (with link)</a>
+        <p>2nd Place - ActivateCare Hackathon (2023)</p>
       </li>
       <li>
-        <a href="#" target="_blank"> Certification Name (with link)</a>
+        <p>First Prize - Quriocity Quiz Competition at Providence College of Engineering, Chengannur (2019)</p>
+      </li>
+      <li>
+        <p>Third Prize - State Level G-Tec IT Quiz Championship (2017)</p>
+      </li>
+      <li>
+        <p>First Prize - Kerala Shasthrolsavam Sub District IT Quiz Championship (2013)</p>
       </li>
     </ul>
 
@@ -105,21 +113,21 @@ const description =
     </div>
 
     <ul class="mx-6 list-disc columns-2 md:columns-5">
-      <li>Ruby on Rails</li>
-      <li>Ruby</li>
-      <li>ReactJS</li>
-      <li>NodeJS</li>
-      <li>Express</li>
-      <li>PostgreSQL</li>
-      <li>MongoDB</li>
-      <li>Typescript</li>
-      <li>NextJS</li>
-      <li>AstroJS</li>
-      <li>Tailwind</li>
-      <li>Bootstrap</li>
-      <li>Kubernates</li>
-      <li>Docker</li>
-      <li>AWS</li>
+      <SkillItem title='Ruby on Rails' icon="rails-plain"/>
+      <SkillItem title='ReactJS' icon="react-original"/>
+      <SkillItem title='NodeJS' icon="nodejs-plain"/>
+      <SkillItem title='ExpressJS' icon="express-original"/>
+      <SkillItem title='PostgreSQL' icon="postgresql-plain"/>
+      <SkillItem title='MongoDB' icon="mongodb-plain"/>
+      <SkillItem title='Ruby' icon="ruby-plain"/>
+      <SkillItem title='TypeScript' icon="typescript-plain"/>
+      <SkillItem title='NextJS' icon="nextjs-plain"/>
+      <SkillItem title='AstroJS' icon="astro-plain"/>
+      <SkillItem title='Tailwind' icon="tailwindcss-plain"/>
+      <SkillItem title='Bootstrap' icon="bootstrap-plain"/>
+      <SkillItem title='Kubernetes' icon="kubernetes-plain"/>
+      <SkillItem title='Docker' icon="docker-plain"/>
+      <SkillItem title='AWS' icon="amazonwebservices-original"/>
     </ul>
   </Section>
 </Base>
