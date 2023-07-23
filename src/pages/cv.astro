@@ -1,9 +1,9 @@
 ---
+import SkillItem from '@components/SkillItem';
 import TimeLine from '@components/Timeline';
 import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
 import { Section } from 'astro-boilerplate-components';
-import SkillItem from '@components/SkillItem';
 
 const titleSuffix = ` - ${AppConfig.site_name}`;
 const title = `Resume${titleSuffix}`;
@@ -57,20 +57,24 @@ const description =
         title="Senior Software Developer"
         subtitle="From September 2021 to Present at Saeloun, Remote"
       >
-        Experienced consultant with expertise in Rails and React, showcasing a proven track record of leading
-        successful projects. Highly skilled in designing robust architectures, developing and maintaining web
-        applications, and adept at team management. Demonstrated proficiency in implementing new features,
-        resolving bugs, and overseeing deployment processes for various clients and internal projects, including Miru,
+        Experienced consultant with expertise in Rails and React, showcasing a
+        proven track record of leading successful projects. Highly skilled in
+        designing robust architectures, developing and maintaining web
+        applications, and adept at team management. Demonstrated proficiency in
+        implementing new features, resolving bugs, and overseeing deployment
+        processes for various clients and internal projects, including Miru,
         ActivateCare, Wanderwhale, GoMethodology, and InfluenceKit.
         <p>
-          Technology Used: Rails, React, NextJS, PostgreSQL, NodeJS, TypeScript, Redis, Tailwind, Bootstrap, Kubernates, Docker, ElasticSearch, AWS
+          Technology Used: Rails, React, NextJS, PostgreSQL, NodeJS, TypeScript,
+          Redis, Tailwind, Bootstrap, Kubernates, Docker, ElasticSearch, AWS
         </p>
       </TimeLine>
       <TimeLine
         title="Software Engineer"
         subtitle="From June 2021 to September 2021 at Bigbinary Solutions, Remote"
       >
-        Bigbinary is a consulting company specializing in Ruby on Rails and ReactJS. I worked on various internal projects.
+        Bigbinary is a consulting company specializing in Ruby on Rails and
+        ReactJS. I worked on various internal projects.
         <p>Technology Used: Rails, React, PostgreSQL</p>
       </TimeLine>
       <TimeLine
@@ -78,14 +82,19 @@ const description =
         subtitle="From August 2020 to July 2021 at Sapaad Pvt Lmt, Kochi, India"
       >
         Sapaad is a SaaS company having a cloud-based restaurant management
-        point of sale system.
-        Experienced software engineer specialized in SaaS development, with expertise in AGILE Scrum-based product
-        life cycle. Proficient in building and integrating microservice apps. Worked on various projects,
-        including POS system with GPay integration and multilingual support, BYOD platform with PayTabs and PayU
-        integration, delivery manager application with Kafka data handling, and trial application management system
-        as lead developer. Skilled in Ruby on Rails and ReactJS for backend and frontend development, delivering
+        point of sale system. Experienced software engineer specialized in SaaS
+        development, with expertise in AGILE Scrum-based product life cycle.
+        Proficient in building and integrating microservice apps. Worked on
+        various projects, including POS system with GPay integration and
+        multilingual support, BYOD platform with PayTabs and PayU integration,
+        delivery manager application with Kafka data handling, and trial
+        application management system as lead developer. Skilled in Ruby on
+        Rails and ReactJS for backend and frontend development, delivering
         robust and scalable solutions within tight deadlines.
-        <p>Technology Used: Rails, React, PostgreSQL, Bootstrap, Redis, Docker, AWS, ApacheKafka, Heroku, GoLang</p>
+        <p>
+          Technology Used: Rails, React, PostgreSQL, Bootstrap, Redis, Docker,
+          AWS, ApacheKafka, Heroku, GoLang
+        </p>
       </TimeLine>
     </div>
 
@@ -98,13 +107,19 @@ const description =
         <p>2nd Place - ActivateCare Hackathon (2023)</p>
       </li>
       <li>
-        <p>First Prize - Quriocity Quiz Competition at Providence College of Engineering, Chengannur (2019)</p>
+        <p>
+          First Prize - Quriocity Quiz Competition at Providence College of
+          Engineering, Chengannur (2019)
+        </p>
       </li>
       <li>
         <p>Third Prize - State Level G-Tec IT Quiz Championship (2017)</p>
       </li>
       <li>
-        <p>First Prize - Kerala Shasthrolsavam Sub District IT Quiz Championship (2013)</p>
+        <p>
+          First Prize - Kerala Shasthrolsavam Sub District IT Quiz Championship
+          (2013)
+        </p>
       </li>
     </ul>
 
@@ -113,21 +128,21 @@ const description =
     </div>
 
     <ul class="mx-6 list-disc columns-2 md:columns-5">
-      <SkillItem title='Ruby on Rails' icon="rails-plain"/>
-      <SkillItem title='ReactJS' icon="react-original"/>
-      <SkillItem title='NodeJS' icon="nodejs-plain"/>
-      <SkillItem title='ExpressJS' icon="express-original"/>
-      <SkillItem title='PostgreSQL' icon="postgresql-plain"/>
-      <SkillItem title='MongoDB' icon="mongodb-plain"/>
-      <SkillItem title='Ruby' icon="ruby-plain"/>
-      <SkillItem title='TypeScript' icon="typescript-plain"/>
-      <SkillItem title='NextJS' icon="nextjs-plain"/>
-      <SkillItem title='AstroJS' icon="astro-plain"/>
-      <SkillItem title='Tailwind' icon="tailwindcss-plain"/>
-      <SkillItem title='Bootstrap' icon="bootstrap-plain"/>
-      <SkillItem title='Kubernetes' icon="kubernetes-plain"/>
-      <SkillItem title='Docker' icon="docker-plain"/>
-      <SkillItem title='AWS' icon="amazonwebservices-original"/>
+      <SkillItem title="Ruby on Rails" icon="rails-plain" />
+      <SkillItem title="ReactJS" icon="react-original" />
+      <SkillItem title="NodeJS" icon="nodejs-plain" />
+      <SkillItem title="ExpressJS" icon="express-original" />
+      <SkillItem title="PostgreSQL" icon="postgresql-plain" />
+      <SkillItem title="MongoDB" icon="mongodb-plain" />
+      <SkillItem title="Ruby" icon="ruby-plain" />
+      <SkillItem title="TypeScript" icon="typescript-plain" />
+      <SkillItem title="NextJS" icon="nextjs-plain" />
+      <SkillItem title="AstroJS" icon="astro-plain-wordmark" />
+      <SkillItem title="Tailwind" icon="tailwindcss-plain" />
+      <SkillItem title="Bootstrap" icon="bootstrap-plain" />
+      <SkillItem title="Kubernetes" icon="kubernetes-plain" />
+      <SkillItem title="Docker" icon="docker-plain" />
+      <SkillItem title="AWS" icon="amazonwebservices-original" />
     </ul>
   </Section>
 </Base>
