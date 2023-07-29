@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://akhilgkrishnan.me/sitemap-index.xml

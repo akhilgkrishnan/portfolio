@@ -1,9 +1,11 @@
+import { AppConfig } from './AppConfig';
+
 export const schemaMarkup = {
   '@context': 'https://schema.org/',
   '@type': 'Person',
-  name: 'Akhil G Krishnan',
+  name: AppConfig.site_name,
   alternateName: 'Akhil Krishnan',
-  url: 'https://akhilgkrishnan.me',
+  url: AppConfig.site_url,
   image: 'https://avatars.githubusercontent.com/u/22231095?v=4',
   sameAs: [
     'https://facebook.com/akhilgkrishnan9800',
