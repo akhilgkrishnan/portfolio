@@ -27,6 +27,7 @@ const {
     <meta name="author" content={AppConfig.author} />
     <meta name="keywords" content={AppConfig.keywords} />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
     <link
       rel="stylesheet"
@@ -98,6 +99,8 @@ const {
         }
       });
     </script>
-    <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+    <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)}>
+
+    </script>
   </body>
 </html>

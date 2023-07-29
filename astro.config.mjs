@@ -8,7 +8,7 @@ import { astroImageTools } from 'astro-imagetools';
 // https://astro.build/config
 export default defineConfig({
   // base: '.', // Set a path prefix.
-  site: 'https://akhilgk.netlify.com/', // Use to generate your sitemap and canonical URLs in your final build.
+  site: 'https://akhilgkrishnan.me/', // Use to generate your sitemap and canonical URLs in your final build.
   trailingSlash: 'always', // Use to always append '/' at end of url
   // Important!
   // Only official '@astrojs/*' integrations are currently supported by Astro.
