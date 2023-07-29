@@ -9,6 +9,7 @@ This repository showcases my web development skills and my blogs. 💻✨
 - 🔥 Astro with React
 - 🎨 Tailwind CSS with aspect ratio and typography plugin
 - 🎉 TypeScript
+- 🎨 daisyUI
 
 ### Getting started
 
