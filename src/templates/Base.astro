@@ -34,12 +34,15 @@ const {
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
   </head>
-  <body class="bg-slate-200 text-gray-950 dark:bg-slate-800 dark:text-gray-100">
+  <body
+    class=" bg-slate-200 text-gray-950 dark:bg-slate-800 dark:text-gray-100"
+  >
     <Navbar />
 
     <slot />
 
     <Footer />
+
     <script>
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
       if (
