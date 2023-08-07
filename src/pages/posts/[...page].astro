@@ -3,7 +3,7 @@ import { BlogGallery } from '@components/BlogGallery';
 import { CTA } from '@partials/CTA';
 import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
-import { sortByDate } from '@utils/Posts';
+import { sortPostByDate } from '@utils/Posts';
 import type {
   IFrontmatter,
   MarkdownInstance,
@@ -25,7 +25,7 @@ interface BlogPostFrontmatter extends IFrontmatter {
 
 export async function getStaticPaths({ paginate }: GetStaticPaths) {
   const allPosts = await Astro.glob<BlogPostFrontmatter>('./*.md');
-  const sortedPosts = sortByDate(allPosts);
+  const sortedPosts = sortPostByDate(allPosts);
 
   // Return a paginated collection of paths for all posts
   return paginate(sortedPosts, { pageSize: 6 });
