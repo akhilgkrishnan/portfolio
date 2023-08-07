@@ -7,7 +7,7 @@ import { RecentPosts } from '@partials/RecentPosts';
 import { RecentProjects } from '@partials/RecentProjects';
 import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
-import { sortByDate } from '@utils/Posts';
+import { sortPostByDate, sortProjectsByDate } from '@utils/Posts';
 import type { IFrontmatter } from 'astro-boilerplate-components';
 
 import type { Project } from '../types/project';
@@ -17,13 +17,14 @@ interface BlogPostFrontmatter extends IFrontmatter {
 }
 
 const allPosts = await Astro.glob<BlogPostFrontmatter>('./posts/*.md');
-const sortedPosts = sortByDate(allPosts);
+const sortedPosts = sortPostByDate(allPosts);
 const lastThreePosts = sortedPosts.slice(0, 3);
 const allProjects = await Astro.glob<Project>('./projects/*.md');
-const openSourceProjects = allProjects
+const sortedProjects = sortProjectsByDate(allProjects);
+const openSourceProjects = sortedProjects
   .filter((project) => project.frontmatter.openSource)
   .slice(0, 4);
-const myProjects = allProjects
+const myProjects = sortedProjects
   .filter((project) => !project.frontmatter.openSource)
   .slice(0, 3);
 
