@@ -4,7 +4,7 @@ export const AppConfig = {
   title:
     'Akhil G Krishnan | Software Developer | Open Source Contributor | CyberSecurity Researcher',
   description:
-    'Akhil G Krishnan is an Indian Software Developer, Open Source Contributor, AI/ML Enthusiast',
+    "Akhil G Krishnan's personal website. He is an Indian Software Developer, Open Source Contributor, AI/ML Enthusiast",
   keywords:
     'Akhil, Akhil G, Akhil Krishnan, Akhil G Krishnan, Gekay Job Solutions, Malluz Media, 4Techo, sealoun, activatecare, best Web Designer in kerala, india,Web Developer, Ethical Hacker, CyberSecurity researcher, rails developer, react developers',
   author: 'Akhil G Krishnan',

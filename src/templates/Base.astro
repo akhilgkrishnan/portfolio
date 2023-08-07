@@ -23,6 +23,15 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="msvalidate.01" content="A3AA1AEE6C57EE63539E74E67696D204" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={AppConfig.site_name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={AppConfig.site_url} />
+    <meta property="og:image" content={`${AppConfig.site_url}/profile-pic.png`}
+    />
+    <meta property="og:image:alt" content={AppConfig.title} />
+
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content={AppConfig.author} />
