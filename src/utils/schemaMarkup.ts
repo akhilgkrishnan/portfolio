@@ -6,7 +6,7 @@ export const schemaMarkup = {
   name: AppConfig.site_name,
   alternateName: 'Akhil Krishnan',
   url: AppConfig.site_url,
-  image: 'https://avatars.githubusercontent.com/u/22231095?v=4',
+  image: `${AppConfig.site_url}/profile-pic.png`,
   sameAs: [
     'https://facebook.com/akhilgkrishnan9800',
     'https://twitter.com/mrakhilg',
