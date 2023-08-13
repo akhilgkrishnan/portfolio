@@ -1,11 +1,12 @@
 ---
+import { PaginationHeader } from '@components/PaginationHeader';
 import { ProjectGallery } from '@components/ProjectGallery';
 import { CTA } from '@partials/CTA';
 import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
 import { sortProjectsByDate } from '@utils/Posts';
 import type { MarkdownInstance, Page } from 'astro-boilerplate-components';
-import { PaginationHeader, Section } from 'astro-boilerplate-components';
+import { Section } from 'astro-boilerplate-components';
 
 import type { Project } from '../../types/project';
 

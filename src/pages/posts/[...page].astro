@@ -1,5 +1,6 @@
 ---
 import { BlogGallery } from '@components/BlogGallery';
+import { PaginationHeader } from '@components/PaginationHeader';
 import { CTA } from '@partials/CTA';
 import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
@@ -9,11 +10,7 @@ import type {
   MarkdownInstance,
   Page,
 } from 'astro-boilerplate-components';
-import {
-  NewerOlderPagination,
-  PaginationHeader,
-  Section,
-} from 'astro-boilerplate-components';
+import { NewerOlderPagination, Section } from 'astro-boilerplate-components';
 
 type GetStaticPaths = {
   paginate: any;
