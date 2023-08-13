@@ -11,13 +11,13 @@ type NavbarProps = {
 
 const Navbar = (props: NavbarProps) => (
   <NavbarContext.Provider value={props.path}>
-    <nav className="navbar sticky top-0 z-10 mx-auto flex max-w-screen-lg flex-col gap-y-3 bg-slate-200 px-3 py-6 shadow  dark:bg-slate-800 sm:flex-row sm:items-center sm:justify-between">
+    <nav className="navbar sticky top-0 z-10 mx-auto flex max-w-screen-lg flex-col gap-y-3 bg-base-200 px-3 py-6 shadow sm:flex-row sm:items-center sm:justify-between">
       <div className="flex">
         <a href="/" className="flex-none">
           <Logo />
         </a>
       </div>
-      <ul className="flex items-center gap-x-3 font-medium text-gray-800 dark:text-gray-200">
+      <ul className="flex items-center gap-x-3 font-medium">
         <NavMenuItem href="/posts/">Blogs</NavMenuItem>
         <NavMenuItem href="/projects/">Projects</NavMenuItem>
         <NavMenuItem href="/cv/">Resume</NavMenuItem>

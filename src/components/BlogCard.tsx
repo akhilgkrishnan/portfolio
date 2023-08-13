@@ -16,7 +16,7 @@ const BlogCard = (props: IBlogCardProps) => (
     href={props.instance.frontmatter.url}
     target="_blank"
   >
-    <div className="overflow-hidden rounded-md bg-slate-200 dark:bg-slate-800">
+    <div className="overflow-hidden rounded-md bg-base-100">
       <div className="aspect-h-2 aspect-w-3">
         <img
           className="h-full w-full object-cover object-center"
@@ -31,7 +31,7 @@ const BlogCard = (props: IBlogCardProps) => (
           {props.instance.frontmatter.title}
         </h2>
 
-        <div className="mt-1 text-xs text-gray-800 dark:text-gray-200">
+        <div className="mt-1 text-xs">
           {format(new Date(props.instance.frontmatter.pubDate), 'LLL d, yyyy')}
         </div>
 

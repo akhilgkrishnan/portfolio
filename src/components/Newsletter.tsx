@@ -7,7 +7,7 @@ const Newsletter = () => (
         Subscribe to my <GradientText>Newsletters</GradientText>
       </div>
 
-      <p className="mt-3 text-gray-950 dark:text-gray-300">
+      <p className="mt-3">
         Stay ahead of the curve in web development, technology trends, and
         industry news. Don't miss the opportunity to expand your knowledge and
         stay informed. Sign up now and be part of my growing community!
@@ -18,14 +18,14 @@ const Newsletter = () => (
       <form
         name="subscribe"
         method="POST"
-        className="flex rounded-full bg-slate-300 px-4 py-2 ring-cyan-600 focus-within:ring-2 focus-within:ring-cyan-600 hover:ring-2 dark:bg-slate-600"
+        className="flex rounded-full bg-base-300 px-4 py-2 ring-cyan-600 focus-within:ring-2 focus-within:ring-cyan-600 hover:ring-2"
         data-netlify="true"
       >
         <input
           type="email"
           name="email"
           placeholder="Enter your email"
-          className="w-full appearance-none bg-slate-300 focus:outline-none dark:bg-slate-600"
+          className="w-full appearance-none bg-base-300 focus:outline-none"
         />
 
         <button

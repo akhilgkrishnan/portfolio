@@ -8,21 +8,23 @@ const ProjectCard = (props: Project) => {
   return (
     <div
       key={props.link}
-      className="flex flex-col items-center gap-x-8 rounded-md bg-slate-200 p-3 transition ease-in-out hover:scale-[102%] hover:shadow-xl dark:bg-slate-800 md:flex-row"
+      className="flex flex-col items-center gap-x-8 rounded-md bg-base-100 p-3 transition ease-in-out hover:scale-[102%] hover:shadow-xl md:flex-row"
     >
       <div className="relative shrink-0">
         <a href={props.link}>
-          <img
-            className="h-36 w-36 hover:translate-y-1"
-            src={props.imgSrc}
-            alt={props.imgAlt}
-            loading="lazy"
-          />
-          {props.openSource && (
-            <div className="absolute left-0 top-0 -translate-y-3/4 rotate-0 rounded bg-green-500 px-2 py-1 text-white">
-              Open Source
-            </div>
-          )}
+          <div className="indicator">
+            {props.openSource && (
+              <span className="indicator-center badge indicator-item badge-primary indicator-top">
+                Open Source
+              </span>
+            )}
+            <img
+              className="h-36 w-36 hover:translate-y-1"
+              src={props.imgSrc}
+              alt={props.imgAlt}
+              loading="lazy"
+            />
+          </div>
         </a>
       </div>
 
@@ -43,9 +45,7 @@ const ProjectCard = (props: Project) => {
           </div>
         </div>
 
-        <p className="mt-3 text-gray-800 dark:text-gray-400">
-          {props.description}
-        </p>
+        <p className="mt-3">{props.description}</p>
       </div>
     </div>
   );
