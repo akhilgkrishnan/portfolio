@@ -21,9 +21,6 @@ const Navbar = (props: NavbarProps) => (
         <NavMenuItem href="/posts/">Blogs</NavMenuItem>
         <NavMenuItem href="/projects/">Projects</NavMenuItem>
         <NavMenuItem href="/cv/">Resume</NavMenuItem>
-        <NavMenuItem href="https://github.com/akhilgkrishnan">
-          GitHub
-        </NavMenuItem>
         <NavMenuItem href="mailto:akhilgkrishnan4us@gmail.com">
           Contact
         </NavMenuItem>
