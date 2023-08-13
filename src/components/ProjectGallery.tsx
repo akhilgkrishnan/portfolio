@@ -9,19 +9,25 @@ type IRecentProjectProps = {
 
 const ProjectGallery = (props: IRecentProjectProps) => (
   <div className="flex flex-col gap-6">
-    {props.projectList.map((elt) => (
-      <ProjectCard
-        key={elt.frontmatter.link}
-        title={elt.frontmatter.title}
-        description={elt.frontmatter.description}
-        link={elt.frontmatter.link}
-        imgSrc={elt.frontmatter.imgSrc}
-        imgAlt={elt.frontmatter.imgAlt}
-        startDate={elt.frontmatter.startDate}
-        openSource={elt.frontmatter.openSource}
-        category={elt.frontmatter.category}
-      />
-    ))}
+    {props.projectList.map((project, index) => {
+      return (
+        <>
+          <ProjectCard
+            title={project.frontmatter.title}
+            description={project.frontmatter.description}
+            link={project.frontmatter.link}
+            imgSrc={project.frontmatter.imgSrc}
+            imgAlt={project.frontmatter.imgAlt}
+            startDate={project.frontmatter.startDate}
+            openSource={project.frontmatter.openSource}
+            category={project.frontmatter.category}
+          />
+          {index !== props.projectList.length - 1 && (
+            <div className="divider my-0"></div>
+          )}
+        </>
+      );
+    })}
   </div>
 );
 

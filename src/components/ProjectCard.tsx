@@ -8,7 +8,7 @@ const ProjectCard = (props: Project) => {
   return (
     <div
       key={props.link}
-      className="flex flex-col items-center gap-x-8 rounded-md bg-slate-200 p-3 dark:bg-slate-800 md:flex-row"
+      className="flex flex-col items-center gap-x-8 rounded-md bg-slate-200 p-3 transition ease-in-out hover:scale-[102%] hover:shadow-xl dark:bg-slate-800 md:flex-row"
     >
       <div className="relative shrink-0">
         <a href={props.link}>
