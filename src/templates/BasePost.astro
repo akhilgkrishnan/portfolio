@@ -18,7 +18,9 @@ const ogImage = `https://graphigen.vercel.app/api/og?author=Akhil%20G%20Krishnan
   content.title
 }&description=${
   content.description
-}&image=${'https://blog.saeloun.com/images/og_logo.png'}&date={content.date}&type=blog`;
+}&image=${'https://blog.saeloun.com/images/og_logo.png'}&date=${
+  content.pubDate
+}&type=blog`;
 ---
 
 <Base head={{ title, description: content.description, ogImage }}>
