@@ -14,9 +14,14 @@ export interface Props {
 
 const { content } = Astro.props as Props;
 const title = `${content.title} - ${AppConfig.site_name}`;
+const ogImage = `https://graphigen.vercel.app/api/dynamic-image?author=Akhil%20G%20Krishnan&title=${
+  content.title
+}&description=${
+  content.description
+}&image=${'https://blog.saeloun.com/images/og_logo.png'}&date={content.date}&type=blog`;
 ---
 
-<Base head={{ title, description: content.description }}>
+<Base head={{ title, description: content.description, ogImage }}>
   <BlogPost frontmatter={content}>
     <slot />
   </BlogPost>

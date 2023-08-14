@@ -10,11 +10,12 @@ export interface Props {
   head: {
     title: string;
     description: string;
+    ogImage?: string;
   };
 }
 
 const {
-  head: { title, description },
+  head: { title, description, ogImage },
 } = Astro.props as Props;
 ---
 
@@ -28,8 +29,7 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={AppConfig.site_url} />
-    <meta property="og:image" content={`${AppConfig.site_url}/profile-pic.png`}
-    />
+    <meta property="og:image" content={`${ogImage || AppConfig.og_image}`} />
     <meta property="og:image:alt" content={AppConfig.title} />
 
     <title>{title}</title>
