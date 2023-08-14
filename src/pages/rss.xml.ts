@@ -1,7 +1,7 @@
-import rss from '@astrojs/rss';
+import rss, {pagesGlobToRssItems} from '@astrojs/rss';
 import { AppConfig } from '@utils/AppConfig';
 
-export const get = () =>
+export asyncconst get = async () =>
   rss({
     // `<title>` field in output xml
     title: AppConfig.title,
@@ -13,7 +13,9 @@ export const get = () =>
     // list of `<item>`s in output xml
     // simple example: generate items for every md file in /src/pages
     // see "Generating items" section for required frontmatter and advanced use cases
-    items: import.meta.glob('./posts/*.md'),
+    items: await pagesGlobToRssItems(
+      import.meta.glob('./posts/*.md')
+    ),
     // (optional) inject custom xml
     customData: `<language>en-us</language>`,
   });
