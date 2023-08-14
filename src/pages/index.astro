@@ -28,11 +28,10 @@ const myProjects = sortedProjects
   .filter((project) => !project.frontmatter.openSource)
   .slice(0, 3);
 
-const { title } = AppConfig;
-const { description } = AppConfig;
+const { title, description, og_image } = AppConfig;
 ---
 
-<Base head={{ title, description }}>
+<Base head={{ title, description, ogImage: og_image }}>
   <Hero />
   <RecentProjects projectList={myProjects} />
   <RecentOssProjects projectList={openSourceProjects} />

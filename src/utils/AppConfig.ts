@@ -10,4 +10,5 @@ export const AppConfig = {
   locale_region: 'en-us',
   locale: 'en',
   og_image: 'https://akhilgkrishnan.me/profile-pic.png',
+  twitter_handle: '@MrAkhilG',
 };

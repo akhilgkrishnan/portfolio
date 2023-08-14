@@ -23,7 +23,9 @@ const ogImage = `https://graphigen.vercel.app/api/og?author=Akhil%20G%20Krishnan
 }&type=blog.png`;
 ---
 
-<Base head={{ title, description: content.description, ogImage }}>
+<Base
+  head={{ title, description: content.description, ogImage, ogType: 'article' }}
+>
   <BlogPost frontmatter={content}>
     <slot />
   </BlogPost>
