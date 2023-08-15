@@ -57,20 +57,32 @@ const Hero = () => (
         <>
           <a href="https://twitter.com/mrakhilg">
             <HeroSocial
-              src="/assets/images/twitter-icon.png"
+              src="/assets/images/social/twitter-icon.png"
               alt="Twitter icon"
             />
           </a>
           <a href="https://facebook.com/akhilmnr">
             <HeroSocial
-              src="/assets/images/facebook-icon.png"
+              src="/assets/images/social/facebook-icon.png"
               alt="Facebook icon"
             />
           </a>
           <a href="https://linkedin.com/in/akhilgkrishnan">
             <HeroSocial
-              src="/assets/images/linkedin-icon.png"
+              src="/assets/images/social/linkedin-icon.png"
               alt="Linkedin icon"
+            />
+          </a>
+          <a href="https://instagram.com/akhilgkrishnan">
+            <HeroSocial
+              src="/assets/images/social/instagram-logo.png"
+              alt="Instagram icon"
+            />
+          </a>
+          <a href="https://github.com/akhilgkrishna">
+            <HeroSocial
+              src="/assets/images/social/github-logo.png"
+              alt="Github icon"
             />
           </a>
         </>
