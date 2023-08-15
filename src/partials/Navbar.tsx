@@ -35,15 +35,15 @@ const Navbar = (props: NavbarProps) => (
             className="menu dropdown-content rounded-box menu-sm z-[1] mt-3 w-52 bg-base-100 p-2 shadow"
           >
             <li className="p-1">
-              <NavMenuItem href="/posts/">Blogs</NavMenuItem>
+              <NavMenuItem href="/posts">Blogs</NavMenuItem>
             </li>
 
             <li className="p-1">
-              <NavMenuItem href="/projects/">Projects</NavMenuItem>
+              <NavMenuItem href="/projects">Projects</NavMenuItem>
             </li>
 
             <li className="p-1">
-              <NavMenuItem href="/cv/">Resume</NavMenuItem>
+              <NavMenuItem href="/cv">Resume</NavMenuItem>
             </li>
 
             <li className="p-1">

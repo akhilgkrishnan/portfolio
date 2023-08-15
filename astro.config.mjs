@@ -7,9 +7,8 @@ import { astroImageTools } from 'astro-imagetools';
 
 // https://astro.build/config
 export default defineConfig({
-
   site: 'https://akhilgkrishnan.me', // Use to generate your sitemap and canonical URLs in your final build.
-  trailingSlash: 'always', // Use to always append '/' at end of url
+  trailingSlash: 'ignore',
   markdown: {
     shikiConfig: {
       // Choose from Shiki's built-in themes (or add your own)

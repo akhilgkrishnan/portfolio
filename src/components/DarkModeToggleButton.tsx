@@ -15,9 +15,9 @@ const DarkModeToggleButton = () => {
           className="inline-block h-5 w-5 stroke-current md:h-6 md:w-6"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
           ></path>
         </svg>
@@ -37,7 +37,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline outline-2 outline-offset-2 outline-base-content"
             data-set-theme="light"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="light"
@@ -59,7 +59,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="dark"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="dark"
@@ -81,7 +81,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="cupcake"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="cupcake"
@@ -103,7 +103,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="bumblebee"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="bumblebee"
@@ -125,7 +125,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="emerald"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="emerald"
@@ -147,7 +147,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="corporate"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="corporate"
@@ -169,7 +169,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="synthwave"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="synthwave"
@@ -191,7 +191,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="retro"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="retro"
@@ -213,7 +213,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="cyberpunk"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="cyberpunk"
@@ -235,7 +235,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="valentine"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="valentine"
@@ -257,7 +257,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="halloween"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="halloween"
@@ -279,7 +279,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="garden"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="garden"
@@ -301,7 +301,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="forest"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="forest"
@@ -323,7 +323,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="aqua"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="aqua"
@@ -345,7 +345,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="lofi"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="lofi"
@@ -367,7 +367,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="pastel"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="pastel"
@@ -389,7 +389,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="fantasy"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="fantasy"
@@ -411,7 +411,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="wireframe"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="wireframe"
@@ -433,7 +433,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="black"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="black"
@@ -455,7 +455,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="luxury"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="luxury"
@@ -477,7 +477,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="dracula"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="dracula"
@@ -499,7 +499,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="cmyk"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="cmyk"
@@ -521,7 +521,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="autumn"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="autumn"
@@ -543,7 +543,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="business"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="business"
@@ -565,7 +565,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="acid"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="acid"
@@ -587,7 +587,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="lemonade"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="lemonade"
@@ -609,7 +609,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="night"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="night"
@@ -631,7 +631,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="coffee"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="coffee"
@@ -653,7 +653,7 @@ const DarkModeToggleButton = () => {
           <div
             className="overflow-hidden rounded-lg outline-2 outline-offset-2 outline-base-content"
             data-set-theme="winter"
-            data-act-className="outline"
+            data-act-classname="outline"
           >
             <div
               data-theme="winter"
