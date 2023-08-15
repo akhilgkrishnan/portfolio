@@ -1,33 +1,24 @@
 import { ProjectCard } from '@components/ProjectCard';
-import type { MarkdownInstance } from 'astro';
+import type { CollectionEntry } from 'astro:content';
 
-import type { Project } from '../types/project';
+interface ProjectGalleryProps {
+  projectList: CollectionEntry<'project'>[];
+}
 
-type IRecentProjectProps = {
-  projectList: MarkdownInstance<Project>[];
-};
-
-const ProjectGallery = (props: IRecentProjectProps) => (
+const ProjectGallery = (props: ProjectGalleryProps) => (
   <div className="flex flex-col gap-6">
-    {props.projectList.map((project, index) => {
-      return (
-        <>
-          <ProjectCard
-            title={project.frontmatter.title}
-            description={project.frontmatter.description}
-            link={project.frontmatter.link}
-            imgSrc={project.frontmatter.imgSrc}
-            imgAlt={project.frontmatter.imgAlt}
-            startDate={project.frontmatter.startDate}
-            openSource={project.frontmatter.openSource}
-            category={project.frontmatter.category}
-          />
-          {index !== props.projectList.length - 1 && (
-            <div className="divider my-0"></div>
-          )}
-        </>
-      );
-    })}
+    {props.projectList.map(
+      (project: CollectionEntry<'project'>, index: number) => {
+        return (
+          <>
+            <ProjectCard project={project} />
+            {index !== props.projectList.length - 1 && (
+              <div className="divider my-0"></div>
+            )}
+          </>
+        );
+      }
+    )}
   </div>
 );
 

@@ -1,11 +1,9 @@
 import { ProjectGallery } from '@components/ProjectGallery';
-import type { MarkdownInstance } from 'astro';
+import type { CollectionEntry } from 'astro:content';
 import { GradientText, Section } from 'astro-boilerplate-components';
 
-import type { Project as IProject } from '../types/project';
-
 type IRecentProjectProps = {
-  projectList: MarkdownInstance<IProject>[];
+  projectList: CollectionEntry<'project'>[];
 };
 
 const RecentProjects = (props: IRecentProjectProps) => {

@@ -1,19 +1,14 @@
 import { BlogCard } from '@components/BlogCard';
-import type { MarkdownInstance } from 'astro';
-import type { IFrontmatter } from 'astro-boilerplate-components';
-
-interface BlogPostProps extends IFrontmatter {
-  url: string;
-}
+import type { CollectionEntry } from 'astro:content';
 
 type IRecentPostsProps = {
-  postList: MarkdownInstance<BlogPostProps>[];
+  postList: CollectionEntry<'post'>[];
 };
 
 const BlogGallery = (props: IRecentPostsProps) => (
   <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
     {props.postList.map((elt) => (
-      <BlogCard key={elt.url} instance={elt} />
+      <BlogCard key={elt.data.url} blog={elt} />
     ))}
   </div>
 );

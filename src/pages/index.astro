@@ -8,24 +8,18 @@ import { RecentProjects } from '@partials/RecentProjects';
 import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
 import { sortPostByDate, sortProjectsByDate } from '@utils/Posts';
-import type { IFrontmatter } from 'astro-boilerplate-components';
+import { getCollection } from 'astro:content';
 
-import type { Project } from '../types/project';
-
-interface BlogPostFrontmatter extends IFrontmatter {
-  url: string;
-}
-
-const allPosts = await Astro.glob<BlogPostFrontmatter>('./posts/*.md');
+const allPosts = await getCollection('post');
 const sortedPosts = sortPostByDate(allPosts);
 const lastThreePosts = sortedPosts.slice(0, 3);
-const allProjects = await Astro.glob<Project>('./projects/*.md');
+const allProjects = await getCollection('project');
 const sortedProjects = sortProjectsByDate(allProjects);
 const openSourceProjects = sortedProjects
-  .filter((project) => project.frontmatter.openSource)
+  .filter((project) => project.data.openSource)
   .slice(0, 4);
 const myProjects = sortedProjects
-  .filter((project) => !project.frontmatter.openSource)
+  .filter((project) => !project.data.openSource)
   .slice(0, 3);
 
 const { title, description, og_image } = AppConfig;
