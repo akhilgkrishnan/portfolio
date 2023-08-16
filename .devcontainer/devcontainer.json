@@ -1,0 +1,32 @@
+{
+  "name": "Akhil G Krishnan's Portfolio",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "hostRequirements": {
+    "cpus": 2
+  },
+  "portsAttributes": {
+    "3000": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    }
+  },
+
+  "forwardPorts": [3000],
+
+  "postCreateCommand": "yarn install",
+
+  "waitFor": "postCreateCommand",
+
+  "postAttachCommand": {
+    "Server": "yarn dev"
+  },
+
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["src/pages/index.astro"]
+    },
+    "vscode": {
+      "extensions": ["astro-build.astro-vscode", "esbenp.prettier-vscode"]
+    }
+  }
+}
