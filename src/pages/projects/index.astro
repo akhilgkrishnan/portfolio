@@ -5,28 +5,12 @@ import { CTA } from '@partials/CTA';
 import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
 import { sortProjectsByDate } from '@utils/Posts';
-import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
-import type { Page } from 'astro-boilerplate-components';
 import { Section } from 'astro-boilerplate-components';
 
-type GetStaticPaths = {
-  paginate: any;
-}; // Overrides `GetStaticPathsOptions` types from Astro
+const allProjects = await getCollection('project');
+const sortedProjects = sortProjectsByDate(allProjects);
 
-export async function getStaticPaths({ paginate }: GetStaticPaths) {
-  const allProjects = await getCollection('project');
-  const sortedProjects = sortProjectsByDate(allProjects);
-
-  // Return a paginated collection of paths for all posts
-  return paginate(sortedProjects, { pageSize: 8 });
-}
-
-interface Props {
-  page: Page<CollectionEntry<'project'>>;
-}
-
-const { page } = Astro.props as Props;
 const titleSuffix = ` - ${AppConfig.site_name}`;
 const titleBase = `Projects`;
 const title = titleBase + titleSuffix;
@@ -51,7 +35,7 @@ const description =
     </div>
   </Section>
   <Section>
-    <ProjectGallery projectList={page.data} />
+    <ProjectGallery projectList={sortedProjects} />
   </Section>
 
   <CTA />
