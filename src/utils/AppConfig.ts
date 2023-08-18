@@ -1,11 +1,11 @@
 export const AppConfig = {
   site_url: 'https://akhilgkrishnan.me',
-  site_name: 'Akhil G Krishnan',
-  title: 'Akhil G Krishnan | Software Developer | Open Source Contributor',
+  site_name: 'Akhil G Krishnan | Full Stack Web Developer',
+  title: 'Akhil G Krishnan',
   description:
-    "Akhil G Krishnan's personal website. He is an Indian Software Developer, Open Source Contributor, AI/ML Enthusiast",
+    'Explore the digital world through the eyes of Akhil G Krishnan, a passionate full stack web developer specializing in Rails and React. Dive into a collection of innovative projects, insightful coding techniques, and captivating open source contributions, showcasing a journey of creativity and expertise in the realm of web development.',
   keywords:
-    'Akhil, Akhil G, Akhil Krishnan, Akhil G Krishnan, Gekay Job Solutions, Malluz Media, 4Techo, sealoun, activatecare, best Web Designer in kerala, india,Web Developer, Ethical Hacker, CyberSecurity researcher, rails developer, react developers',
+    'akhil, akhil g, akhil krishnan, akhil g krishnan, portfolio, sealoun, activatecare, best web designer in kerala, india, web developer, ethical hacker, cyberSecurity researcher, rails developer, react developers, javascript',
   author: 'Akhil G Krishnan',
   locale_region: 'en-us',
   locale: 'en',
