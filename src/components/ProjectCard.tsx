@@ -23,7 +23,7 @@ const ProjectCard = (props: ProjectCardProps) => {
               </span>
             )}
             <img
-              className="h-36 w-36 hover:translate-y-1"
+              className="aspect-1 h-36 w-36 hover:translate-y-1"
               src={project.data.imgSrc}
               alt={project.data.imgAlt}
               loading="lazy"
