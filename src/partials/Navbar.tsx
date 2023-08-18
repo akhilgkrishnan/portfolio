@@ -11,7 +11,7 @@ type NavbarProps = {
 
 const Navbar = (props: NavbarProps) => (
   <NavbarContext.Provider value={props.path}>
-    <div className="navbar sticky top-0 z-10 gap-y-3 bg-base-200 px-3 py-6 shadow sm:flex-row sm:items-center sm:justify-between">
+    <div className="navbar sticky top-0 z-10 gap-y-3 bg-base-100/90 px-3 py-6 shadow sm:flex-row sm:items-center sm:justify-between">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
