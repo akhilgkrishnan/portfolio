@@ -79,11 +79,14 @@ const Hero = () => (
               alt="Instagram icon"
             />
           </a>
-          <a href="https://github.com/akhilgkrishna">
+          <a href="https://github.com/akhilgkrishnan">
             <HeroSocial
               src="/assets/images/social/github-logo.png"
               alt="Github icon"
             />
+          </a>
+          <a href="/rss.xml">
+            <HeroSocial src="/assets/images/social/rss.png" alt="RSS icon" />
           </a>
         </>
       }
