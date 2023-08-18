@@ -50,7 +50,7 @@ const Hero = () => (
           className="h-96 w-96"
           src="/assets/images/avatar.webp"
           alt="Avatar image"
-          loading="lazy"
+          loading="eager"
         />
       }
       socialButtons={
