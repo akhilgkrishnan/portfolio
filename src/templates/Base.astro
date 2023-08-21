@@ -53,6 +53,25 @@ const {
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
+
+    <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)}>
+
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXPS1JLJ55"
+    >
+
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-NXPS1JLJ55');
+    </script>
   </head>
   <body class="bg-base-100">
     <Navbar path={Astro.url.pathname} />
@@ -83,24 +102,6 @@ const {
         document.querySelector('html').setAttribute('data-theme', newTheme);
         window.localStorage.setItem('data-theme', newTheme);
       }
-    </script>
-    <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)}>
-
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXPS1JLJ55"
-    >
-
-    </script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'G-NXPS1JLJ55');
     </script>
   </body>
 </html>
