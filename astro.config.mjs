@@ -20,7 +20,27 @@ export default defineConfig({
     react(),
     tailwind({}),
     sitemap(),
-    robotsTxt(),
+    robotsTxt({
+      policy: [
+        {
+          userAgent: 'Googlebot',
+          allow: '/',
+          disallow: ['/cdn-cgi/'],
+          crawlDelay: 2,
+        },
+        {
+          userAgent: 'Bingbot',
+          allow: '/',
+          disallow: ['/cdn-cgi/'],
+          crawlDelay: 2,
+        },
+        {
+          userAgent: '*',
+          allow: '/',
+          crawlDelay: 10,
+        },
+      ],
+    }),
     astroImageTools,
   ],
 });
