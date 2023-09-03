@@ -99,6 +99,11 @@ const {
       });
 
       function updateTheme(newTheme) {
+        document
+          .querySelector(
+            "#theme-selector div[data-set-theme='" + newTheme + "']"
+          )
+          .classList.add('outline');
         document.querySelector('html').setAttribute('data-theme', newTheme);
         window.localStorage.setItem('data-theme', newTheme);
       }
