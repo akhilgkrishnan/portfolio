@@ -33,7 +33,7 @@ const Hero = () => (
               </a>
             </strong>
             , where my primary focus is on building web applications using Ruby
-            on Rails, ReactJS, and NodeJS.
+            on Rails, ReactJS, NextJS and NodeJS.
           </p>{' '}
           <p>
             My typical day revolves around coding, staying updated with new
