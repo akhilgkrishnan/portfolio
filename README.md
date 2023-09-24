@@ -19,15 +19,15 @@ This repository showcases my web development skills and my blogs. 💻✨
 Run the following command on your local environment:
 
 ```bash
-git clone --depth=1 https://github.com/akhilgkrishnan/portfolio
-cd my-project-name
-yarn install
+$ git clone --depth=1 https://github.com/akhilgkrishnan/portfolio my-project-name
+$ cd my-project-name
+$ yarn install
 ```
 
 Then, you can run locally in development mode with live reload:
 
 ```bash
-yarn dev
+$ yarn dev
 ```
 
 Open http://localhost:3000 with your favorite browser to see your project.
