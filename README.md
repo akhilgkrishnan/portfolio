@@ -11,6 +11,9 @@ This repository showcases my web development skills and my blogs. 💻✨
 - 🎉 TypeScript
 - 🎨 daisyUI
 
+<img width="484" alt="Lighthouse Score" src="https://github.com/akhilgkrishnan/portfolio/assets/22231095/aa5e9ea0-deda-4e47-a5e8-0f78efb1e6c1">
+
+
 ### Getting started
 
 Run the following command on your local environment:
