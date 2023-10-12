@@ -4,7 +4,7 @@ import '@styles/custom.css';
 import { Footer } from '@partials/Footer';
 import { Navbar } from '@partials/Navbar';
 import { AppConfig } from '@utils/AppConfig';
-import { schemaMarkup } from '@utils/schemaMarkup';
+import { personSchemaMarkup, websiteSchemaMarkup } from '@utils/schemaMarkup';
 
 export interface Props {
   head: {
@@ -54,7 +54,17 @@ const {
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
 
-    <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)}>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(personSchemaMarkup)}
+    >
+
+    </script>
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(websiteSchemaMarkup)}
+    >
 
     </script>
 
