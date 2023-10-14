@@ -41,7 +41,8 @@ const Hero = () => (
             actively contributing to open source projects. I also have a passion
             for writing technical articles, sharing my knowledge with the
             community, and mentoring aspiring developers to help them enhance
-            their skills and become better professionals.
+            their skills and become better professionals. I'm a member of Rails
+            Issues Triage team.
           </p>
         </div>
       }
