@@ -17,32 +17,11 @@ const Hero = () => (
       description={
         <div className="mt-6 text-xl leading-9">
           <p>
-            I am a Full Stack Developer with over 4+ years of experience in
-            application development.
-          </p>{' '}
-          <p>
-            Currently, I hold the position of{' '}
-            <strong>
-              Senior Software Developer at{' '}
-              <a
-                className="underline"
-                href="http://saeloun.com"
-                target="_blank"
-              >
-                Saeloun Inc.
-              </a>
-            </strong>
-            , where my primary focus is on building web applications using Ruby
-            on Rails, ReactJS, NextJS and NodeJS.
-          </p>{' '}
-          <p>
-            My typical day revolves around coding, staying updated with new
-            technologies, engaging in continuous learning through books, and
-            actively contributing to open source projects. I also have a passion
-            for writing technical articles, sharing my knowledge with the
-            community, and mentoring aspiring developers to help them enhance
-            their skills and become better professionals. I'm a member of Rails
-            Issues Triage team.
+            I'm a Senior Software Developer at <strong>Saeloun Inc</strong>.
+            with 4+ years of full-stack development experience, specializing in
+            Ruby on Rails, ReactJS, NextJS, and NodeJS. I code daily, stay
+            updated on tech write technical articles, contribute to open source,
+            and mentor developers. I'm also on the Rails Issues Triage team.
           </p>
         </div>
       }
