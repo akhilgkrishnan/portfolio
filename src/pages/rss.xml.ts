@@ -20,7 +20,7 @@ export const get = async () => {
       title: post.data.title,
       pubDate: post.data.pubDate,
       description: post.data.description,
-      link: `/posts/${post.slug}/`,
+      link: `/blogs/${post.slug}/`,
     })),
     // (optional) inject custom xml
     customData: `<language>en-us</language>`,
