@@ -35,6 +35,12 @@ export default defineConfig({
           crawlDelay: 2,
         },
         {
+          userAgent: 'AhrefsBot',
+          allow: '/',
+          disallow: ['/cdn-cgi/'],
+          crawlDelay: 2,
+        },
+        {
           userAgent: '*',
           allow: '/',
           crawlDelay: 10,
