@@ -19,7 +19,7 @@ const Footer = () => (
           </a>
           and hosted on{' '}
           <a
-            href="https://netlify.com"
+            href="https://www.netlify.com/"
             className="text-blue-400"
             target="_blank"
           >

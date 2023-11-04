@@ -3,7 +3,7 @@ export const AppConfig = {
   site_name: 'Akhil G Krishnan | Full Stack Web Developer',
   title: 'Akhil G Krishnan',
   description:
-    'Explore the digital world through the eyes of Akhil G Krishnan, a passionate full stack web developer specializing in Rails and React. Dive into a collection of innovative projects, insightful coding techniques, and captivating open source contributions, showcasing a journey of creativity and expertise in the realm of web development.',
+    "Explore Akhil G Krishnan's 4 years of full-stack development expertise, open source contributions, and passion for Ruby on Rails and React.",
   keywords:
     'akhil, akhil g, akhil krishnan, akhil g krishnan, portfolio, sealoun, activatecare, best web designer in kerala, india, web developer, ethical hacker, cyberSecurity researcher, rails developer, react developers, javascript',
   author: 'Akhil G Krishnan',
