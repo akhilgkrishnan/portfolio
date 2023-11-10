@@ -47,7 +47,7 @@ const Navbar = (props: NavbarProps) => (
             </li>
 
             <li className="p-1">
-              <NavMenuItem href="mailto:akhilgkrishnan4us@gmail.com">
+              <NavMenuItem href="mailto:hello@akhilgkrishnan.me">
                 Contact
               </NavMenuItem>
             </li>
@@ -68,7 +68,7 @@ const Navbar = (props: NavbarProps) => (
           <NavMenuItem href="/blogs/">Blogs</NavMenuItem>
           <NavMenuItem href="/projects/">Projects</NavMenuItem>
           <NavMenuItem href="/cv/">Resume</NavMenuItem>
-          <NavMenuItem href="mailto:akhilgkrishnan4us@gmail.com">
+          <NavMenuItem href="mailto:hello@akhilgkrishnan.me">
             Contact
           </NavMenuItem>
           <li>
