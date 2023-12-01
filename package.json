@@ -22,7 +22,7 @@
     "@types/react": "^18.0.21",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
-    "astro": "^3.4.3",
+    "astro": "^3.6.4",
     "astro-eslint-parser": "^0.2.2",
     "astro-imagetools": "^0.6.10",
     "astro-robots-txt": "^0.3.2",
