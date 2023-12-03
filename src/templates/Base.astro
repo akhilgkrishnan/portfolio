@@ -95,7 +95,7 @@ const {
       const theme_selectors = document.querySelectorAll(
         '#theme-selector div[data-theme]'
       );
-      const theme = window.localStorage.getItem('data-theme');
+      const theme = window.sessionStorage.getItem('data-theme');
 
       if (theme) {
         updateTheme(theme);
@@ -116,7 +116,7 @@ const {
           )
           .classList.add('outline');
         document.querySelector('html').setAttribute('data-theme', newTheme);
-        window.localStorage.setItem('data-theme', newTheme);
+        window.sessionStorage.setItem('data-theme', newTheme);
       }
     </script>
   </body>
