@@ -1,6 +1,6 @@
 export const AppConfig = {
   site_url: 'https://akhilgkrishnan.me',
-  site_name: 'Akhil G Krishnan | Full Stack Web Developer',
+  site_name: 'Akhil G Krishnan',
   title: 'Akhil G Krishnan',
   description:
     "Explore Akhil G Krishnan's 4 years of full-stack development expertise, open source contributions, and passion for Ruby on Rails and React.",
