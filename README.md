@@ -52,4 +52,4 @@ If you have any questions, collaboration opportunities, or just want to say hell
 
 ## License
 
-This project is licensed under the MIT License. Feel free to use the code for personal or commercial purposes.
+This project is licensed under the [MIT License](LICENSE). Feel free to use the code for personal or commercial purposes.
