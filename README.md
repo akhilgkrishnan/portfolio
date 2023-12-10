@@ -11,7 +11,7 @@ This repository showcases my web development skills and my blogs. 💻✨
 - 🎉 TypeScript
 - 🎨 daisyUI
 
-<img width="484" alt="Lighthouse Score" src="https://github.com/akhilgkrishnan/portfolio/assets/22231095/aa5e9ea0-deda-4e47-a5e8-0f78efb1e6c1">
+<img width="484" alt="Lighthouse Score" src="https://github.com/akhilgkrishnan/portfolio/assets/22231095/24d4e781-f151-4493-b808-716565d5d90c">
 
 
 ### Getting started
