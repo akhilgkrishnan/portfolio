@@ -91,9 +91,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/react@npm:^3.0.10":
-  version: 3.0.10
-  resolution: "@astrojs/react@npm:3.0.10"
+"@astrojs/react@npm:3.1.1":
+  version: 3.1.1
+  resolution: "@astrojs/react@npm:3.1.1"
   dependencies:
     "@vitejs/plugin-react": "npm:^4.2.0"
     ultrahtml: "npm:^1.3.0"
@@ -102,7 +102,7 @@ __metadata:
     "@types/react-dom": ^17.0.17 || ^18.0.6
     react: ^17.0.2 || ^18.0.0
     react-dom: ^17.0.2 || ^18.0.0
-  checksum: 73062d9611c573ea936ea2dacc1550739f3e47c3ac8d3a567fde1353ba965840cae83c9c8bad3d3c58c212e91164ed7bd52e1c291681fb3f7cfc9f2d484eb3b2
+  checksum: bedf8e331ccda4a79ecc290165b9387b4aaf488a95c6fc86daee7b40898ee87b179cdadd5441708752cdeaec8f85dd004db4de3afd45c97709211176ad1204d2
   languageName: node
   linkType: hard
 
@@ -116,13 +116,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/sitemap@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "@astrojs/sitemap@npm:3.1.1"
+"@astrojs/sitemap@npm:3.1.2":
+  version: 3.1.2
+  resolution: "@astrojs/sitemap@npm:3.1.2"
   dependencies:
     sitemap: "npm:^7.1.1"
     zod: "npm:^3.22.4"
-  checksum: 13bbdf65a7a831baa560d2765e63727403f493797ff9d294181c34d2bdc677a5b66926a1e66f352f3f892a4f4d2c932c1c593b2d3929cde8bc6004ec78bf841c
+  checksum: 8c68a67d8f6cd3685908ee62bc98fd25d11d8931ba2dc7cc31994a4cf1d9d05d93de7545a2f5d626aedd638ba61784f3595b709b9634efe15165e990fdbb4713
   languageName: node
   linkType: hard
 
@@ -1984,9 +1984,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "Akhil-Portfolio@workspace:."
   dependencies:
-    "@astrojs/react": "npm:^3.0.10"
+    "@astrojs/react": "npm:3.1.1"
     "@astrojs/rss": "npm:^4.0.5"
-    "@astrojs/sitemap": "npm:^3.1.1"
+    "@astrojs/sitemap": "npm:3.1.2"
     "@astrojs/tailwind": "npm:^5.1.0"
     "@commitlint/cli": "npm:^17.0.2"
     "@commitlint/config-conventional": "npm:^17.0.2"
