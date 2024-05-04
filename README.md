@@ -13,7 +13,6 @@ This repository showcases my web development skills and my blogs. 💻✨
 
 <img width="484" alt="Lighthouse Score" src="https://github.com/akhilgkrishnan/portfolio/assets/22231095/24d4e781-f151-4493-b808-716565d5d90c">
 
-
 ### Getting started
 
 Run the following command on your local environment:
@@ -21,13 +20,13 @@ Run the following command on your local environment:
 ```bash
 $ git clone --depth=1 https://github.com/akhilgkrishnan/portfolio my-project-name
 $ cd my-project-name
-$ yarn install
+$ bun install
 ```
 
 Then, you can run locally in development mode with live reload:
 
 ```bash
-$ yarn dev
+$ bun dev
 ```
 
 Open http://localhost:3000 with your favorite browser to see your project.
