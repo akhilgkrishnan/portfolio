@@ -29,5 +29,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.words": ["Akhil", "Krishnan", "Saeloun"],
-  "editor.acceptSuggestionOnEnter": "on"
+  "editor.acceptSuggestionOnEnter": "on",
+  "circleci.persistedProjectSelection": []
 }
