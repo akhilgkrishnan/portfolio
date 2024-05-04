@@ -13,12 +13,12 @@
 
   "forwardPorts": [3000],
 
-  "postCreateCommand": "yarn install",
+  "postCreateCommand": "bun install",
 
   "waitFor": "postCreateCommand",
 
   "postAttachCommand": {
-    "Server": "yarn dev"
+    "Server": "bun dev"
   },
 
   "customizations": {
