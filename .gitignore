@@ -23,3 +23,5 @@ Thumbs.db
 .history
 .astro/
 .yarn/
+# Local Netlify folder
+.netlify
