@@ -5,6 +5,7 @@ import { CTA } from '@partials/CTA';
 import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
 import { sortProjectsByDate } from '@utils/Posts';
+import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import { Section } from 'astro-boilerplate-components';
 
@@ -26,7 +27,7 @@ const url = `${AppConfig.site_url}/projects/`;
       description="Welcome to my web development projects section! Here you will find a showcase of my diverse range of web development projects, highlighting my skills and expertise as a web developer. Get inspired and let's collaborate to bring your next digital venture to life!"
     />
     <div class="flex justify-center">
-      <img
+      <Image
         src="/assets/images/studying.webp"
         alt="Project image"
         width={300}

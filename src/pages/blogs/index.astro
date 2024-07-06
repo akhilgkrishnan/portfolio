@@ -5,6 +5,7 @@ import { CTA } from '@partials/CTA';
 import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
 import { sortPostByDate } from '@utils/Posts';
+import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import { Section } from 'astro-boilerplate-components';
 
@@ -26,7 +27,7 @@ const url = `${AppConfig.site_url}/blogs/`;
       description="Explore the world of web development through my blog section. Gain valuable insights, tips, and tricks on the latest trends, technologies, and best practices in the ever-evolving realm of web development.  Let's embark on a journey together and unlock the limitless potential of the digital world."
     />
     <div class="flex justify-center">
-      <img
+      <Image
         src="/assets/images/reading.webp"
         alt="Blog"
         width={300}
