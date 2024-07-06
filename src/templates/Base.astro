@@ -12,11 +12,12 @@ export interface Props {
     description: string;
     ogImage?: string;
     ogType?: string;
+    url?: string;
   };
 }
 
 const {
-  head: { title, description, ogImage, ogType },
+  head: { title, description, ogImage, ogType, url },
 } = Astro.props as Props;
 ---
 
@@ -30,13 +31,14 @@ const {
     <meta property="og:site_name" content={AppConfig.site_name} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={AppConfig.site_url} />
+    <meta property="og:url" content={url || AppConfig.site_url} />
     <meta property="og:image" content={`${ogImage}`} />
     <meta property="og:image:alt" content={AppConfig.title} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:widgets:new-embed-design" content="on" />
     <meta name="twitter:site" content={AppConfig.twitter_handle} />
+    <meta name="twitter:url" content={url || AppConfig.site_url} />
     <meta name="twitter:creator" content={AppConfig.twitter_handle} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />

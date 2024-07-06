@@ -8,10 +8,11 @@ import { Section } from 'astro-boilerplate-components';
 const titleSuffix = ` - ${AppConfig.site_name}`;
 const title = `Resume${titleSuffix}`;
 const description =
-  'Experienced and passionate developer skilled in full-stack web development and mobile app creation. Proficient in multiple programming languages and frameworks, including Ruby on Rails, React, NextJS, and NodeJS. Adept at problem-solving and collaborating in agile teams to deliver robust and scalable solutions. Check out my portfolio to see my latest projects and accomplishments.';
+  'Experienced and passionate developer skilled in full-stack web development. Proficient in multiple programming languages and frameworks, including Ruby on Rails, React, NextJS, and NodeJS.';
+const url = `${AppConfig.site_url}/cv/`;
 ---
 
-<Base head={{ title, description }}>
+<Base head={{ title, description, url }}>
   <Section>
     <div class="mb-5">
       <div class="w-full text-3xl font-bold">Profile</div>

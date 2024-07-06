@@ -15,10 +15,11 @@ const titleSuffix = ` - ${AppConfig.site_name}`;
 const titleBase = `Projects`;
 const title = titleBase + titleSuffix;
 const description =
-  'Explore a collection of insightful articles and resources in our web development blog. Stay updated with the latest trends, technologies, and best practices in web development. Gain valuable knowledge, tips, and tricks to enhance your skills and create stunning websites. Join our community and unlock the potential of the digital world.';
+  'Explore the portfolio of a passionate Rails and React developer. Discover innovative open source projects, code samples, and contributions to the developer community.';
+const url = `${AppConfig.site_url}/projects/`;
 ---
 
-<Base head={{ title, description }}>
+<Base head={{ title, description, url }}>
   <Section>
     <PaginationHeader
       title="Showcasing Web Development Mastery"
