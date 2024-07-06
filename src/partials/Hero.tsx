@@ -21,7 +21,8 @@ const Hero = () => (
             with 4+ years of full-stack development experience, specializing in
             Ruby on Rails, ReactJS, NextJS, and NodeJS. I code daily, stay
             updated on tech write technical articles, contribute to open source,
-            and mentor developers. I'm also on the Rails Issues Triage team.
+            and mentor developers. Additionally, I am part of the Rails Issues
+            Triage team and also undertake freelance work.
           </p>
         </div>
       }
