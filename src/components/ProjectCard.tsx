@@ -18,12 +18,12 @@ const ProjectCard = (props: ProjectCardProps) => {
         <a href={project.data.link}>
           <div className="indicator">
             {project.data.openSource && (
-              <span className="indicator-center badge indicator-item badge-primary indicator-top">
+              <span className="badge indicator-item badge-primary indicator-center indicator-top">
                 Open Source
               </span>
             )}
             <img
-              className="aspect-1 h-36 w-36 hover:translate-y-1"
+              className="aspect-1 size-36 hover:translate-y-1"
               src={project.data.imgSrc}
               alt={project.data.imgAlt}
               loading="lazy"

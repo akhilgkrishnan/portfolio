@@ -12,7 +12,7 @@ const BlogCard = (props: BlogCardProps) => {
       <div className="overflow-hidden rounded-md bg-base-100">
         <div className="aspect-h-2 aspect-w-3">
           <img
-            className="h-full w-full object-cover object-center"
+            className="size-full object-cover object-center"
             src={blog.data.imgSrc}
             alt={blog.data.imgAlt}
             loading="lazy"

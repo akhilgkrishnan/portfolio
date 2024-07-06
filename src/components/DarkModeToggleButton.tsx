@@ -12,7 +12,7 @@ const DarkModeToggleButton = () => {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          className="inline-block h-5 w-5 stroke-current md:h-6 md:w-6"
+          className="inline-block size-5 stroke-current md:size-6"
         >
           <path
             strokeLinecap="round"
@@ -25,7 +25,7 @@ const DarkModeToggleButton = () => {
         <svg
           width="12px"
           height="12px"
-          className="ml-1 hidden h-3 w-3 fill-current opacity-60 sm:inline-block"
+          className="ml-1 hidden size-3 fill-current opacity-60 sm:inline-block"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 2048 2048"
         >

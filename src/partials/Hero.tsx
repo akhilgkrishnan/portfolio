@@ -27,7 +27,7 @@ const Hero = () => (
       }
       avatar={
         <img
-          className="h-96 w-96"
+          className="size-96"
           src="/assets/images/avatar.webp"
           alt="Avatar image"
           loading="eager"
