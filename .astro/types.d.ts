@@ -131,93 +131,107 @@ declare module 'astro:content' {
   slug: "create-typescript-next-js-tailwind-application";
   body: string;
   collection: "post";
-  data: InferEntrySchema<"post">
+  data: any
 } & { render(): Render[".md"] };
 "rails-7-css-app-generator.md": {
 	id: "rails-7-css-app-generator.md";
   slug: "rails-7-css-app-generator";
   body: string;
   collection: "post";
-  data: InferEntrySchema<"post">
+  data: any
 } & { render(): Render[".md"] };
 "rails-7-replaced-byebug-with-debug.md": {
 	id: "rails-7-replaced-byebug-with-debug.md";
   slug: "rails-7-replaced-byebug-with-debug";
   body: string;
   collection: "post";
-  data: InferEntrySchema<"post">
+  data: any
 } & { render(): Render[".md"] };
 "rails-7.1-lines-by-range-filtering.md": {
 	id: "rails-7.1-lines-by-range-filtering.md";
   slug: "rails-71-lines-by-range-filtering";
   body: string;
   collection: "post";
-  data: InferEntrySchema<"post">
+  data: any
 } & { render(): Render[".md"] };
 "ruby-3.1-hash-literals.md": {
 	id: "ruby-3.1-hash-literals.md";
   slug: "ruby-31-hash-literals";
   body: string;
   collection: "post";
-  data: InferEntrySchema<"post">
+  data: any
 } & { render(): Render[".md"] };
 };
 "project": {
+"activatecare.md": {
+	id: "activatecare.md";
+  slug: "activatecare";
+  body: string;
+  collection: "project";
+  data: any
+} & { render(): Render[".md"] };
 "censorlabel.md": {
 	id: "censorlabel.md";
   slug: "censorlabel";
   body: string;
   collection: "project";
-  data: InferEntrySchema<"project">
+  data: any
 } & { render(): Render[".md"] };
 "chatwoot.md": {
 	id: "chatwoot.md";
   slug: "chatwoot";
   body: string;
   collection: "project";
-  data: InferEntrySchema<"project">
+  data: any
 } & { render(): Render[".md"] };
 "gekay-real-estate.md": {
 	id: "gekay-real-estate.md";
   slug: "gekay-real-estate";
   body: string;
   collection: "project";
-  data: InferEntrySchema<"project">
+  data: any
 } & { render(): Render[".md"] };
 "miru.md": {
 	id: "miru.md";
   slug: "miru";
   body: string;
   collection: "project";
-  data: InferEntrySchema<"project">
+  data: any
 } & { render(): Render[".md"] };
 "rails.md": {
 	id: "rails.md";
   slug: "rails";
   body: string;
   collection: "project";
-  data: InferEntrySchema<"project">
+  data: any
+} & { render(): Render[".md"] };
+"sapaad.md": {
+	id: "sapaad.md";
+  slug: "sapaad";
+  body: string;
+  collection: "project";
+  data: any
 } & { render(): Render[".md"] };
 "shortly.md": {
 	id: "shortly.md";
   slug: "shortly";
   body: string;
   collection: "project";
-  data: InferEntrySchema<"project">
+  data: any
 } & { render(): Render[".md"] };
 "tooljet.md": {
 	id: "tooljet.md";
   slug: "tooljet";
   body: string;
   collection: "project";
-  data: InferEntrySchema<"project">
+  data: any
 } & { render(): Render[".md"] };
 "univcontact.md": {
 	id: "univcontact.md";
   slug: "univcontact";
   body: string;
   collection: "project";
-  data: InferEntrySchema<"project">
+  data: any
 } & { render(): Render[".md"] };
 };
 
@@ -229,5 +243,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("../src/content/config.js");
+	export type ContentConfig = never;
 }

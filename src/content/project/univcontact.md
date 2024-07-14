@@ -5,6 +5,6 @@ link: 'https://github.com/akhilgkrishnan/UnivContact'
 imgSrc: '/assets/images/projects/project_02.jpg'
 startDate: 2019-07-10T00:00:00Z
 imgAlt: 'Univcontact Dashboard'
-openSource: false
+openSource: true
 category: Ruby on Rails, PostgreSQL, Bootstrap
 ---

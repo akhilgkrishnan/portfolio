@@ -5,6 +5,6 @@ link: 'https://github.com/akhilgkrishnan/shortly'
 startDate: 2021-07-10T00:00:00Z
 imgSrc: '/assets/images/projects/shortly.png'
 imgAlt: 'Shortly dashboard'
-openSource: false
+openSource: true
 category: Ruby on Rails, React, PostgreSQL, Tailwind
 ---

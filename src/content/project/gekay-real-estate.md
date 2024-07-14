@@ -5,6 +5,6 @@ link: 'https://github.com/akhilgkrishnan/GekayRealEstate'
 startDate: 2019-01-07T00:00:00Z
 imgSrc: '/assets/images/projects/project_01.jpg'
 imgAlt: 'GekayRealEstate Dashboard'
-openSource: false
+openSource: true
 category: Python, Django, PostgreSQL, Bootstrap
 ---

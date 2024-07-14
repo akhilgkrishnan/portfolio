@@ -5,6 +5,6 @@ link: 'https://github.com/akhilgkrishnan/censorlabel'
 startDate: 2020-03-02T00:00:00Z
 imgSrc: '/assets/images/projects/project_04.png'
 imgAlt: 'Censorlabel app dashboard'
-openSource: false
+openSource: true
 category: Python, OpenCV, YoloV3, TkInter, Bootstrap
 ---
