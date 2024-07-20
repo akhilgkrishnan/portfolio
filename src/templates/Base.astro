@@ -50,14 +50,17 @@ const {
     <meta name="author" content={AppConfig.author} />
     <meta name="keywords" content={AppConfig.keywords} />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <link rel="canonical" href={url || AppConfig.site_url} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/src/assets/images/favicon.png"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
 
     <script
+      is:inline
       type="application/ld+json"
       set:html={JSON.stringify(personSchemaMarkup)}
     >
@@ -65,6 +68,7 @@ const {
     </script>
 
     <script
+      is:inline
       type="application/ld+json"
       set:html={JSON.stringify(websiteSchemaMarkup)}
     >
@@ -72,7 +76,10 @@ const {
     </script>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXPS1JLJ55"
+    <script
+      is:inline
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NXPS1JLJ55"
     >
 
     </script>
