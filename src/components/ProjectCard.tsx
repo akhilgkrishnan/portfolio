@@ -26,7 +26,7 @@ const ProjectCard = (props: ProjectCardProps) => {
               className="aspect-1 size-36 hover:translate-y-1"
               src={project.data.imgSrc}
               alt={project.data.imgAlt}
-              loading="lazy"
+              loading="eager"
             />
           </div>
         </a>

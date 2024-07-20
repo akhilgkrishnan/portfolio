@@ -15,7 +15,7 @@ const BlogCard = (props: BlogCardProps) => {
             className="size-full object-cover object-center"
             src={blog.data.imgSrc}
             alt={blog.data.imgAlt}
-            loading="lazy"
+            loading="eager"
           />
         </div>
 
