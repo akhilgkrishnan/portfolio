@@ -29,7 +29,7 @@ const Hero = () => (
       avatar={
         <img
           className="size-96"
-          src="/src/assets/images/avatar.webp"
+          src="/assets/images/avatar.webp"
           alt="Avatar image"
           loading="eager"
         />
@@ -38,39 +38,36 @@ const Hero = () => (
         <>
           <a href="https://twitter.com/mrakhilg">
             <HeroSocial
-              src="/src/assets/images/social/twitter-icon.png"
+              src="/assets/images/social/twitter-icon.png"
               alt="Twitter icon"
             />
           </a>
           <a href="https://facebook.com/akhilmnr">
             <HeroSocial
-              src="/src/assets/images/social/facebook-icon.png"
+              src="/assets/images/social/facebook-icon.png"
               alt="Facebook icon"
             />
           </a>
           <a href="https://linkedin.com/in/akhilgkrishnan">
             <HeroSocial
-              src="/src/assets/images/social/linkedin-icon.png"
+              src="/assets/images/social/linkedin-icon.png"
               alt="Linkedin icon"
             />
           </a>
           <a href="https://instagram.com/akhilgkrishnan">
             <HeroSocial
-              src="/src/assets/images/social/instagram-logo.png"
+              src="/assets/images/social/instagram-logo.png"
               alt="Instagram icon"
             />
           </a>
           <a href="https://github.com/akhilgkrishnan">
             <HeroSocial
-              src="/src/assets/images/social/github-logo.png"
+              src="/assets/images/social/github-logo.png"
               alt="Github icon"
             />
           </a>
           <a href="/rss.xml">
-            <HeroSocial
-              src="/src/assets/images/social/rss.png"
-              alt="RSS icon"
-            />
+            <HeroSocial src="/assets/images/social/rss.png" alt="RSS icon" />
           </a>
         </>
       }
