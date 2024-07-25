@@ -7,4 +7,5 @@ imgSrc: '/assets/images/projects/project_04.png'
 imgAlt: 'Censorlabel app dashboard'
 openSource: true
 category: Python, OpenCV, YoloV3, TkInter, Bootstrap
+runningOrder: 5
 ---

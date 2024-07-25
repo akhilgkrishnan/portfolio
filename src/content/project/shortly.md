@@ -7,4 +7,5 @@ imgSrc: '/assets/images/projects/shortly.png'
 imgAlt: 'Shortly dashboard'
 openSource: true
 category: Ruby on Rails, React, PostgreSQL, Tailwind
+runningOrder: 7
 ---

@@ -7,4 +7,5 @@ startDate: 2021-09-24T00:00:00Z
 imgAlt: 'Project Maps'
 openSource: true
 category: Ruby on Rails, VueJS, Typescript, PostgreSQL
+runningOrder: 3
 ---

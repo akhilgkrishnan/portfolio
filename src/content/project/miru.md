@@ -7,4 +7,5 @@ startDate: 2021-12-06T00:00:00Z
 imgAlt: 'Miru Logo'
 openSource: true
 category: Ruby on Rails, React, Typescript, PostgreSQL, ElasticSearch
+runningOrder: 2
 ---

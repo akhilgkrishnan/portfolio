@@ -7,4 +7,5 @@ imgSrc: '/assets/images/projects/project_01.jpg'
 imgAlt: 'GekayRealEstate Dashboard'
 openSource: true
 category: Python, Django, PostgreSQL, Bootstrap
+runningOrder: 8
 ---

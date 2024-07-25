@@ -13,3 +13,7 @@ export const sortProjectsByDate = (projects: CollectionEntry<'project'>[]) => {
       new Date(a.data.startDate).valueOf()
   );
 };
+
+export const sortByRunningOrder = (items: any) => {
+  return items.sort((a, b) => a.data.runningOrder - b.data.runningOrder);
+};

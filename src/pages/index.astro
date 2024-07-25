@@ -7,20 +7,23 @@ import { RecentPosts } from '@partials/RecentPosts';
 import { RecentProjects } from '@partials/RecentProjects';
 import Base from '@templates/Base.astro';
 import { AppConfig } from '@utils/AppConfig';
-import { sortPostByDate, sortProjectsByDate } from '@utils/Posts';
+import {
+  sortByRunningOrder,
+  sortPostByDate,
+  sortProjectsByDate,
+} from '@utils/Posts';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('post');
 const sortedPosts = sortPostByDate(allPosts);
 const lastThreePosts = sortedPosts.slice(0, 3);
 const allProjects = await getCollection('project');
-const sortedProjects = sortProjectsByDate(allProjects);
-const openSourceProjects = sortedProjects
-  .filter((project) => project.data.openSource)
-  .slice(0, 4);
-const myProjects = sortedProjects
-  .filter((project) => !project.data.openSource)
-  .slice(0, 3);
+const openSourceProjects = sortByRunningOrder(
+  allProjects.filter((project) => project.data.openSource)
+).slice(0, 4);
+const myProjects = sortProjectsByDate(
+  allProjects.filter((project) => !project.data.openSource)
+).slice(0, 3);
 
 const { title, description, ogImage } = AppConfig;
 ---

@@ -7,4 +7,5 @@ startDate: 2019-07-10T00:00:00Z
 imgAlt: 'Univcontact Dashboard'
 openSource: true
 category: Ruby on Rails, PostgreSQL, Bootstrap
+runningOrder: 6
 ---

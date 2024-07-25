@@ -19,6 +19,7 @@ export const projectSchema = z.object({
   imgAlt: z.string(),
   openSource: z.boolean(),
   category: z.string(),
+  runningOrder: z.number(),
 });
 
 export type BlogFrontMatter = z.infer<typeof postSchema>;
