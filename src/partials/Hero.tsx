@@ -23,7 +23,7 @@ const Hero = () => (
                 Saeloun Inc
               </a>
             </strong>
-            . with 4+ years of full-stack development experience, specializing
+            . with 5+ years of full-stack development experience, specializing
             in Ruby on Rails, ReactJS, NextJS, and NodeJS. I code daily, stay
             updated on tech write technical articles, contribute to open source,
             and mentor developers. Additionally, I am part of the{' '}
