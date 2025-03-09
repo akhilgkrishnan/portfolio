@@ -7,5 +7,5 @@ imgSrc: '/assets/images/projects/act.png'
 imgAlt: 'Activate Care Logo'
 openSource: false
 category: Rails, React, NodeJS, Postgres, Kubernetes, AWS, Elasticsearch, Redis, Sidekiq
-runningOrder: 1
+runningOrder: 2
 ---

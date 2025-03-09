@@ -7,5 +7,5 @@ imgSrc: '/assets/images/projects/sapaad.png'
 imgAlt: 'Sapaad Website'
 openSource: false
 category: Rails, React, Postgres, Redis, Sidekiq, Kafka
-runningOrder: 2
+runningOrder: 3
 ---
