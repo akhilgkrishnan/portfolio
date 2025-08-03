@@ -1,11 +1,11 @@
 export const AppConfig = {
   site_url: 'https://akhilgkrishnan.me',
   site_name: 'Akhil G Krishnan',
-  title: 'Akhil G Krishnan - Full Stack Web Developer',
+  title: 'Akhil G Krishnan - Senior Full Stack Developer | Ruby on Rails & React Expert',
   description:
-    "Explore Akhil G Krishnan's 4 years of full-stack development expertise, open source contributions, and passion for Ruby on Rails and React.",
+    "Senior Full Stack Developer with 5+ years expertise in Ruby on Rails, React.js, and open source contributions. Building scalable web applications and contributing to the developer community.",
   keywords:
-    'akhil, akhil g, akhil krishnan, akhil g krishnan, portfolio, sealoun, activatecare, india, web developer, ethical hacker, cyber security researcher, rails developer, react developers, javascript, akhil g krishnan official website',
+    'Akhil G Krishnan, Senior Software Developer, Full Stack Developer, Ruby on Rails Developer, React Developer, JavaScript, TypeScript, Open Source Contributor, Web Development, Software Engineer, Saeloun, India, Portfolio, Rails Expert, React.js, Node.js, PostgreSQL, Docker, AWS, Git, Agile Development',
   author: 'Akhil G Krishnan',
   locale_region: 'en-us',
   locale: 'en',

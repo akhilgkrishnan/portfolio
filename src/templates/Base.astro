@@ -27,6 +27,7 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="msvalidate.01" content="A3AA1AEE6C57EE63539E74E67696D204" />
     <meta name="yandex-verification" content="80c2ec5bdd10aed3" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta property="og:type" content={ogType || 'website'} />
     <meta property="og:site_name" content={AppConfig.site_name} />
     <meta property="og:title" content={title} />
@@ -49,10 +50,12 @@ const {
     <meta name="description" content={description} />
     <meta name="author" content={AppConfig.author} />
     <meta name="keywords" content={AppConfig.keywords} />
-    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Akhil G Krishnan Blog RSS Feed" />
     <link rel="canonical" href={url || AppConfig.site_url} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"

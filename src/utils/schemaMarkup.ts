@@ -23,21 +23,45 @@ export const personSchemaMarkup = {
   worksFor: {
     '@type': 'Organization',
     name: 'Saeloun Technologies Pvt. Ltd.',
+    url: 'https://www.saeloun.com',
   },
   alumniOf: {
     '@type': 'EducationalOrganization',
     name: 'Providence College of Engineering',
   },
+  knowsAbout: [
+    'Ruby on Rails',
+    'React.js',
+    'JavaScript',
+    'TypeScript',
+    'PostgreSQL',
+    'Docker',
+    'AWS',
+    'Git',
+    'Full Stack Development',
+    'Web Development',
+    'Software Engineering',
+  ],
+  nationality: 'Indian',
+  gender: 'Male',
 };
 
 export const websiteSchemaMarkup = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  description:
-    'Software professional with over 4 years of experience in the IT industry.',
-  headline: 'Akhil G Krishnan',
+  name: 'Akhil G Krishnan - Portfolio',
+  description: AppConfig.description,
+  headline: 'Senior Full Stack Developer | Ruby on Rails & React Expert',
   image: `${AppConfig.site_url}/profile-pic.png`,
-  name: 'Akhil G Krishnan',
+  url: AppConfig.site_url,
+  author: {
+    '@type': 'Person',
+    name: 'Akhil G Krishnan',
+  },
+  publisher: {
+    '@type': 'Person',
+    name: 'Akhil G Krishnan',
+  },
   sameAs: [
     'https://facebook.com/akhilgkrishnan9800',
     'https://twitter.com/mrakhilg',
@@ -50,5 +74,4 @@ export const websiteSchemaMarkup = {
     'https://in.pinterest.com/akhilgkrishnan/',
     'https://www.threads.net/@akhilgkrishnan',
   ],
-  url: 'https://akhilgkrishnan.me/',
 };

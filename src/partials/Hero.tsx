@@ -42,7 +42,7 @@ const Hero = () => (
         <img
           className="size-96"
           src="/assets/images/avatar.webp"
-          alt="Avatar image"
+          alt="Akhil G Krishnan - Senior Full Stack Developer profile picture"
           loading="eager"
         />
       }
@@ -51,35 +51,35 @@ const Hero = () => (
           <a href="https://twitter.com/mrakhilg">
             <HeroSocial
               src="/assets/images/social/twitter-icon.png"
-              alt="Twitter icon"
+              alt="Follow Akhil G Krishnan on Twitter"
             />
           </a>
           <a href="https://facebook.com/akhilmnr">
             <HeroSocial
               src="/assets/images/social/facebook-icon.png"
-              alt="Facebook icon"
+              alt="Connect with Akhil G Krishnan on Facebook"
             />
           </a>
           <a href="https://linkedin.com/in/akhilgkrishnan">
             <HeroSocial
               src="/assets/images/social/linkedin-icon.png"
-              alt="Linkedin icon"
+              alt="View Akhil G Krishnan's LinkedIn profile"
             />
           </a>
           <a href="https://instagram.com/akhilgkrishnan">
             <HeroSocial
               src="/assets/images/social/instagram-logo.png"
-              alt="Instagram icon"
+              alt="Follow Akhil G Krishnan on Instagram"
             />
           </a>
           <a href="https://github.com/akhilgkrishnan">
             <HeroSocial
               src="/assets/images/social/github-logo.png"
-              alt="Github icon"
+              alt="View Akhil G Krishnan's GitHub repositories"
             />
           </a>
           <a href="/rss.xml">
-            <HeroSocial src="/assets/images/social/rss.png" alt="RSS icon" />
+            <HeroSocial src="/assets/images/social/rss.png" alt="Subscribe to Akhil G Krishnan's blog RSS feed" />
           </a>
         </>
       }

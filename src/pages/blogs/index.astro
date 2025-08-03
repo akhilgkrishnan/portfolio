@@ -13,10 +13,10 @@ const allPosts = await getCollection('post');
 const sortedPosts = sortPostByDate(allPosts);
 
 const titleSuffix = ` - ${AppConfig.site_name}`;
-const titleBase = `Blogs`;
+const titleBase = `Tech Blog & Tutorials`;
 const title = titleBase + titleSuffix;
 const description =
-  'Insights on Ruby on Rails, React.js, and open source development from a passionate full-stack developer. Explore tutorials, best practices, and project contributions.';
+  'Read expert insights on Ruby on Rails, React.js, TypeScript, and full-stack development. Technical tutorials, open source contributions, and web development best practices from a Senior Software Developer.';
 const url = `${AppConfig.site_url}/blogs/`;
 ---
 
@@ -29,7 +29,7 @@ const url = `${AppConfig.site_url}/blogs/`;
     <div class="flex justify-center">
       <Image
         src="/assets/images/reading.webp"
-        alt="Blog"
+        alt="Person reading technical blog articles about web development"
         width={300}
         height={300}
         loading="eager"

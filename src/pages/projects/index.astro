@@ -13,10 +13,10 @@ const allProjects = await getCollection('project');
 const sortedProjects = sortProjectsByDate(allProjects);
 
 const titleSuffix = ` - ${AppConfig.site_name}`;
-const titleBase = `Projects`;
+const titleBase = `Open Source Projects & Portfolio`;
 const title = titleBase + titleSuffix;
 const description =
-  'Explore the portfolio of a passionate Rails and React developer. Discover innovative open source projects, code samples, and contributions to the developer community.';
+  'Explore 15+ open source projects and contributions including Ruby on Rails, React.js applications. View real-world SaaS applications, developer tools, and technical implementations by a Senior Full Stack Developer.';
 const url = `${AppConfig.site_url}/projects/`;
 ---
 
@@ -29,7 +29,7 @@ const url = `${AppConfig.site_url}/projects/`;
     <div class="flex justify-center">
       <Image
         src="/assets/images/studying.webp"
-        alt="Project image"
+        alt="Developer working on open source projects and portfolio"
         width={300}
         height={300}
         loading="eager"

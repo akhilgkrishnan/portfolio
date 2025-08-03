@@ -6,16 +6,16 @@ import { AppConfig } from '@utils/AppConfig';
 import { Section } from 'astro-boilerplate-components';
 
 const titleSuffix = ` - ${AppConfig.site_name}`;
-const title = `Resume${titleSuffix}`;
+const title = `Resume & CV | Senior Software Developer${titleSuffix}`;
 const description =
-  'Experienced and passionate developer skilled in full-stack web development. Proficient in multiple programming languages and frameworks, including Ruby on Rails, React, NextJS, and NodeJS.';
+  'Senior Software Developer with 5+ years experience at Saeloun Inc. Expert in Ruby on Rails, React.js, TypeScript, PostgreSQL, Docker, AWS. Rails Core contributor, open source maintainer, IEEE published researcher.';
 const url = `${AppConfig.site_url}/cv/`;
 ---
 
 <Base head={{ title, description, url }}>
   <Section>
     <div class="mb-5">
-      <div class="w-full text-3xl font-bold">Profile</div>
+      <h2 class="w-full text-3xl font-bold">Profile</h2>
     </div>
 
     <div class="mb-10 text-justify">
@@ -36,7 +36,7 @@ const url = `${AppConfig.site_url}/cv/`;
     </div>
 
     <div class="mb-5">
-      <div class="w-full text-3xl font-bold">Education</div>
+      <h2 class="w-full text-3xl font-bold">Education</h2>
     </div>
 
     <div class="time-line-container mb-10 grid gap-4">
@@ -59,7 +59,7 @@ const url = `${AppConfig.site_url}/cv/`;
     </div>
 
     <div class="mb-5">
-      <div class="w-full text-3xl font-bold">Experience</div>
+      <h2 class="w-full text-3xl font-bold">Experience</h2>
     </div>
 
     <div class="time-line-container mb-10">
@@ -109,7 +109,7 @@ const url = `${AppConfig.site_url}/cv/`;
     </div>
 
     <div class="mb-5">
-      <div class="w-full text-3xl font-bold">Achievements</div>
+      <h2 class="w-full text-3xl font-bold">Achievements</h2>
     </div>
 
     <ul class="mx-6 mb-10 grid list-disc gap-2">
@@ -134,7 +134,7 @@ const url = `${AppConfig.site_url}/cv/`;
     </ul>
 
     <div class="mb-5">
-      <div class="w-full text-3xl font-bold">Publications</div>
+      <h2 class="w-full text-3xl font-bold">Publications</h2>
     </div>
 
     <ul class="mx-6 mb-10 grid list-disc gap-2">
@@ -165,7 +165,7 @@ const url = `${AppConfig.site_url}/cv/`;
     </ul>
 
     <div class="mb-5">
-      <div class="w-full text-3xl font-bold">Skills</div>
+      <h2 class="w-full text-3xl font-bold">Skills</h2>
     </div>
 
     <ul class="mx-6 list-disc columns-2 md:columns-5">
