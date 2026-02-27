@@ -1,22 +1,191 @@
+/* JetBrains Mono Font Import */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+/* Terminal Window Styles */
+.terminal-window {
+  @apply rounded-lg border border-terminal-gray-700 bg-base-200 overflow-hidden;
+}
+
+.terminal-header {
+  @apply flex items-center gap-2 px-4 py-2 bg-base-300 border-b border-terminal-gray-700;
+}
+
+.terminal-dots {
+  @apply flex gap-2;
+}
+
+.terminal-dot {
+  @apply w-3 h-3 rounded-full;
+}
+
+.terminal-dot-red {
+  @apply bg-red-500;
+}
+
+.terminal-dot-yellow {
+  @apply bg-yellow-500;
+}
+
+.terminal-dot-green {
+  @apply bg-green-500;
+}
+
+.terminal-title {
+  @apply text-sm text-terminal-gray-400 ml-2 font-mono;
+}
+
+.terminal-body {
+  @apply p-4 font-mono;
+}
+
+/* Command Line Styles */
+.prompt {
+  @apply text-terminal-emerald font-mono;
+}
+
+.prompt::before {
+  content: '$ ';
+  @apply text-terminal-green;
+}
+
+.cursor {
+  @apply inline-block w-2 h-5 bg-terminal-green ml-1 animate-cursor-blink align-middle;
+}
+
+.cursor-line {
+  @apply border-l-2 border-terminal-green animate-cursor-blink;
+}
+
+/* Terminal Tags */
+.terminal-tag {
+  @apply inline-block px-2 py-0.5 text-xs font-mono rounded border border-terminal-gray-600 text-terminal-gray-300 bg-terminal-gray-800;
+}
+
+[data-theme="terminal-light"] .terminal-tag {
+  @apply border-gray-300 text-gray-700 bg-gray-100;
+}
+
+/* Terminal Button */
+.terminal-btn {
+  @apply px-4 py-2 font-mono text-sm border border-terminal-green text-terminal-green bg-transparent rounded hover:bg-terminal-green hover:text-terminal-gray-900 transition-all duration-200;
+}
+
+[data-theme="terminal-light"] .terminal-btn {
+  @apply border-terminal-green-dark text-terminal-green-dark hover:bg-terminal-green-dark hover:text-white;
+}
+
+/* Terminal Link */
+.terminal-link {
+  @apply text-terminal-emerald hover:text-terminal-green underline underline-offset-2 transition-colors;
+}
+
+[data-theme="terminal-light"] .terminal-link {
+  @apply text-terminal-green-dark hover:text-terminal-green-light;
+}
+
+/* Glow Effects */
+.glow-green {
+  @apply text-terminal-green;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+.glow-emerald {
+  @apply text-terminal-emerald;
+  text-shadow: 0 0 5px #10b981, 0 0 10px #10b981;
+}
+
+[data-theme="terminal-light"] .glow-green,
+[data-theme="terminal-light"] .glow-emerald {
+  text-shadow: none;
+}
+
+/* Wave Animation (preserved from original) */
 .wave {
-  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;        /* Change to speed up or slow down */
-  animation-iteration-count: infinite;  /* Never stop waving :) */
-  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
   display: inline-block;
 }
 
 @keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-  100% { transform: rotate( 0.0deg) }
+  0% { transform: rotate(0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate(0.0deg) }
+  100% { transform: rotate(0.0deg) }
 }
 
+/* Timeline Styles */
 .time-line-container>div:last-child .education__time>.education__line {
   display: none;
+}
+
+/* Terminal Comment Style */
+.terminal-comment {
+  @apply text-terminal-gray-500 font-mono;
+}
+
+.terminal-comment::before {
+  content: '// ';
+}
+
+[data-theme="terminal-light"] .terminal-comment {
+  @apply text-gray-500;
+}
+
+/* Terminal Section Header */
+.terminal-section-header {
+  @apply text-terminal-green font-mono font-bold;
+}
+
+.terminal-section-header::before {
+  content: '## ';
+  @apply text-terminal-gray-500;
+}
+
+[data-theme="terminal-light"] .terminal-section-header {
+  @apply text-terminal-green-dark;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-base-300;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-terminal-gray-600 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-terminal-gray-500;
+}
+
+/* Code Block Styles */
+pre {
+  @apply font-mono bg-base-200 rounded-lg p-4 overflow-x-auto;
+}
+
+code {
+  @apply font-mono text-terminal-green;
+}
+
+[data-theme="terminal-light"] code {
+  @apply text-terminal-green-dark;
+}
+
+/* Selection Styles */
+::selection {
+  @apply bg-terminal-green text-terminal-gray-900;
+}
+
+[data-theme="terminal-light"] ::selection {
+  @apply bg-terminal-green-dark text-white;
 }

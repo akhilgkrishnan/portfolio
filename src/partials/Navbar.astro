@@ -1,0 +1,91 @@
+---
+import DarkModeToggleButton from '@components/DarkModeToggleButton.astro';
+import Logo from '@components/Logo.astro';
+import NavMenuItem from '@components/NavMenuItem.astro';
+
+interface Props {
+  path: string;
+}
+
+const { path } = Astro.props;
+---
+
+<nav class="terminal-window sticky top-0 z-10 mx-auto">
+  <div class="terminal-header">
+    <div class="terminal-dots">
+      <span class="terminal-dot terminal-dot-red"></span>
+      <span class="terminal-dot terminal-dot-yellow"></span>
+      <span class="terminal-dot terminal-dot-green"></span>
+    </div>
+    <span class="terminal-title">portfolio.sh</span>
+  </div>
+  <div class="flex flex-col gap-y-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
+    <div class="flex items-center justify-between w-full lg:w-auto">
+      <a href="/" class="flex-none">
+        <Logo />
+      </a>
+
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-btn"
+        class="btn btn-ghost text-terminal-green lg:hidden"
+        aria-label="Open menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="size-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h8m-8 6h16"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div
+      id="mobile-menu"
+      class="hidden w-full flex-col gap-2 border-t border-terminal-gray-700 pt-3 lg:hidden"
+    >
+      <NavMenuItem href="/blogs/" currentPath={path}>Blogs</NavMenuItem>
+      <NavMenuItem href="/projects/" currentPath={path}>Projects</NavMenuItem>
+      <NavMenuItem href="/cv/" currentPath={path}>Resume</NavMenuItem>
+      <NavMenuItem href="mailto:hello@akhilgkrishnan.me" currentPath={path}>Contact</NavMenuItem>
+      <div class="pt-2">
+        <DarkModeToggleButton />
+      </div>
+    </div>
+
+    <!-- Desktop menu -->
+    <div class="hidden lg:flex">
+      <ul class="flex items-center gap-x-6 font-mono">
+        <li><NavMenuItem href="/blogs/" currentPath={path}>Blogs</NavMenuItem></li>
+        <li><NavMenuItem href="/projects/" currentPath={path}>Projects</NavMenuItem></li>
+        <li><NavMenuItem href="/cv/" currentPath={path}>Resume</NavMenuItem></li>
+        <li><NavMenuItem href="mailto:hello@akhilgkrishnan.me" currentPath={path}>Contact</NavMenuItem></li>
+        <li>
+          <DarkModeToggleButton />
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+  }
+</script>

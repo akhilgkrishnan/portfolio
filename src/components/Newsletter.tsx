@@ -1,40 +1,53 @@
-import { GradientText } from 'astro-boilerplate-components';
-
 const Newsletter = () => (
-  <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-    <div className="sm:w-7/12">
-      <div className="text-3xl font-bold">
-        Subscribe to my <GradientText>Newsletters</GradientText>
+  <div className="terminal-window">
+    <div className="terminal-header">
+      <div className="terminal-dots">
+        <span className="terminal-dot terminal-dot-red"></span>
+        <span className="terminal-dot terminal-dot-yellow"></span>
+        <span className="terminal-dot terminal-dot-green"></span>
       </div>
-
-      <p className="mt-3">
-        Stay ahead of the curve in web development, technology trends, and
-        industry news. Don't miss the opportunity to expand your knowledge and
-        stay informed. Sign up now and be part of my growing community!
-      </p>
+      <span className="terminal-title">subscribe.sh</span>
     </div>
+    <div className="p-6">
+      <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
+        <div className="sm:w-7/12">
+          <div className="text-2xl font-bold font-mono">
+            <span className="text-terminal-gray-500">## </span>
+            <span className="text-terminal-green">Subscribe</span>
+            <span className="text-terminal-gray-300"> to Newsletters</span>
+          </div>
 
-    <div className="w-full sm:w-5/12">
-      <form
-        name="subscribe"
-        method="POST"
-        className="flex rounded-full bg-base-300 px-4 py-2 ring-cyan-600 focus-within:ring-2 focus-within:ring-cyan-600 hover:ring-2"
-        data-netlify="true"
-      >
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter your email"
-          className="w-full appearance-none bg-base-300 focus:outline-none"
-        />
+          <p className="mt-3 text-terminal-gray-400">
+            <span className="text-terminal-gray-600">{'// '}</span>
+            Stay ahead of the curve in web development, technology trends, and
+            industry news. Sign up now and be part of my growing community!
+          </p>
+        </div>
 
-        <button
-          className="ml-2 shrink-0 rounded-full bg-gradient-to-br from-sky-500 to-cyan-400 px-3 py-1 text-sm font-medium hover:from-sky-700 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/50"
-          type="submit"
-        >
-          Subscribe
-        </button>
-      </form>
+        <div className="w-full sm:w-5/12">
+          <form
+            name="subscribe"
+            method="POST"
+            className="flex items-center rounded border border-terminal-gray-700 bg-base-300 px-3 py-2 ring-terminal-green focus-within:ring-1 hover:border-terminal-green transition-colors"
+            data-netlify="true"
+          >
+            <span className="text-terminal-green font-mono">$</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="enter@email.com"
+              className="ml-2 w-full appearance-none bg-transparent font-mono text-terminal-gray-300 placeholder-terminal-gray-600 focus:outline-none"
+            />
+
+            <button
+              className="terminal-btn ml-2 shrink-0 whitespace-nowrap"
+              type="submit"
+            >
+              ./submit
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 );

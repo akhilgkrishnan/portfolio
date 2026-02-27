@@ -1,6 +1,6 @@
 import { ProjectGallery } from '@components/ProjectGallery';
 import type { CollectionEntry } from 'astro:content';
-import { GradientText, Section } from 'astro-boilerplate-components';
+import { Section } from 'astro-boilerplate-components';
 
 type IRecentProjectProps = {
   projectList: CollectionEntry<'project'>[];
@@ -11,13 +11,19 @@ const RecentProjects = (props: IRecentProjectProps) => {
     <Section
       title={
         <div className="flex items-baseline justify-between">
-          <div>
-            Recent <GradientText>Projects</GradientText>
+          <div className="font-mono">
+            <span className="text-terminal-gray-500">## </span>
+            <span className="text-terminal-green">Recent</span>
+            <span className="text-terminal-gray-300"> Projects</span>
           </div>
 
-          <div className="text-sm">
-            <a href="/projects/">View all Projects →</a>
-          </div>
+          <a
+            href="/projects/"
+            className="text-sm font-mono text-terminal-emerald hover:text-terminal-green transition-colors"
+          >
+            <span className="text-terminal-gray-500">$ </span>
+            ls -la ./projects/
+          </a>
         </div>
       }
     >
