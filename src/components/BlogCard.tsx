@@ -7,10 +7,21 @@ interface BlogCardProps {
 
 const BlogCard = (props: BlogCardProps) => {
   const { blog } = props;
+  const dateStr = format(new Date(blog.data.pubDate), 'yyyy-MM-dd');
+
   return (
-    <a className="hover:translate-y-1" href={blog.data.url} target="_blank">
-      <div className="overflow-hidden rounded-md bg-base-100">
-        <div className="aspect-h-2 aspect-w-3">
+    <a className="block transition-transform hover:-translate-y-1" href={blog.data.url} target="_blank">
+      <div className="terminal-window h-full transition-all duration-200 hover:shadow-terminal-emerald">
+        <div className="terminal-header">
+          <div className="terminal-dots">
+            <span className="terminal-dot terminal-dot-red"></span>
+            <span className="terminal-dot terminal-dot-yellow"></span>
+            <span className="terminal-dot terminal-dot-green"></span>
+          </div>
+          <span className="terminal-title">{dateStr}.md</span>
+        </div>
+
+        <div className="aspect-h-2 aspect-w-3 overflow-hidden">
           <img
             className="size-full object-cover object-center"
             src={blog.data.imgSrc}
@@ -19,14 +30,24 @@ const BlogCard = (props: BlogCardProps) => {
           />
         </div>
 
-        <div className="px-3 pb-6 pt-4 text-center">
-          <h2 className="text-xl font-semibold">{blog.data.title}</h2>
+        <div className="p-4">
+          {/* Title with # prefix */}
+          <h2 className="text-lg font-semibold">
+            <span className="text-terminal-gray-500"># </span>
+            <span className="text-terminal-green">{blog.data.title}</span>
+          </h2>
 
-          <div className="mt-1 text-xs">
-            {format(new Date(blog.data.pubDate), 'LLL d, yyyy')}
+          {/* Date as metadata */}
+          <div className="mt-1 text-xs text-terminal-gray-500">
+            <span>published: </span>
+            <span className="text-terminal-emerald">{format(new Date(blog.data.pubDate), 'LLL d, yyyy')}</span>
           </div>
 
-          <div className="mt-2 text-sm">{blog.data.description}</div>
+          {/* Description as comment */}
+          <div className="mt-3 text-sm text-terminal-gray-400">
+            <span className="text-terminal-gray-600">{'// '}</span>
+            {blog.data.description}
+          </div>
         </div>
       </div>
     </a>

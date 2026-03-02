@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ff00"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- Terminal window -->
+  <rect x="60" y="60" width="1080" height="510" rx="12" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+
+  <!-- Terminal header -->
+  <rect x="60" y="60" width="1080" height="40" rx="12" fill="#21262d"/>
+  <rect x="60" y="88" width="1080" height="12" fill="#21262d"/>
+
+  <!-- Terminal dots -->
+  <circle cx="90" cy="80" r="8" fill="#ff5f56"/>
+  <circle cx="115" cy="80" r="8" fill="#ffbd2e"/>
+  <circle cx="140" cy="80" r="8" fill="#27ca40"/>
+
+  <!-- Terminal title -->
+  <text x="600" y="85" font-family="Monaco, Consolas, monospace" font-size="14" fill="#8b949e" text-anchor="middle">
+    portfolio.sh — akhil@dev: ~
+  </text>
+
+  <!-- Command line 1 -->
+  <text x="90" y="150" font-family="Monaco, Consolas, monospace" font-size="18" fill="#8b949e">
+    <tspan fill="#00ff00">$</tspan> whoami
+  </text>
+
+  <!-- Name -->
+  <text x="90" y="220" font-family="Monaco, Consolas, monospace" font-size="56" font-weight="bold" fill="url(#greenGrad)" filter="url(#glow)">
+    Akhil G Krishnan
+  </text>
+
+  <!-- Title -->
+  <text x="90" y="280" font-family="Monaco, Consolas, monospace" font-size="24" fill="#8b949e">
+    <tspan fill="#00ff00">></tspan> Senior Software Developer
+  </text>
+
+  <!-- Skills line -->
+  <text x="90" y="340" font-family="Monaco, Consolas, monospace" font-size="18" fill="#8b949e">
+    <tspan fill="#00ff00">$</tspan> cat skills.txt
+  </text>
+
+  <!-- Skills -->
+  <text x="90" y="380" font-family="Monaco, Consolas, monospace" font-size="20" fill="#c9d1d9">
+    <tspan fill="#10b981">[</tspan>Ruby on Rails<tspan fill="#10b981">]</tspan>
+    <tspan fill="#10b981">[</tspan>React<tspan fill="#10b981">]</tspan>
+    <tspan fill="#10b981">[</tspan>TypeScript<tspan fill="#10b981">]</tspan>
+    <tspan fill="#10b981">[</tspan>Node.js<tspan fill="#10b981">]</tspan>
+    <tspan fill="#10b981">[</tspan>PostgreSQL<tspan fill="#10b981">]</tspan>
+  </text>
+
+  <!-- Command line 2 -->
+  <text x="90" y="440" font-family="Monaco, Consolas, monospace" font-size="18" fill="#8b949e">
+    <tspan fill="#00ff00">$</tspan> echo $ROLE
+  </text>
+
+  <!-- Role output -->
+  <text x="90" y="480" font-family="Monaco, Consolas, monospace" font-size="20" fill="#c9d1d9">
+    Rails Issues Triage Team • Open Source Contributor • Tech Writer
+  </text>
+
+  <!-- Cursor line -->
+  <text x="90" y="530" font-family="Monaco, Consolas, monospace" font-size="18" fill="#8b949e">
+    <tspan fill="#00ff00">$</tspan>
+  </text>
+  <rect x="110" y="515" width="12" height="20" fill="#00ff00" opacity="0.9"/>
+
+  <!-- URL badge -->
+  <rect x="940" y="530" width="180" height="30" rx="4" fill="#21262d" stroke="#30363d"/>
+  <text x="1030" y="550" font-family="Monaco, Consolas, monospace" font-size="14" fill="#10b981" text-anchor="middle">
+    akhilgkrishnan.me
+  </text>
+</svg>

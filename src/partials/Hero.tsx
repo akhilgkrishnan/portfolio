@@ -1,89 +1,135 @@
 import HeroSocial from '@components/HeroSocial';
-import {
-  GradientText,
-  HeroAvatar,
-  Section,
-} from 'astro-boilerplate-components';
+import { TerminalWindow } from '@components/TerminalWindow';
+import { Section } from 'astro-boilerplate-components';
 
 const Hero = () => (
   <Section>
-    <HeroAvatar
-      title={
-        <>
-          Hi there, I'm <GradientText>Akhil G Krishnan</GradientText>{' '}
-          <span className="wave">👋</span>
-        </>
-      }
-      description={
-        <div className="mt-6 text-xl leading-9">
-          <p>
-            I'm a Senior Software Developer at{' '}
-            <strong>
-              <a href="https://www.saeloun.com" target="_blank">
-                Saeloun Inc
-              </a>
-            </strong>
-            . with 5+ years of full-stack development experience, specializing
-            in Ruby on Rails, ReactJS, NextJS, and NodeJS. I code daily, stay
-            updated on tech write technical articles, contribute to open source,
-            and mentor developers. Additionally, I am part of the{' '}
-            <a
-              className="text-blue-600"
-              href="https://arc.net/l/quote/istxqczd"
-              target="_blank"
-            >
-              Rails Issues Triage
-            </a>{' '}
-            team and also undertake freelance work.
-          </p>
+    <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
+      {/* Avatar */}
+      <div className="shrink-0">
+        <div className="terminal-window p-2">
+          <img
+            className="size-64 md:size-80"
+            src="/assets/images/avatar.webp"
+            alt="Akhil G Krishnan - Senior Full Stack Developer profile picture"
+            loading="eager"
+          />
         </div>
-      }
-      avatar={
-        <img
-          className="size-96"
-          src="/assets/images/avatar.webp"
-          alt="Akhil G Krishnan - Senior Full Stack Developer profile picture"
-          loading="eager"
-        />
-      }
-      socialButtons={
-        <>
-          <a href="https://twitter.com/mrakhilg">
-            <HeroSocial
-              src="/assets/images/social/twitter-icon.png"
-              alt="Follow Akhil G Krishnan on Twitter"
-            />
-          </a>
-          <a href="https://facebook.com/akhilmnr">
-            <HeroSocial
-              src="/assets/images/social/facebook-icon.png"
-              alt="Connect with Akhil G Krishnan on Facebook"
-            />
-          </a>
-          <a href="https://linkedin.com/in/akhilgkrishnan">
-            <HeroSocial
-              src="/assets/images/social/linkedin-icon.png"
-              alt="View Akhil G Krishnan's LinkedIn profile"
-            />
-          </a>
-          <a href="https://instagram.com/akhilgkrishnan">
-            <HeroSocial
-              src="/assets/images/social/instagram-logo.png"
-              alt="Follow Akhil G Krishnan on Instagram"
-            />
-          </a>
-          <a href="https://github.com/akhilgkrishnan">
-            <HeroSocial
-              src="/assets/images/social/github-logo.png"
-              alt="View Akhil G Krishnan's GitHub repositories"
-            />
-          </a>
-          <a href="/rss.xml">
-            <HeroSocial src="/assets/images/social/rss.png" alt="Subscribe to Akhil G Krishnan's blog RSS feed" />
-          </a>
-        </>
-      }
-    />
+      </div>
+
+      {/* Terminal Bio */}
+      <div className="flex-1">
+        <TerminalWindow title="whoami">
+          <div className="space-y-4">
+            {/* Name with cursor */}
+            <div className="flex items-center">
+              <span className="text-terminal-green">$</span>
+              <span className="ml-2 text-terminal-gray-300">whoami</span>
+            </div>
+            <h1 className="text-2xl font-bold">
+              <span className="text-terminal-green">Akhil G Krishnan</span>
+              <span className="wave ml-2">👋</span>
+            </h1>
+
+            {/* Bio as command output */}
+            <div className="space-y-2">
+              <div className="flex items-center">
+                <span className="text-terminal-green">$</span>
+                <span className="ml-2 text-terminal-gray-300">cat ./about.txt</span>
+              </div>
+              <div className="text-terminal-gray-400 leading-relaxed">
+                <p>
+                  <span className="text-terminal-emerald">Senior Software Developer</span> at{' '}
+                  <a
+                    href="https://www.saeloun.com"
+                    target="_blank"
+                    className="terminal-link"
+                  >
+                    Saeloun Inc
+                  </a>
+                </p>
+                <p className="mt-2">
+                  <span className="text-terminal-gray-500">{'// '}</span>
+                  5+ years of full-stack development experience
+                </p>
+                <p>
+                  <span className="text-terminal-gray-500">{'// '}</span>
+                  Specializing in Ruby on Rails, ReactJS, NextJS, NodeJS
+                </p>
+                <p>
+                  <span className="text-terminal-gray-500">{'// '}</span>
+                  Part of the{' '}
+                  <a
+                    className="terminal-link"
+                    href="https://arc.net/l/quote/istxqczd"
+                    target="_blank"
+                  >
+                    Rails Issues Triage
+                  </a>{' '}
+                  team
+                </p>
+                <p>
+                  <span className="text-terminal-gray-500">{'// '}</span>
+                  Open source contributor & technical writer
+                </p>
+              </div>
+            </div>
+
+            {/* Social links as ls output */}
+            <div className="space-y-2 pt-4">
+              <div className="flex items-center">
+                <span className="text-terminal-green">$</span>
+                <span className="ml-2 text-terminal-gray-300">ls -la ./social/</span>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <a href="https://twitter.com/mrakhilg" className="terminal-link text-sm">
+                  <HeroSocial
+                    src="/assets/images/social/twitter-icon.png"
+                    alt="Follow Akhil G Krishnan on Twitter"
+                    name="twitter"
+                  />
+                </a>
+                <a href="https://facebook.com/akhilmnr" className="terminal-link text-sm">
+                  <HeroSocial
+                    src="/assets/images/social/facebook-icon.png"
+                    alt="Connect with Akhil G Krishnan on Facebook"
+                    name="facebook"
+                  />
+                </a>
+                <a href="https://linkedin.com/in/akhilgkrishnan" className="terminal-link text-sm">
+                  <HeroSocial
+                    src="/assets/images/social/linkedin-icon.png"
+                    alt="View Akhil G Krishnan's LinkedIn profile"
+                    name="linkedin"
+                  />
+                </a>
+                <a href="https://instagram.com/akhilgkrishnan" className="terminal-link text-sm">
+                  <HeroSocial
+                    src="/assets/images/social/instagram-logo.png"
+                    alt="Follow Akhil G Krishnan on Instagram"
+                    name="instagram"
+                  />
+                </a>
+                <a href="https://github.com/akhilgkrishnan" className="terminal-link text-sm">
+                  <HeroSocial
+                    src="/assets/images/social/github-logo.png"
+                    alt="View Akhil G Krishnan's GitHub repositories"
+                    name="github"
+                  />
+                </a>
+                <a href="/rss.xml" className="terminal-link text-sm">
+                  <HeroSocial
+                    src="/assets/images/social/rss.png"
+                    alt="Subscribe to Akhil G Krishnan's blog RSS feed"
+                    name="rss"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </TerminalWindow>
+      </div>
+    </div>
   </Section>
 );
 

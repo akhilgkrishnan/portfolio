@@ -1,8 +1,8 @@
 ---
 import '@styles/custom.css';
 
-import { Footer } from '@partials/Footer';
-import { Navbar } from '@partials/Navbar';
+import Footer from '@partials/Footer.astro';
+import Navbar from '@partials/Navbar.astro';
 import { AppConfig } from '@utils/AppConfig';
 import { personSchemaMarkup, websiteSchemaMarkup } from '@utils/schemaMarkup';
 
@@ -21,7 +21,7 @@ const {
 } = Astro.props as Props;
 ---
 
-<html lang="en" data-theme="lofi">
+<html lang="en" data-theme="terminal-dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,7 +53,14 @@ const {
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Akhil G Krishnan Blog RSS Feed" />
     <link rel="canonical" href={url || AppConfig.site_url} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="apple-touch-icon" href="/assets/images/favicon.svg" />
+
+    <!-- JetBrains Mono Font Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" />
+
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
     <link
@@ -65,16 +72,20 @@ const {
       is:inline
       type="application/ld+json"
       set:html={JSON.stringify(websiteSchemaMarkup)}
-    >
-
-    </script>
+    />
 
     <script
       is:inline
       type="application/ld+json"
       set:html={JSON.stringify(personSchemaMarkup)}
-    >
+    />
 
+    <!-- Theme initialization (runs before page renders to prevent flash) -->
+    <script is:inline>
+      (function() {
+        const savedTheme = sessionStorage.getItem('data-theme') || 'terminal-dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      })();
     </script>
 
     <!-- Google tag (gtag.js) -->
@@ -82,53 +93,62 @@ const {
       is:inline
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-NXPS1JLJ55"
-    >
-
-    </script>
-    <script>
+    />
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag('js', new Date());
-
       gtag('config', 'G-NXPS1JLJ55');
     </script>
   </head>
-  <body class="bg-base-100">
+  <body class="bg-base-100 font-mono text-base-content">
     <Navbar path={Astro.url.pathname} />
 
     <slot />
 
     <Footer />
 
-    <script>
-      const theme_selectors = document.querySelectorAll(
-        '#theme-selector div[data-theme]'
-      );
-      const theme = window.sessionStorage.getItem('data-theme');
+    <!-- Theme toggle script -->
+    <script is:inline>
+      function updateAllToggleIcons(theme) {
+        var sunIcons = document.querySelectorAll('[data-sun-icon]');
+        var moonIcons = document.querySelectorAll('[data-moon-icon]');
 
-      if (theme) {
-        updateTheme(theme);
-      } else {
-        updateTheme('lofi');
+        sunIcons.forEach(function(icon) {
+          if (theme === 'terminal-dark') {
+            icon.classList.remove('hidden');
+          } else {
+            icon.classList.add('hidden');
+          }
+        });
+
+        moonIcons.forEach(function(icon) {
+          if (theme === 'terminal-dark') {
+            icon.classList.add('hidden');
+          } else {
+            icon.classList.remove('hidden');
+          }
+        });
       }
 
-      theme_selectors.forEach((selector) => {
-        selector.addEventListener('click', () => {
-          updateTheme(selector.getAttribute('data-theme'));
+      // Set initial icons
+      var currentTheme = document.documentElement.getAttribute('data-theme') || 'terminal-dark';
+      updateAllToggleIcons(currentTheme);
+
+      // Add click handlers to all theme toggle buttons
+      var toggleButtons = document.querySelectorAll('[data-theme-toggle]');
+      toggleButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var current = document.documentElement.getAttribute('data-theme');
+          var newTheme = current === 'terminal-dark' ? 'terminal-light' : 'terminal-dark';
+
+          document.documentElement.setAttribute('data-theme', newTheme);
+          sessionStorage.setItem('data-theme', newTheme);
+          updateAllToggleIcons(newTheme);
         });
       });
-
-      function updateTheme(newTheme) {
-        document
-          .querySelector(
-            "#theme-selector div[data-set-theme='" + newTheme + "']"
-          )
-          .classList.add('outline');
-        document.querySelector('html').setAttribute('data-theme', newTheme);
-        window.sessionStorage.setItem('data-theme', newTheme);
-      }
     </script>
   </body>
 </html>

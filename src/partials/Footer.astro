@@ -1,0 +1,38 @@
+---
+import { AppConfig } from '@utils/AppConfig';
+import { Section } from 'astro-boilerplate-components';
+---
+
+<Section>
+  <div class="border-t border-terminal-gray-700 pt-6">
+    <div class="text-center font-mono text-sm text-terminal-gray-500">
+      <div class="text-terminal-gray-600">{'/*'}</div>
+      <div class="my-2">
+        <span class="text-terminal-gray-500">@copyright </span>
+        <span class="text-terminal-emerald">{new Date().getFullYear()}</span>
+        <span class="text-terminal-gray-500"> {AppConfig.author}</span>
+      </div>
+      <div class="my-2">
+        <span class="text-terminal-gray-500">@built-with </span>
+        <a
+          href="https://astro.build"
+          class="terminal-link"
+          target="_blank"
+        >
+          AstroJS
+        </a>
+      </div>
+      <div class="my-2">
+        <span class="text-terminal-gray-500">@hosted-on </span>
+        <a
+          href="https://www.netlify.com/"
+          class="terminal-link"
+          target="_blank"
+        >
+          Netlify
+        </a>
+      </div>
+      <div class="text-terminal-gray-600">{'*/'}</div>
+    </div>
+  </div>
+</Section>

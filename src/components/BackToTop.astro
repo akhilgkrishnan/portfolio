@@ -4,22 +4,11 @@
   aria-label="back to top button"
   data-mdb-ripple="true"
   data-mdb-ripple-color="light"
-  class="focus:ring- fixed bottom-5 right-5 inline-block rounded-full bg-accent p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-accent-focus hover:shadow-lg focus:outline-none"
+  class="fixed bottom-5 right-5 z-50 hidden flex-col items-center rounded border border-terminal-green bg-base-200 px-3 py-2 font-mono text-xs text-terminal-green shadow-terminal transition-all duration-200 hover:bg-terminal-green hover:text-terminal-gray-900"
   id="btn-back-to-top"
 >
-  <svg
-    aria-hidden="true"
-    focusable="false"
-    data-prefix="fas"
-    class="h-4 w-4"
-    role="img"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 448 512"
-    ><path
-      fill="currentColor"
-      d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
-    ></path>
-  </svg>
+  <span class="text-lg leading-none">^</span>
+  <span class="text-[10px]">TOP</span>
 </button>
 
 <script>
@@ -36,7 +25,7 @@
       document.body.scrollTop > 20 ||
       document.documentElement.scrollTop > 20
     ) {
-      mybutton.style.display = 'block';
+      mybutton.style.display = 'flex';
     } else {
       mybutton.style.display = 'none';
     }

@@ -1,0 +1,300 @@
+---
+import DarkModeToggleButton from '@components/DarkModeToggleButton.astro';
+import Logo from '@components/Logo.astro';
+import NavMenuItem from '@components/NavMenuItem.astro';
+
+interface Props {
+  path: string;
+}
+
+const { path } = Astro.props;
+---
+
+<nav class="terminal-window sticky top-0 z-40 mx-auto">
+  <div class="terminal-header">
+    <div class="terminal-dots">
+      <span class="terminal-dot terminal-dot-red"></span>
+      <span class="terminal-dot terminal-dot-yellow"></span>
+      <span class="terminal-dot terminal-dot-green"></span>
+    </div>
+    <span class="terminal-title">portfolio.sh</span>
+  </div>
+  <div class="flex items-center justify-between px-4 py-3">
+    <a href="/" class="flex-none">
+      <Logo />
+    </a>
+
+    <!-- Mobile menu button -->
+    <button
+      id="mobile-menu-btn"
+      class="relative z-[60] flex size-10 flex-col items-center justify-center gap-1.5 rounded border border-terminal-gray-700 bg-base-200 transition-colors hover:border-terminal-green lg:hidden"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <span id="hamburger-top" class="block h-0.5 w-5 bg-terminal-green transition-all duration-300 ease-out"></span>
+      <span id="hamburger-middle" class="block h-0.5 w-5 bg-terminal-green transition-all duration-300 ease-out"></span>
+      <span id="hamburger-bottom" class="block h-0.5 w-5 bg-terminal-green transition-all duration-300 ease-out"></span>
+    </button>
+
+    <!-- Desktop menu -->
+    <div class="hidden lg:flex">
+      <ul class="flex items-center gap-x-6 font-mono">
+        <li><NavMenuItem href="/blogs/" currentPath={path}>Blogs</NavMenuItem></li>
+        <li><NavMenuItem href="/projects/" currentPath={path}>Projects</NavMenuItem></li>
+        <li><NavMenuItem href="/cv/" currentPath={path}>Resume</NavMenuItem></li>
+        <li><NavMenuItem href="mailto:hello@akhilgkrishnan.me" currentPath={path}>Contact</NavMenuItem></li>
+        <li>
+          <DarkModeToggleButton />
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Full-screen overlay menu -->
+<div
+  id="fullscreen-menu"
+  class="fixed inset-0 z-50 flex flex-col bg-base-100 opacity-0 pointer-events-none transition-all duration-500 ease-out lg:hidden"
+  style="clip-path: circle(0% at calc(100% - 36px) 52px);"
+>
+  <!-- Terminal scanline effect -->
+  <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.1)_50%)] bg-[length:100%_4px] opacity-10"></div>
+
+  <!-- Close button -->
+  <button
+    id="close-menu-btn"
+    class="absolute top-6 right-6 z-10 flex size-10 items-center justify-center rounded border border-terminal-gray-700 bg-base-200 font-mono text-terminal-green transition-colors hover:border-terminal-green hover:bg-terminal-green hover:text-base-100"
+    aria-label="Close menu"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+
+  <!-- Terminal content -->
+  <div class="flex h-full flex-col overflow-y-auto px-6 pt-24 pb-8">
+    <!-- Boot sequence header -->
+    <div id="boot-sequence" class="mb-8 font-mono text-sm">
+      <div class="menu-line text-terminal-gray-600" style="opacity: 0; transform: translateY(10px);">
+        <span class="text-terminal-green">$</span> ./open-menu.sh
+      </div>
+      <div class="menu-line mt-2 text-terminal-gray-500" style="opacity: 0; transform: translateY(10px);">
+        Loading navigation module...
+      </div>
+      <div class="menu-line mt-1 text-terminal-emerald" style="opacity: 0; transform: translateY(10px);">
+        [OK] Menu initialized
+      </div>
+    </div>
+
+    <!-- Main navigation -->
+    <nav class="flex-1">
+      <div class="mb-4 font-mono text-xs text-terminal-gray-600">
+        <span class="text-terminal-gray-500"># </span>
+        Available routes:
+      </div>
+
+      <ul class="space-y-2">
+        <li>
+          <a
+            href="/blogs/"
+            class="menu-item group flex items-center gap-4 rounded-lg border border-transparent p-4 font-mono transition-all duration-200 hover:border-terminal-green hover:bg-terminal-green/5"
+            style="opacity: 0; transform: translateX(-20px);"
+          >
+            <span class="flex size-12 items-center justify-center rounded-lg border border-terminal-gray-700 bg-base-200 text-2xl transition-colors group-hover:border-terminal-green group-hover:text-terminal-green">
+              >_
+            </span>
+            <div>
+              <div class="text-lg text-terminal-green">/blogs</div>
+              <div class="text-sm text-terminal-gray-500">Technical articles & tutorials</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="/projects/"
+            class="menu-item group flex items-center gap-4 rounded-lg border border-transparent p-4 font-mono transition-all duration-200 hover:border-terminal-green hover:bg-terminal-green/5"
+            style="opacity: 0; transform: translateX(-20px);"
+          >
+            <span class="flex size-12 items-center justify-center rounded-lg border border-terminal-gray-700 bg-base-200 text-2xl transition-colors group-hover:border-terminal-green group-hover:text-terminal-green">
+              ~/
+            </span>
+            <div>
+              <div class="text-lg text-terminal-green">/projects</div>
+              <div class="text-sm text-terminal-gray-500">Work & open source contributions</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="/cv/"
+            class="menu-item group flex items-center gap-4 rounded-lg border border-transparent p-4 font-mono transition-all duration-200 hover:border-terminal-green hover:bg-terminal-green/5"
+            style="opacity: 0; transform: translateX(-20px);"
+          >
+            <span class="flex size-12 items-center justify-center rounded-lg border border-terminal-gray-700 bg-base-200 text-2xl transition-colors group-hover:border-terminal-green group-hover:text-terminal-green">
+              ##
+            </span>
+            <div>
+              <div class="text-lg text-terminal-green">/resume</div>
+              <div class="text-sm text-terminal-gray-500">Experience & skills</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="mailto:hello@akhilgkrishnan.me"
+            class="menu-item group flex items-center gap-4 rounded-lg border border-transparent p-4 font-mono transition-all duration-200 hover:border-terminal-green hover:bg-terminal-green/5"
+            style="opacity: 0; transform: translateX(-20px);"
+          >
+            <span class="flex size-12 items-center justify-center rounded-lg border border-terminal-gray-700 bg-base-200 text-2xl transition-colors group-hover:border-terminal-green group-hover:text-terminal-green">
+              @
+            </span>
+            <div>
+              <div class="text-lg text-terminal-green">/contact</div>
+              <div class="text-sm text-terminal-gray-500">Get in touch</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Footer section -->
+    <div class="mt-8 border-t border-terminal-gray-700 pt-6">
+      <div class="mb-4 font-mono text-xs text-terminal-gray-600">
+        <span class="text-terminal-gray-500"># </span>
+        System preferences:
+      </div>
+
+      <div class="flex items-center justify-between">
+        <DarkModeToggleButton />
+
+        <div class="font-mono text-xs text-terminal-gray-600">
+          Tap <span class="text-terminal-green">X</span> or select a route to close
+        </div>
+      </div>
+    </div>
+
+    <!-- Cursor line -->
+    <div class="mt-6 flex items-center gap-2 font-mono text-sm">
+      <span class="text-terminal-green">$</span>
+      <span class="h-5 w-2 animate-pulse bg-terminal-green"></span>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    92% { opacity: 1; }
+    93% { opacity: 0.8; }
+    94% { opacity: 1; }
+    95% { opacity: 0.9; }
+    96% { opacity: 1; }
+  }
+
+  #fullscreen-menu.is-open {
+    animation: flicker 0.15s ease-out;
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu-btn');
+    const menu = document.getElementById('fullscreen-menu');
+    const hamburgerTop = document.getElementById('hamburger-top');
+    const hamburgerMiddle = document.getElementById('hamburger-middle');
+    const hamburgerBottom = document.getElementById('hamburger-bottom');
+    const menuLines = document.querySelectorAll('.menu-line');
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    let isOpen = false;
+
+    function openMenu() {
+      isOpen = true;
+      menu.style.clipPath = 'circle(150% at calc(100% - 36px) 52px)';
+      menu.classList.remove('opacity-0', 'pointer-events-none');
+      menu.classList.add('opacity-100', 'pointer-events-auto', 'is-open');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+
+      // Animate hamburger to X
+      hamburgerTop.classList.add('translate-y-2', 'rotate-45');
+      hamburgerMiddle.classList.add('opacity-0', 'scale-0');
+      hamburgerBottom.classList.add('-translate-y-2', '-rotate-45');
+
+      // Animate boot sequence lines
+      menuLines.forEach(function(line, index) {
+        setTimeout(function() {
+          line.style.opacity = '1';
+          line.style.transform = 'translateY(0)';
+          line.style.transition = 'all 0.3s ease-out';
+        }, 100 + (index * 100));
+      });
+
+      // Animate menu items
+      menuItems.forEach(function(item, index) {
+        setTimeout(function() {
+          item.style.opacity = '1';
+          item.style.transform = 'translateX(0)';
+          item.style.transition = 'all 0.4s ease-out';
+        }, 300 + (index * 80));
+      });
+    }
+
+    function closeMenu() {
+      isOpen = false;
+      menu.style.clipPath = 'circle(0% at calc(100% - 36px) 52px)';
+      menu.classList.add('opacity-0', 'pointer-events-none');
+      menu.classList.remove('opacity-100', 'pointer-events-auto', 'is-open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+
+      // Animate X back to hamburger
+      hamburgerTop.classList.remove('translate-y-2', 'rotate-45');
+      hamburgerMiddle.classList.remove('opacity-0', 'scale-0');
+      hamburgerBottom.classList.remove('-translate-y-2', '-rotate-45');
+
+      // Reset animations for next open
+      setTimeout(function() {
+        menuLines.forEach(function(line) {
+          line.style.opacity = '0';
+          line.style.transform = 'translateY(10px)';
+          line.style.transition = 'none';
+        });
+        menuItems.forEach(function(item) {
+          item.style.opacity = '0';
+          item.style.transform = 'translateX(-20px)';
+          item.style.transition = 'none';
+        });
+      }, 500);
+    }
+
+    function toggleMenu() {
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+
+    // Toggle on button click
+    menuBtn.addEventListener('click', toggleMenu);
+
+    // Close on close button click
+    closeBtn.addEventListener('click', closeMenu);
+
+    // Close on ESC key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && isOpen) {
+        closeMenu();
+      }
+    });
+
+    // Close when clicking a link
+    menu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        closeMenu();
+      });
+    });
+  })();
+</script>

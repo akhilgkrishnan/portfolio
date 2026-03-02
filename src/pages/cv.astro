@@ -14,176 +14,251 @@ const url = `${AppConfig.site_url}/cv/`;
 
 <Base head={{ title, description, url }}>
   <Section>
-    <div class="mb-5">
-      <h2 class="w-full text-3xl font-bold">Profile</h2>
+    <!-- Page Header -->
+    <div class="terminal-window mb-8">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="terminal-dot terminal-dot-red"></span>
+          <span class="terminal-dot terminal-dot-yellow"></span>
+          <span class="terminal-dot terminal-dot-green"></span>
+        </div>
+        <span class="terminal-title">resume.md</span>
+      </div>
+      <div class="p-6">
+        <h1 class="text-3xl font-bold font-mono">
+          <span class="text-terminal-gray-500"># </span>
+          <span class="text-terminal-green">Resume & CV</span>
+        </h1>
+      </div>
     </div>
 
-    <div class="mb-10 text-justify">
-      I'm a Senior Software Developer at <strong>Saeloun Inc</strong>, with over
-      5+ years of experience in web development. I've experience with
-      <strong>Ruby on Rails</strong> and <strong>ReactJS</strong>. Over the
-      course of my career, I've led couple of teams to build an application from
-      scratch. I contribute to Open Source and have contributed to
-      <strong>Ruby on Rails</strong>,
-      <strong>Webpack</strong>,
-      <strong>SaaS</strong>,
-      <strong>Miru</strong>,
-      <strong>Github Rails Codespace</strong>,
-      <strong>Rubocop</strong>,
-      <strong>Chatwoot</strong>, and
-      <strong>Tooljet</strong>. Currently I'm a member of Rails issues triage
-      team.
+    <!-- Profile Section -->
+    <div class="mb-8">
+      <h2 class="w-full text-2xl font-bold font-mono mb-4">
+        <span class="text-terminal-gray-500">## </span>
+        <span class="text-terminal-green">Profile</span>
+      </h2>
+
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="terminal-dot terminal-dot-red"></span>
+            <span class="terminal-dot terminal-dot-yellow"></span>
+            <span class="terminal-dot terminal-dot-green"></span>
+          </div>
+          <span class="terminal-title">cat ./profile.txt</span>
+        </div>
+        <div class="p-4 text-terminal-gray-400">
+          <span class="text-terminal-gray-600">// </span>
+          I'm a Senior Software Developer at <strong class="text-terminal-emerald">Saeloun Inc</strong>, with over
+          5+ years of experience in web development. I've experience with
+          <strong class="text-terminal-emerald">Ruby on Rails</strong> and <strong class="text-terminal-emerald">ReactJS</strong>. Over the
+          course of my career, I've led couple of teams to build an application from
+          scratch. I contribute to Open Source and have contributed to
+          <strong class="text-terminal-emerald">Ruby on Rails</strong>,
+          <strong class="text-terminal-emerald">Webpack</strong>,
+          <strong class="text-terminal-emerald">SaaS</strong>,
+          <strong class="text-terminal-emerald">Miru</strong>,
+          <strong class="text-terminal-emerald">Github Rails Codespace</strong>,
+          <strong class="text-terminal-emerald">Rubocop</strong>,
+          <strong class="text-terminal-emerald">Chatwoot</strong>, and
+          <strong class="text-terminal-emerald">Tooljet</strong>. Currently I'm a member of Rails issues triage
+          team.
+        </div>
+      </div>
     </div>
 
-    <div class="mb-5">
-      <h2 class="w-full text-3xl font-bold">Education</h2>
+    <!-- Education Section -->
+    <div class="mb-8">
+      <h2 class="w-full text-2xl font-bold font-mono mb-4">
+        <span class="text-terminal-gray-500">## </span>
+        <span class="text-terminal-green">Education</span>
+      </h2>
+
+      <div class="time-line-container grid gap-4">
+        <TimeLine
+          title="Bachelor of Technology (BTech) in Computer Science and Engineering"
+          subtitle="2016 to 2020 at Providence College of Engineering, Chengannur, India"
+        />
+        <TimeLine
+          title="Plus Two (Higher Secondary Education)"
+          subtitle="2014 to 2016 at Nair Samajam HSS, Mannar, India"
+        />
+        <TimeLine
+          title="Secondary School Leaving Certificate (SSLC)"
+          subtitle="2009 to 2014 at Nair Samajam HSS, Mannar, India"
+        />
+        <TimeLine
+          title="Primary School"
+          subtitle="2002 to 2008 at Akshara EM School, Mannar, India"
+        />
+      </div>
     </div>
 
-    <div class="time-line-container mb-10 grid gap-4">
-      <TimeLine
-        title="Bachelor of Technology (BTech) in Computer Science and Engineering"
-        subtitle="2016 to 2020 at Providence College of Engineering, Chengannur, India"
-      />
-      <TimeLine
-        title="Plus Two (Higher Secondary Education)"
-        subtitle="2014 to 2016 at Nair Samajam HSS, Mannar, India"
-      />
-      <TimeLine
-        title="Secondary School Leaving Certificate (SSLC)"
-        subtitle="2009 to 2014 at Nair Samajam HSS, Mannar, India"
-      />
-      <TimeLine
-        title="Primary School"
-        subtitle="2002 to 2008 at Akshara EM School, Mannar, India"
-      />
+    <!-- Experience Section -->
+    <div class="mb-8">
+      <h2 class="w-full text-2xl font-bold font-mono mb-4">
+        <span class="text-terminal-gray-500">## </span>
+        <span class="text-terminal-green">Experience</span>
+      </h2>
+
+      <div class="time-line-container">
+        <TimeLine
+          title="Senior Software Developer"
+          subtitle="From September 2021 to Present at Saeloun, Remote"
+        >
+          Experienced consultant with expertise in Rails and React, showcasing a
+          proven track record of leading successful projects. Highly skilled in
+          designing robust architectures, developing and maintaining web
+          applications, and adept at team management. Demonstrated proficiency in
+          implementing new features, resolving bugs, and overseeing deployment
+          processes for various clients and internal projects, including Miru,
+          ActivateCare, Wanderwhale, GoMethodology, and InfluenceKit.
+          <p class="mt-2 text-terminal-emerald">
+            Technology Used: Rails, React, NextJS, PostgreSQL, NodeJS, TypeScript,
+            Redis, Tailwind, Bootstrap, Kubernates, Docker, ElasticSearch, AWS
+          </p>
+        </TimeLine>
+        <TimeLine
+          title="Software Engineer"
+          subtitle="From June 2021 to September 2021 at Bigbinary Solutions, Remote"
+        >
+          Bigbinary is a consulting company specializing in Ruby on Rails and
+          ReactJS. I worked on various internal projects.
+          <p class="mt-2 text-terminal-emerald">Technology Used: Rails, React, PostgreSQL</p>
+        </TimeLine>
+        <TimeLine
+          title="Junior Software Developer"
+          subtitle="From August 2020 to July 2021 at Sapaad Pvt Lmt, Kochi, India"
+        >
+          Sapaad is a SaaS company having a cloud-based restaurant management
+          point of sale system. Experienced software engineer specialized in SaaS
+          development, with expertise in AGILE Scrum-based product life cycle.
+          Proficient in building and integrating microservice apps. Worked on
+          various projects, including POS system with GPay integration and
+          multilingual support, BYOD platform with PayTabs and PayU integration,
+          delivery manager application with Kafka data handling, and trial
+          application management system as lead developer. Skilled in Ruby on
+          Rails and ReactJS for backend and frontend development, delivering
+          robust and scalable solutions within tight deadlines.
+          <p class="mt-2 text-terminal-emerald">
+            Technology Used: Rails, React, PostgreSQL, Bootstrap, Redis, Docker,
+            AWS, ApacheKafka, Heroku, GoLang
+          </p>
+        </TimeLine>
+      </div>
     </div>
 
-    <div class="mb-5">
-      <h2 class="w-full text-3xl font-bold">Experience</h2>
+    <!-- Achievements Section -->
+    <div class="mb-8">
+      <h2 class="w-full text-2xl font-bold font-mono mb-4">
+        <span class="text-terminal-gray-500">## </span>
+        <span class="text-terminal-green">Achievements</span>
+      </h2>
+
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="terminal-dot terminal-dot-red"></span>
+            <span class="terminal-dot terminal-dot-yellow"></span>
+            <span class="terminal-dot terminal-dot-green"></span>
+          </div>
+          <span class="terminal-title">achievements.log</span>
+        </div>
+        <ul class="p-4 space-y-2 font-mono text-sm">
+          <li class="text-terminal-gray-400">
+            <span class="text-terminal-green">[2023]</span> 2nd Place - ActivateCare Hackathon
+          </li>
+          <li class="text-terminal-gray-400">
+            <span class="text-terminal-green">[2019]</span> First Prize - Quriocity Quiz Competition at Providence College of Engineering, Chengannur
+          </li>
+          <li class="text-terminal-gray-400">
+            <span class="text-terminal-green">[2017]</span> Third Prize - State Level G-Tec IT Quiz Championship
+          </li>
+          <li class="text-terminal-gray-400">
+            <span class="text-terminal-green">[2013]</span> First Prize - Kerala Shasthrolsavam Sub District IT Quiz Championship
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <div class="time-line-container mb-10">
-      <TimeLine
-        title="Senior Software Developer"
-        subtitle="From September 2021 to Present at Saeloun, Remote"
-      >
-        Experienced consultant with expertise in Rails and React, showcasing a
-        proven track record of leading successful projects. Highly skilled in
-        designing robust architectures, developing and maintaining web
-        applications, and adept at team management. Demonstrated proficiency in
-        implementing new features, resolving bugs, and overseeing deployment
-        processes for various clients and internal projects, including Miru,
-        ActivateCare, Wanderwhale, GoMethodology, and InfluenceKit.
-        <p>
-          Technology Used: Rails, React, NextJS, PostgreSQL, NodeJS, TypeScript,
-          Redis, Tailwind, Bootstrap, Kubernates, Docker, ElasticSearch, AWS
-        </p>
-      </TimeLine>
-      <TimeLine
-        title="Software Engineer"
-        subtitle="From June 2021 to September 2021 at Bigbinary Solutions, Remote"
-      >
-        Bigbinary is a consulting company specializing in Ruby on Rails and
-        ReactJS. I worked on various internal projects.
-        <p>Technology Used: Rails, React, PostgreSQL</p>
-      </TimeLine>
-      <TimeLine
-        title="Junior Software Developer"
-        subtitle="From August 2020 to July 2021 at Sapaad Pvt Lmt, Kochi, India"
-      >
-        Sapaad is a SaaS company having a cloud-based restaurant management
-        point of sale system. Experienced software engineer specialized in SaaS
-        development, with expertise in AGILE Scrum-based product life cycle.
-        Proficient in building and integrating microservice apps. Worked on
-        various projects, including POS system with GPay integration and
-        multilingual support, BYOD platform with PayTabs and PayU integration,
-        delivery manager application with Kafka data handling, and trial
-        application management system as lead developer. Skilled in Ruby on
-        Rails and ReactJS for backend and frontend development, delivering
-        robust and scalable solutions within tight deadlines.
-        <p>
-          Technology Used: Rails, React, PostgreSQL, Bootstrap, Redis, Docker,
-          AWS, ApacheKafka, Heroku, GoLang
-        </p>
-      </TimeLine>
+    <!-- Publications Section -->
+    <div class="mb-8">
+      <h2 class="w-full text-2xl font-bold font-mono mb-4">
+        <span class="text-terminal-gray-500">## </span>
+        <span class="text-terminal-green">Publications</span>
+      </h2>
+
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="terminal-dot terminal-dot-red"></span>
+            <span class="terminal-dot terminal-dot-yellow"></span>
+            <span class="terminal-dot terminal-dot-green"></span>
+          </div>
+          <span class="terminal-title">publications.bib</span>
+        </div>
+        <div class="p-4 font-mono text-sm">
+          <div class="text-terminal-gray-500">@article{'{'}krishnan2020,</div>
+          <div class="pl-4 text-terminal-gray-400">
+            <span class="text-terminal-emerald">title</span> = "<a
+              href="https://ieeexplore.ieee.org/document/9325649"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="terminal-link"
+            >Automated Censorable Content Identification In Videos Using Deep Learning</a>",
+          </div>
+          <div class="pl-4 text-terminal-gray-400">
+            <span class="text-terminal-emerald">publisher</span> = "IEEE",
+          </div>
+          <div class="pl-4 text-terminal-gray-400">
+            <span class="text-terminal-emerald">booktitle</span> = "2020 International Conference on Data Analytics for Business and Industry (ICDABI)",
+          </div>
+          <div class="pl-4 text-terminal-gray-400">
+            <span class="text-terminal-emerald">doi</span> = "10.1109/ICDABI51230.2020.9325649"
+          </div>
+          <div class="text-terminal-gray-500">{'}'}</div>
+        </div>
+      </div>
     </div>
 
-    <div class="mb-5">
-      <h2 class="w-full text-3xl font-bold">Achievements</h2>
+    <!-- Skills Section -->
+    <div class="mb-8">
+      <h2 class="w-full text-2xl font-bold font-mono mb-4">
+        <span class="text-terminal-gray-500">## </span>
+        <span class="text-terminal-green">Skills</span>
+      </h2>
+
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="terminal-dot terminal-dot-red"></span>
+            <span class="terminal-dot terminal-dot-yellow"></span>
+            <span class="terminal-dot terminal-dot-green"></span>
+          </div>
+          <span class="terminal-title">tree ./skills/</span>
+        </div>
+        <div class="p-4">
+          <div class="font-mono text-terminal-emerald mb-2">skills/</div>
+          <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
+            <SkillItem title="Ruby on Rails" icon="rails-plain" />
+            <SkillItem title="ReactJS" icon="react-original" />
+            <SkillItem title="NodeJS" icon="nodejs-plain" />
+            <SkillItem title="ExpressJS" icon="express-original" />
+            <SkillItem title="PostgreSQL" icon="postgresql-plain" />
+            <SkillItem title="MongoDB" icon="mongodb-plain" />
+            <SkillItem title="Ruby" icon="ruby-plain" />
+            <SkillItem title="TypeScript" icon="typescript-plain" />
+            <SkillItem title="NextJS" icon="nextjs-plain" />
+            <SkillItem title="AstroJS" icon="astro-plain" />
+            <SkillItem title="Tailwind" icon="tailwindcss-plain" />
+            <SkillItem title="Bootstrap" icon="bootstrap-plain" />
+            <SkillItem title="Kubernetes" icon="kubernetes-plain" />
+            <SkillItem title="Docker" icon="docker-plain" />
+            <SkillItem title="AWS" icon="amazonwebservices-original" />
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <ul class="mx-6 mb-10 grid list-disc gap-2">
-      <li>
-        <p>2nd Place - ActivateCare Hackathon (2023)</p>
-      </li>
-      <li>
-        <p>
-          First Prize - Quriocity Quiz Competition at Providence College of
-          Engineering, Chengannur (2019)
-        </p>
-      </li>
-      <li>
-        <p>Third Prize - State Level G-Tec IT Quiz Championship (2017)</p>
-      </li>
-      <li>
-        <p>
-          First Prize - Kerala Shasthrolsavam Sub District IT Quiz Championship
-          (2013)
-        </p>
-      </li>
-    </ul>
-
-    <div class="mb-5">
-      <h2 class="w-full text-3xl font-bold">Publications</h2>
-    </div>
-
-    <ul class="mx-6 mb-10 grid list-disc gap-2">
-      <li>
-        <p>
-          <strong>Title:</strong>
-          <a
-            href="https://ieeexplore.ieee.org/document/9325649"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-blue-500"
-          >
-            Automated Censorable Content Identification In Videos Using Deep
-            Learning
-          </a>
-        </p>
-        <p>
-          <strong>Publisher:</strong> IEEE
-        </p>
-        <p>
-          <strong>Published in:</strong> 2020 International Conference on Data Analytics
-          for Business and Industry: Way Towards a Sustainable Economy (ICDABI)
-        </p>
-        <p>
-          <strong>DOI:</strong> 10.1109/ICDABI51230.2020.9325649
-        </p>
-      </li>
-    </ul>
-
-    <div class="mb-5">
-      <h2 class="w-full text-3xl font-bold">Skills</h2>
-    </div>
-
-    <ul class="mx-6 list-disc columns-2 md:columns-5">
-      <SkillItem title="Ruby on Rails" icon="rails-plain" />
-      <SkillItem title="ReactJS" icon="react-original" />
-      <SkillItem title="NodeJS" icon="nodejs-plain" />
-      <SkillItem title="ExpressJS" icon="express-original" />
-      <SkillItem title="PostgreSQL" icon="postgresql-plain" />
-      <SkillItem title="MongoDB" icon="mongodb-plain" />
-      <SkillItem title="Ruby" icon="ruby-plain" />
-      <SkillItem title="TypeScript" icon="typescript-plain" />
-      <SkillItem title="NextJS" icon="nextjs-plain" />
-      <SkillItem title="AstroJS" icon="astro-plain" />
-      <SkillItem title="Tailwind" icon="tailwindcss-plain" />
-      <SkillItem title="Bootstrap" icon="bootstrap-plain" />
-      <SkillItem title="Kubernetes" icon="kubernetes-plain" />
-      <SkillItem title="Docker" icon="docker-plain" />
-      <SkillItem title="AWS" icon="amazonwebservices-original" />
-    </ul>
   </Section>
 </Base>

@@ -6,19 +6,10 @@ interface ProjectGalleryProps {
 }
 
 const ProjectGallery = (props: ProjectGalleryProps) => (
-  <div className="flex flex-col gap-6">
-    {props.projectList.map(
-      (project: CollectionEntry<'project'>, index: number) => {
-        return (
-          <>
-            <ProjectCard project={project} />
-            {index !== props.projectList.length - 1 && (
-              <div className="divider my-0"></div>
-            )}
-          </>
-        );
-      }
-    )}
+  <div className="flex flex-col gap-4">
+    {props.projectList.map((project: CollectionEntry<'project'>) => (
+      <ProjectCard key={project.data.link} project={project} />
+    ))}
   </div>
 );
 

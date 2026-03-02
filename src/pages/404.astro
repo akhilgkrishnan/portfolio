@@ -10,31 +10,64 @@ const description = "Sorry, the page you're looking for doesn't exist. Browse ou
 
 <Base head={{ title, description }}>
   <Section>
-    <div
-      class="mb-96 flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center
-                md:justify-center md:space-x-6"
-    >
-      <div class="space-x-2 pb-8 pt-6 md:space-y-5">
-        <h1
-          class="md:leading-14 text-6xl font-extrabold leading-9 tracking-tight
-                 md:border-r-2 md:px-6 md:text-8xl"
-        >
-          404
-        </h1>
-      </div>
-      <div class="max-w-md">
-        <p class="mb-4 text-xl font-bold leading-normal md:text-2xl">
-          Sorry, the page you are looking for doesn't exist or has been moved.
-        </p>
-        <p class="mb-8">Let's find a better place for you to go.</p>
-        <a href="/">
-          <button
-            class="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-secondary px-4 py-2
-                    text-sm font-medium leading-5 text-white shadow transition-colors duration-150
-                  hover:bg-secondary-focus focus:outline-none "
-            >Back to homepage
-          </button>
-        </a>
+    <div class="flex min-h-[60vh] items-center justify-center">
+      <div class="terminal-window max-w-2xl w-full">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="terminal-dot terminal-dot-red"></span>
+            <span class="terminal-dot terminal-dot-yellow"></span>
+            <span class="terminal-dot terminal-dot-green"></span>
+          </div>
+          <span class="terminal-title">error.log</span>
+        </div>
+        <div class="p-6 font-mono">
+          <!-- Error code -->
+          <div class="text-center mb-6">
+            <span class="text-6xl md:text-8xl font-bold text-terminal-green glow-green">404</span>
+          </div>
+
+          <!-- Error messages -->
+          <div class="space-y-2 text-terminal-gray-400">
+            <div>
+              <span class="text-red-500">[ERROR]</span>
+              <span class="ml-2">bash: cd: No such file or directory</span>
+            </div>
+            <div>
+              <span class="text-yellow-500">[WARN]</span>
+              <span class="ml-2">The requested page could not be found.</span>
+            </div>
+            <div>
+              <span class="text-terminal-emerald">[INFO]</span>
+              <span class="ml-2">Redirecting to a safe location...</span>
+            </div>
+          </div>
+
+          <!-- Suggested action -->
+          <div class="mt-8 space-y-4">
+            <div class="flex items-center">
+              <span class="text-terminal-green">$</span>
+              <span class="ml-2 text-terminal-gray-300">cd ~/home</span>
+              <span class="cursor"></span>
+            </div>
+
+            <a href="/" class="terminal-btn inline-block">
+              ./return-home
+            </a>
+          </div>
+
+          <!-- Available commands -->
+          <div class="mt-8 pt-4 border-t border-terminal-gray-700">
+            <p class="text-terminal-gray-500 text-sm">
+              <span class="text-terminal-gray-600"># </span>
+              Available commands:
+            </p>
+            <div class="mt-2 flex flex-wrap gap-2">
+              <a href="/blogs/" class="terminal-tag hover:border-terminal-green">./blogs</a>
+              <a href="/projects/" class="terminal-tag hover:border-terminal-green">./projects</a>
+              <a href="/cv/" class="terminal-tag hover:border-terminal-green">./resume</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </Section>
