@@ -6,13 +6,18 @@ import { AppConfig } from '@utils/AppConfig';
 import { Section } from 'astro-boilerplate-components';
 
 const titleSuffix = ` - ${AppConfig.site_name}`;
-const title = `Resume & CV | Senior Software Developer${titleSuffix}`;
+const title = `Resume & CV | Ruby on Rails Contributor from India${titleSuffix}`;
 const description =
-  'Senior Software Developer with 5+ years experience at Saeloun Inc. Expert in Ruby on Rails, React.js, TypeScript, PostgreSQL, Docker, AWS. Rails Core contributor, open source maintainer, IEEE published researcher.';
+  'Ruby on Rails contributor from India with 5+ years experience at Saeloun Inc. Expert in Rails, React.js, TypeScript. Active Rails Core contributor, Rails Issues Triage Team member, open source maintainer, IEEE published researcher.';
 const url = `${AppConfig.site_url}/cv/`;
+
+const breadcrumbs = [
+  { name: 'Home', url: AppConfig.site_url },
+  { name: 'Resume & CV', url: url },
+];
 ---
 
-<Base head={{ title, description, url }}>
+<Base head={{ title, description, url, breadcrumbs }}>
   <Section>
     <!-- Page Header -->
     <div class="terminal-window mb-8">
@@ -50,20 +55,18 @@ const url = `${AppConfig.site_url}/cv/`;
         </div>
         <div class="p-4 text-terminal-gray-400">
           <span class="text-terminal-gray-600">// </span>
-          I'm a Senior Software Developer at <strong class="text-terminal-emerald">Saeloun Inc</strong>, with over
-          5+ years of experience in web development. I've experience with
+          I'm a <strong class="text-terminal-emerald">Ruby on Rails contributor from India</strong>, currently working as a Senior Software Developer at <strong class="text-terminal-emerald">Saeloun Inc</strong>, with over
+          5+ years of experience in web development. I specialize in
           <strong class="text-terminal-emerald">Ruby on Rails</strong> and <strong class="text-terminal-emerald">ReactJS</strong>. Over the
-          course of my career, I've led couple of teams to build an application from
-          scratch. I contribute to Open Source and have contributed to
-          <strong class="text-terminal-emerald">Ruby on Rails</strong>,
+          course of my career, I've led couple of teams to build applications from
+          scratch. As an active open source contributor, I have contributed to
+          <strong class="text-terminal-emerald">Ruby on Rails Core</strong>,
           <strong class="text-terminal-emerald">Webpack</strong>,
-          <strong class="text-terminal-emerald">SaaS</strong>,
           <strong class="text-terminal-emerald">Miru</strong>,
           <strong class="text-terminal-emerald">Github Rails Codespace</strong>,
           <strong class="text-terminal-emerald">Rubocop</strong>,
           <strong class="text-terminal-emerald">Chatwoot</strong>, and
-          <strong class="text-terminal-emerald">Tooljet</strong>. Currently I'm a member of Rails issues triage
-          team.
+          <strong class="text-terminal-emerald">Tooljet</strong>. Currently, I'm a member of the <a href="https://arc.net/l/quote/istxqczd" target="_blank" rel="noopener noreferrer" class="terminal-link">Rails Issues Triage Team</a>, helping maintain and improve the Ruby on Rails framework.
         </div>
       </div>
     </div>

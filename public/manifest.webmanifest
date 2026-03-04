@@ -1,0 +1,26 @@
+{
+  "name": "Akhil G Krishnan - Senior Full Stack Developer",
+  "short_name": "Akhil G Krishnan",
+  "description": "Senior Full Stack Developer with 5+ years expertise in Ruby on Rails, React.js, and open source contributions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0f0d",
+  "theme_color": "#22c55e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["portfolio", "technology", "development"],
+  "lang": "en",
+  "dir": "ltr"
+}

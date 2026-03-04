@@ -4,7 +4,7 @@ import '@styles/custom.css';
 import Footer from '@partials/Footer.astro';
 import Navbar from '@partials/Navbar.astro';
 import { AppConfig } from '@utils/AppConfig';
-import { personSchemaMarkup, websiteSchemaMarkup } from '@utils/schemaMarkup';
+import { personSchemaMarkup, websiteSchemaMarkup, generateBreadcrumbSchema, generateArticleSchema } from '@utils/schemaMarkup';
 
 export interface Props {
   head: {
@@ -13,12 +13,24 @@ export interface Props {
     ogImage?: string;
     ogType?: string;
     url?: string;
+    breadcrumbs?: { name: string; url: string }[];
+    articleSchema?: {
+      title: string;
+      description: string;
+      url: string;
+      imageUrl: string;
+      datePublished: string;
+      dateModified?: string;
+    };
   };
 }
 
 const {
-  head: { title, description, ogImage, ogType, url },
+  head: { title, description, ogImage, ogType, url, breadcrumbs, articleSchema },
 } = Astro.props as Props;
+
+const breadcrumbSchema = breadcrumbs ? generateBreadcrumbSchema(breadcrumbs) : null;
+const articleJsonLd = articleSchema ? generateArticleSchema(articleSchema) : null;
 ---
 
 <html lang="en" data-theme="terminal-dark">
@@ -29,6 +41,7 @@ const {
     <meta name="yandex-verification" content="80c2ec5bdd10aed3" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta property="og:type" content={ogType || 'website'} />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content={AppConfig.site_name} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -55,6 +68,8 @@ const {
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
     <link rel="apple-touch-icon" href="/assets/images/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#22c55e" />
 
     <!-- JetBrains Mono Font Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -79,6 +94,22 @@ const {
       type="application/ld+json"
       set:html={JSON.stringify(personSchemaMarkup)}
     />
+
+    {breadcrumbSchema && (
+      <script
+        is:inline
+        type="application/ld+json"
+        set:html={JSON.stringify(breadcrumbSchema)}
+      />
+    )}
+
+    {articleJsonLd && (
+      <script
+        is:inline
+        type="application/ld+json"
+        set:html={JSON.stringify(articleJsonLd)}
+      />
+    )}
 
     <!-- Theme initialization (runs before page renders to prevent flash) -->
     <script is:inline>

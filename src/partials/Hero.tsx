@@ -30,6 +30,9 @@ const Hero = () => (
               <span className="text-terminal-green">Akhil G Krishnan</span>
               <span className="wave ml-2">👋</span>
             </h1>
+            <p className="text-sm text-terminal-gray-500">
+              Ruby on Rails Contributor from India | Rails Issues Triage Team Member
+            </p>
 
             {/* Bio as command output */}
             <div className="space-y-2">
@@ -43,6 +46,7 @@ const Hero = () => (
                   <a
                     href="https://www.saeloun.com"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="terminal-link"
                   >
                     Saeloun Inc
@@ -58,19 +62,28 @@ const Hero = () => (
                 </p>
                 <p>
                   <span className="text-terminal-gray-500">{'// '}</span>
-                  Part of the{' '}
+                  <a
+                    className="terminal-link"
+                    href="https://contributors.rubyonrails.org/contributors/akhil-g-krishnan/commits"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Rails Core Contributor
+                  </a>{' '}
+                  &{' '}
                   <a
                     className="terminal-link"
                     href="https://arc.net/l/quote/istxqczd"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Rails Issues Triage
+                    Issues Triage Team
                   </a>{' '}
-                  team
+                  member
                 </p>
                 <p>
                   <span className="text-terminal-gray-500">{'// '}</span>
-                  Open source contributor & technical writer
+                  Open source contributor & technical writer from India
                 </p>
               </div>
             </div>
@@ -82,35 +95,35 @@ const Hero = () => (
                 <span className="ml-2 text-terminal-gray-300">ls -la ./social/</span>
               </div>
               <div className="flex flex-wrap gap-3">
-                <a href="https://twitter.com/mrakhilg" className="terminal-link text-sm">
+                <a href="https://twitter.com/mrakhilg" className="terminal-link text-sm" target="_blank" rel="noopener noreferrer">
                   <HeroSocial
                     src="/assets/images/social/twitter-icon.png"
                     alt="Follow Akhil G Krishnan on Twitter"
                     name="twitter"
                   />
                 </a>
-                <a href="https://facebook.com/akhilmnr" className="terminal-link text-sm">
+                <a href="https://facebook.com/akhilmnr" className="terminal-link text-sm" target="_blank" rel="noopener noreferrer">
                   <HeroSocial
                     src="/assets/images/social/facebook-icon.png"
                     alt="Connect with Akhil G Krishnan on Facebook"
                     name="facebook"
                   />
                 </a>
-                <a href="https://linkedin.com/in/akhilgkrishnan" className="terminal-link text-sm">
+                <a href="https://linkedin.com/in/akhilgkrishnan" className="terminal-link text-sm" target="_blank" rel="noopener noreferrer">
                   <HeroSocial
                     src="/assets/images/social/linkedin-icon.png"
                     alt="View Akhil G Krishnan's LinkedIn profile"
                     name="linkedin"
                   />
                 </a>
-                <a href="https://instagram.com/akhilgkrishnan" className="terminal-link text-sm">
+                <a href="https://instagram.com/akhilgkrishnan" className="terminal-link text-sm" target="_blank" rel="noopener noreferrer">
                   <HeroSocial
                     src="/assets/images/social/instagram-logo.png"
                     alt="Follow Akhil G Krishnan on Instagram"
                     name="instagram"
                   />
                 </a>
-                <a href="https://github.com/akhilgkrishnan" className="terminal-link text-sm">
+                <a href="https://github.com/akhilgkrishnan" className="terminal-link text-sm" target="_blank" rel="noopener noreferrer">
                   <HeroSocial
                     src="/assets/images/social/github-logo.png"
                     alt="View Akhil G Krishnan's GitHub repositories"

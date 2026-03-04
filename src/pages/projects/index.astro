@@ -16,11 +16,16 @@ const titleSuffix = ` - ${AppConfig.site_name}`;
 const titleBase = `Open Source Projects & Portfolio`;
 const title = titleBase + titleSuffix;
 const description =
-  'Explore 15+ open source projects and contributions including Ruby on Rails, React.js applications. View real-world SaaS applications, developer tools, and technical implementations by a Senior Full Stack Developer.';
+  'Explore 15+ open source projects and Rails contributions from India. View Ruby on Rails, React.js applications, developer tools, and technical implementations by a Rails Issues Triage Team member.';
 const url = `${AppConfig.site_url}/projects/`;
+
+const breadcrumbs = [
+  { name: 'Home', url: AppConfig.site_url },
+  { name: 'Projects', url: url },
+];
 ---
 
-<Base head={{ title, description, url }}>
+<Base head={{ title, description, url, breadcrumbs }}>
   <Section>
     <PaginationHeader
       title="Showcasing Web Development Mastery"

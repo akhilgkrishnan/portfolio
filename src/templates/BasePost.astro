@@ -2,6 +2,7 @@
 import { BlogPost } from '@partials/BlogPost';
 import { CTA } from '@partials/CTA';
 import Base from '@templates/Base.astro';
+import { AppConfig } from '@utils/AppConfig';
 import type { IFrontmatter } from 'astro-boilerplate-components';
 
 interface BlogPostFrontmatter extends IFrontmatter {
@@ -20,10 +21,25 @@ const ogImage = `https://graphigen.vercel.app/api/og?author=Akhil%20G%20Krishnan
 }&image=${'https://blog.saeloun.com/images/og_logo.png'}&date=${
   content.pubDate
 }&type=blog.png`;
+
+const postUrl = `${AppConfig.site_url}/blogs/${content.title.toLowerCase().replace(/\s+/g, '-')}/`;
+const breadcrumbs = [
+  { name: 'Home', url: AppConfig.site_url },
+  { name: 'Blogs', url: `${AppConfig.site_url}/blogs/` },
+  { name: content.title, url: postUrl },
+];
+
+const articleSchema = {
+  title: content.title,
+  description: content.description,
+  url: postUrl,
+  imageUrl: ogImage,
+  datePublished: content.pubDate,
+};
 ---
 
 <Base
-  head={{ title, description: content.description, ogImage, ogType: 'article' }}
+  head={{ title, description: content.description, ogImage, ogType: 'article', url: postUrl, breadcrumbs, articleSchema }}
 >
   <BlogPost frontmatter={content}>
     <slot />
