@@ -9,6 +9,6 @@ export const AppConfig = {
   author: 'Akhil G Krishnan',
   locale_region: 'en-us',
   locale: 'en',
-  ogImage: 'https://akhilgkrishnan.me/assets/images/og-image.png',
+  ogImage: 'https://akhilgkrishnan.me/profile-pic.png',
   twitter_handle: '@MrAkhilG',
 };
