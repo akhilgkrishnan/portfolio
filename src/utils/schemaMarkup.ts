@@ -25,26 +25,26 @@ export function generateArticleSchema(article: {
 }) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
+    '@id': article.url,
     headline: article.title,
     description: article.description,
     image: article.imageUrl,
     url: article.url,
+    inLanguage: 'en',
     datePublished: article.datePublished,
     dateModified: article.dateModified || article.datePublished,
     author: {
       '@type': 'Person',
+      '@id': `${AppConfig.site_url}/#person`,
       name: AppConfig.author,
       url: AppConfig.site_url,
     },
     publisher: {
       '@type': 'Person',
+      '@id': `${AppConfig.site_url}/#person`,
       name: AppConfig.author,
       url: AppConfig.site_url,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${AppConfig.site_url}/profile-pic.png`,
-      },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
@@ -56,11 +56,20 @@ export function generateArticleSchema(article: {
 export const personSchemaMarkup = {
   '@context': 'https://schema.org/',
   '@type': 'Person',
+  '@id': `${AppConfig.site_url}/#person`,
   name: AppConfig.site_name,
   alternateName: ['Akhil Krishnan', 'Akhil G K', 'MrAkhilG'],
   description: 'Ruby on Rails contributor from India and Rails Issues Triage Team member. Senior Full Stack Developer specializing in Rails and React. Active open source contributor to Ruby on Rails core.',
   url: AppConfig.site_url,
-  image: `${AppConfig.site_url}/profile-pic.png`,
+  image: {
+    '@type': 'ImageObject',
+    url: `${AppConfig.site_url}/profile-pic.png`,
+    '@id': `${AppConfig.site_url}/#personimage`,
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': AppConfig.site_url,
+  },
   sameAs: [
     'https://github.com/akhilgkrishnan',
     'https://contributors.rubyonrails.org/contributors/akhil-g-krishnan/commits',
@@ -118,33 +127,28 @@ export const personSchemaMarkup = {
 export const websiteSchemaMarkup = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': `${AppConfig.site_url}/#website`,
   name: 'Akhil G Krishnan - Ruby on Rails Contributor from India | Rails Issues Triage Team',
   description: AppConfig.description,
   headline: 'Ruby on Rails Contributor from India | Rails Issues Triage Team Member',
-  image: `${AppConfig.site_url}/profile-pic.png`,
   url: AppConfig.site_url,
   inLanguage: 'en',
   author: {
     '@type': 'Person',
+    '@id': `${AppConfig.site_url}/#person`,
     name: 'Akhil G Krishnan',
-    description: 'Ruby on Rails contributor from India and Rails Issues Triage Team member',
   },
   publisher: {
     '@type': 'Person',
+    '@id': `${AppConfig.site_url}/#person`,
     name: 'Akhil G Krishnan',
   },
-  keywords: 'Ruby on Rails contributor, Rails contributor India, Rails Issues Triage Team, Indian Rails developer, open source contributor',
-  sameAs: [
-    'https://github.com/akhilgkrishnan',
-    'https://contributors.rubyonrails.org/contributors/akhil-g-krishnan/commits',
-    'https://linkedin.com/in/akhilgkrishnan',
-    'https://twitter.com/mrakhilg',
-    'https://stackoverflow.com/users/10321356/akhil-g-krishnan',
-    'https://facebook.com/akhilgkrishnan9800',
-    'https://instagram.com/akhilgkrishnan',
-    'https://akhilgkrishnan.github.io',
-    'https://scholar.google.com/citations?user=RHT03hwAAAAJ&hl=en',
-    'https://in.pinterest.com/akhilgkrishnan/',
-    'https://www.threads.net/@akhilgkrishnan',
-  ],
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${AppConfig.site_url}/blogs/?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
 };

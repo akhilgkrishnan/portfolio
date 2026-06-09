@@ -36,10 +36,16 @@ const articleSchema = {
   imageUrl: ogImage,
   datePublished: content.pubDate,
 };
+
+const articleMeta = {
+  publishedTime: content.pubDate,
+  author: 'Akhil G Krishnan',
+  section: 'Technology',
+};
 ---
 
 <Base
-  head={{ title, description: content.description, ogImage, ogType: 'article', url: postUrl, breadcrumbs, articleSchema }}
+  head={{ title, description: content.description, ogImage, ogType: 'article', url: postUrl, breadcrumbs, articleMeta, articleSchema }}
 >
   <BlogPost frontmatter={content}>
     <slot />
