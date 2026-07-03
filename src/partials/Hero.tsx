@@ -31,18 +31,24 @@ const Hero = () => (
               <span className="wave ml-2">👋</span>
             </h1>
             <p className="text-sm text-terminal-gray-500">
-              Ruby on Rails Contributor from India | Rails Issues Triage Team Member
+              Ruby on Rails Developer & Contributor from India | Rails Issues
+              Triage Team Member
             </p>
 
             {/* Bio as command output */}
             <div className="space-y-2">
               <div className="flex items-center">
                 <span className="text-terminal-green">$</span>
-                <span className="ml-2 text-terminal-gray-300">cat ./about.txt</span>
+                <span className="ml-2 text-terminal-gray-300">
+                  cat ./about.txt
+                </span>
               </div>
-              <div className="text-terminal-gray-400 leading-relaxed">
+              <div className="leading-relaxed text-terminal-gray-400">
                 <p>
-                  <span className="text-terminal-emerald">Senior Software Developer</span> at{' '}
+                  <span className="text-terminal-emerald">
+                    Senior Software Developer
+                  </span>{' '}
+                  at{' '}
                   <a
                     href="https://www.saeloun.com"
                     target="_blank"
@@ -54,7 +60,7 @@ const Hero = () => (
                 </p>
                 <p className="mt-2">
                   <span className="text-terminal-gray-500">{'// '}</span>
-                  5+ years of full-stack development experience
+                  6+ years of full-stack development experience
                 </p>
                 <p>
                   <span className="text-terminal-gray-500">{'// '}</span>
@@ -83,7 +89,8 @@ const Hero = () => (
                 </p>
                 <p>
                   <span className="text-terminal-gray-500">{'// '}</span>
-                  Open source contributor & technical writer from India
+                  Open source contributor & technical writer based in Kerala,
+                  India
                 </p>
               </div>
             </div>
@@ -92,38 +99,65 @@ const Hero = () => (
             <div className="space-y-2 pt-4">
               <div className="flex items-center">
                 <span className="text-terminal-green">$</span>
-                <span className="ml-2 text-terminal-gray-300">ls -la ./social/</span>
+                <span className="ml-2 text-terminal-gray-300">
+                  ls -la ./social/
+                </span>
               </div>
               <div className="flex flex-wrap gap-3">
-                <a href="https://twitter.com/mrakhilg" className="terminal-link text-sm" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://twitter.com/mrakhilg"
+                  className="terminal-link text-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <HeroSocial
                     src="/assets/images/social/twitter-icon.png"
                     alt="Follow Akhil G Krishnan on Twitter"
                     name="twitter"
                   />
                 </a>
-                <a href="https://facebook.com/akhilmnr" className="terminal-link text-sm" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://facebook.com/akhilmnr"
+                  className="terminal-link text-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <HeroSocial
                     src="/assets/images/social/facebook-icon.png"
                     alt="Connect with Akhil G Krishnan on Facebook"
                     name="facebook"
                   />
                 </a>
-                <a href="https://linkedin.com/in/akhilgkrishnan" className="terminal-link text-sm" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://linkedin.com/in/akhilgkrishnan"
+                  className="terminal-link text-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <HeroSocial
                     src="/assets/images/social/linkedin-icon.png"
                     alt="View Akhil G Krishnan's LinkedIn profile"
                     name="linkedin"
                   />
                 </a>
-                <a href="https://instagram.com/akhilgkrishnan" className="terminal-link text-sm" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://instagram.com/akhilgkrishnan"
+                  className="terminal-link text-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <HeroSocial
                     src="/assets/images/social/instagram-logo.png"
                     alt="Follow Akhil G Krishnan on Instagram"
                     name="instagram"
                   />
                 </a>
-                <a href="https://github.com/akhilgkrishnan" className="terminal-link text-sm" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com/akhilgkrishnan"
+                  className="terminal-link text-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <HeroSocial
                     src="/assets/images/social/github-logo.png"
                     alt="View Akhil G Krishnan's GitHub repositories"

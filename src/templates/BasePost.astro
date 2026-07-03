@@ -13,16 +13,17 @@ export interface Props {
 }
 
 const { content } = Astro.props as Props;
-const title = `${content.title}`;
-const ogImage = `https://graphigen.vercel.app/api/og?author=Akhil%20G%20Krishnan&title=${
+const title = `${content.title} - ${AppConfig.site_name}`;
+const ogImage = `https://graphigen.vercel.app/api/og?author=Akhil%20G%20Krishnan&title=${encodeURIComponent(
   content.title
-}&description=${
+)}&description=${encodeURIComponent(
   content.description
-}&image=${'https://blog.saeloun.com/images/og_logo.png'}&date=${
+)}&image=${encodeURIComponent('https://blog.saeloun.com/images/og_logo.png')}&date=${encodeURIComponent(
   content.pubDate
-}&type=blog.png`;
+)}&type=blog.png`;
 
-const postUrl = `${AppConfig.site_url}/blogs/${content.title.toLowerCase().replace(/\s+/g, '-')}/`;
+const postPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const postUrl = `${AppConfig.site_url}${postPath}`;
 const breadcrumbs = [
   { name: 'Home', url: AppConfig.site_url },
   { name: 'Blogs', url: `${AppConfig.site_url}/blogs/` },

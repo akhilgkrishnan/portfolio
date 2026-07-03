@@ -28,7 +28,7 @@ const myProjects = sortProjectsByDate(
 const { title, description, ogImage } = AppConfig;
 ---
 
-<Base head={{ title, description, ogImage }}>
+<Base head={{ title, description, ogImage, profilePage: true }}>
   <Hero />
   <RecentProjects projectList={myProjects} />
   <RecentOssProjects projectList={openSourceProjects} />

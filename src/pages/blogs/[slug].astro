@@ -1,4 +1,5 @@
 ---
+import BasePost from '@templates/BasePost.astro';
 import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
 
@@ -19,6 +20,13 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 
 const { Content } = await render(post);
+
+const content = {
+  ...post.data,
+  pubDate: post.data.pubDate.toISOString(),
+};
 ---
 
-<Content />
+<BasePost content={content}>
+  <Content />
+</BasePost>

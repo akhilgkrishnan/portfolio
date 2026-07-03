@@ -6,9 +6,9 @@ import { AppConfig } from '@utils/AppConfig';
 import { Section } from 'astro-boilerplate-components';
 
 const titleSuffix = ` - ${AppConfig.site_name}`;
-const title = `Resume & CV | Ruby on Rails Contributor from India${titleSuffix}`;
+const title = `Resume & CV | Ruby on Rails Developer from India${titleSuffix}`;
 const description =
-  'Ruby on Rails contributor from India with 5+ years experience at Saeloun Inc. Expert in Rails, React.js, TypeScript. Active Rails Core contributor, Rails Issues Triage Team member, open source maintainer, IEEE published researcher.';
+  'Ruby on Rails contributor from India with 6+ years experience at Saeloun Inc. Expert in Rails, React.js, TypeScript. Active Rails Core contributor, Rails Issues Triage Team member, open source maintainer, IEEE published researcher.';
 const url = `${AppConfig.site_url}/cv/`;
 
 const breadcrumbs = [
@@ -17,7 +17,7 @@ const breadcrumbs = [
 ];
 ---
 
-<Base head={{ title, description, url, breadcrumbs }}>
+<Base head={{ title, description, url, breadcrumbs, profilePage: true }}>
   <Section>
     <!-- Page Header -->
     <div class="terminal-window mb-8">
@@ -56,7 +56,7 @@ const breadcrumbs = [
         <div class="p-4 text-terminal-gray-400">
           <span class="text-terminal-gray-600">// </span>
           I'm a <strong class="text-terminal-emerald">Ruby on Rails contributor from India</strong>, currently working as a Senior Software Developer at <strong class="text-terminal-emerald">Saeloun Inc</strong>, with over
-          5+ years of experience in web development. I specialize in
+          6+ years of experience in web development. I specialize in
           <strong class="text-terminal-emerald">Ruby on Rails</strong> and <strong class="text-terminal-emerald">ReactJS</strong>. Over the
           course of my career, I've led couple of teams to build applications from
           scratch. As an active open source contributor, I have contributed to

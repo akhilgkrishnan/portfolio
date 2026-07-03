@@ -4,7 +4,7 @@ import '@styles/custom.css';
 import Footer from '@partials/Footer.astro';
 import Navbar from '@partials/Navbar.astro';
 import { AppConfig } from '@utils/AppConfig';
-import { personSchemaMarkup, websiteSchemaMarkup, generateBreadcrumbSchema, generateArticleSchema } from '@utils/schemaMarkup';
+import { personSchemaMarkup, profilePageSchemaMarkup, websiteSchemaMarkup, generateBreadcrumbSchema, generateArticleSchema } from '@utils/schemaMarkup';
 
 export interface Props {
   head: {
@@ -13,6 +13,7 @@ export interface Props {
     ogImage?: string;
     ogType?: string;
     url?: string;
+    profilePage?: boolean;
     breadcrumbs?: { name: string; url: string }[];
     articleMeta?: {
       publishedTime: string;
@@ -31,9 +32,10 @@ export interface Props {
 }
 
 const {
-  head: { title, description, ogImage, ogType, url, breadcrumbs, articleMeta, articleSchema },
+  head: { title, description, ogImage, ogType, url, profilePage, breadcrumbs, articleMeta, articleSchema },
 } = Astro.props as Props;
 
+const socialImage = ogImage || AppConfig.ogImage;
 const breadcrumbSchema = breadcrumbs ? generateBreadcrumbSchema(breadcrumbs) : null;
 const articleJsonLd = articleSchema ? generateArticleSchema(articleSchema) : null;
 ---
@@ -51,7 +53,7 @@ const articleJsonLd = articleSchema ? generateArticleSchema(articleSchema) : nul
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={url || AppConfig.site_url} />
-    <meta property="og:image" content={`${ogImage}`} />
+    <meta property="og:image" content={socialImage} />
     <meta property="og:image:alt" content={AppConfig.title} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -72,7 +74,7 @@ const articleJsonLd = articleSchema ? generateArticleSchema(articleSchema) : nul
     <meta name="twitter:creator" content={AppConfig.twitter_handle} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image" content={socialImage} />
     <meta name="twitter:image:alt" content={AppConfig.title} />
 
     <title>{title}</title>
@@ -115,7 +117,7 @@ const articleJsonLd = articleSchema ? generateArticleSchema(articleSchema) : nul
     <script
       is:inline
       type="application/ld+json"
-      set:html={JSON.stringify(personSchemaMarkup)}
+      set:html={JSON.stringify(profilePage ? profilePageSchemaMarkup : personSchemaMarkup)}
     />
 
     {breadcrumbSchema && (

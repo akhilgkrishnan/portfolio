@@ -1,7 +1,9 @@
 import { AppConfig } from './AppConfig';
 
 // Generate BreadcrumbList schema for navigation
-export function generateBreadcrumbSchema(items: { name: string; url: string }[]) {
+export function generateBreadcrumbSchema(
+  items: { name: string; url: string }[]
+) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -53,13 +55,16 @@ export function generateArticleSchema(article: {
   };
 }
 
-export const personSchemaMarkup = {
-  '@context': 'https://schema.org/',
+const personEntity = {
   '@type': 'Person',
   '@id': `${AppConfig.site_url}/#person`,
   name: AppConfig.site_name,
+  givenName: 'Akhil',
+  additionalName: 'G',
+  familyName: 'Krishnan',
   alternateName: ['Akhil Krishnan', 'Akhil G K', 'MrAkhilG'],
-  description: 'Ruby on Rails contributor from India and Rails Issues Triage Team member. Senior Full Stack Developer specializing in Rails and React. Active open source contributor to Ruby on Rails core.',
+  description:
+    'Akhil G Krishnan, also known as Akhil Krishnan, is a Ruby on Rails developer and contributor from India, and Rails Issues Triage Team member. Senior Full Stack Developer specializing in Rails and React. Active open source contributor to Ruby on Rails core.',
   url: AppConfig.site_url,
   image: {
     '@type': 'ImageObject',
@@ -84,6 +89,16 @@ export const personSchemaMarkup = {
     'https://www.threads.net/@akhilgkrishnan',
   ],
   jobTitle: 'Senior Software Developer & Rails Issues Triage Team Member',
+  hasOccupation: {
+    '@type': 'Occupation',
+    name: 'Ruby on Rails Developer',
+    occupationLocation: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    skills:
+      'Ruby on Rails, Ruby, React.js, TypeScript, PostgreSQL, Full Stack Development',
+  },
   worksFor: {
     '@type': 'Organization',
     name: 'Saeloun Technologies Pvt. Ltd.',
@@ -116,21 +131,51 @@ export const personSchemaMarkup = {
     'Web Development',
     'Software Engineering',
   ],
-  nationality: 'Indian',
+  knowsLanguage: ['English', 'Malayalam'],
+  nationality: {
+    '@type': 'Country',
+    name: 'India',
+  },
   gender: 'Male',
+  homeLocation: {
+    '@type': 'Place',
+    name: 'Kerala, India',
+  },
   address: {
     '@type': 'PostalAddress',
-    addressCountry: 'India',
+    addressRegion: 'Kerala',
+    addressCountry: 'IN',
   },
+};
+
+export const personSchemaMarkup = {
+  '@context': 'https://schema.org',
+  ...personEntity,
+};
+
+// Google's recommended type for personal profile/portfolio pages —
+// used as a signal source for the Knowledge Graph and knowledge panels.
+export const profilePageSchemaMarkup = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': `${AppConfig.site_url}/#profilepage`,
+  url: AppConfig.site_url,
+  name: AppConfig.title,
+  inLanguage: 'en',
+  isPartOf: { '@id': `${AppConfig.site_url}/#website` },
+  about: { '@id': `${AppConfig.site_url}/#person` },
+  mainEntity: personEntity,
 };
 
 export const websiteSchemaMarkup = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   '@id': `${AppConfig.site_url}/#website`,
-  name: 'Akhil G Krishnan - Ruby on Rails Contributor from India | Rails Issues Triage Team',
+  name: 'Akhil G Krishnan',
+  alternateName: ['Akhil Krishnan', 'akhilgkrishnan.me', 'Akhil G Krishnan Portfolio'],
   description: AppConfig.description,
-  headline: 'Ruby on Rails Contributor from India | Rails Issues Triage Team Member',
+  headline:
+    'Ruby on Rails Developer & Contributor from India | Rails Issues Triage Team Member',
   url: AppConfig.site_url,
   inLanguage: 'en',
   author: {
