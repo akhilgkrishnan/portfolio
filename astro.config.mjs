@@ -1,14 +1,13 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
-import { astroImageTools } from 'astro-imagetools';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://akhilgkrishnan.me', // Use to generate your sitemap and canonical URLs in your final build.
   trailingSlash: 'ignore', // Keep trailing slashes on URLs
+  compressHTML: true, // Astro 7 defaults to 'jsx', which strips whitespace between inline elements
   markdown: {
     shikiConfig: {
       // Choose from Shiki's built-in themes (or add your own)
@@ -18,7 +17,6 @@ export default defineConfig({
   },
   integrations: [
     react(),
-    tailwind({}),
     sitemap(),
     robotsTxt({
       policy: [
@@ -47,6 +45,5 @@ export default defineConfig({
         },
       ],
     }),
-    astroImageTools,
   ],
 });
