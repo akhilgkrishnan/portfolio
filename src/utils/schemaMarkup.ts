@@ -188,12 +188,4 @@ export const websiteSchemaMarkup = {
     '@id': `${AppConfig.site_url}/#person`,
     name: 'Akhil G Krishnan',
   },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: `${AppConfig.site_url}/blogs/?q={search_term_string}`,
-    },
-    'query-input': 'required name=search_term_string',
-  },
 };

@@ -17,7 +17,10 @@ export default defineConfig({
   },
   integrations: [
     react(),
-    sitemap(),
+    sitemap({
+      // Post pages are stubs that link to the full article on the Saeloun blog
+      filter: (page) => !/\/blogs\/[^/]+\/$/.test(page),
+    }),
     robotsTxt({
       policy: [
         {

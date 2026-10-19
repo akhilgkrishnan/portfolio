@@ -4,7 +4,7 @@ description: 'Chatwoot is an open-source, self-hosted customer engagement suite.
 link: 'https://github.com/chatwoot/chatwoot/commits?author=akhilgkrishnan'
 imgSrc: '/assets/images/projects/chatwoot.png'
 startDate: 2021-09-24T00:00:00Z
-imgAlt: 'Project Maps'
+imgAlt: 'Chatwoot logo'
 openSource: true
 category: Ruby on Rails, VueJS, Typescript, PostgreSQL
 runningOrder: 3

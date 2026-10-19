@@ -4,7 +4,7 @@ description: 'Rails is a web-application framework that includes everything need
 link: 'https://contributors.rubyonrails.org/contributors/akhil-g-krishnan/commits'
 imgSrc: '/assets/images/projects/rails.png'
 startDate: 2021-06-27T00:00:00Z
-imgAlt: 'Project Maps'
+imgAlt: 'Ruby on Rails logo'
 openSource: true
 category: Ruby
 runningOrder: 1

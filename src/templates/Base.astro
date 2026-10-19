@@ -15,6 +15,7 @@ export interface Props {
     ogType?: string;
     url?: string;
     profilePage?: boolean;
+    noindex?: boolean;
     breadcrumbs?: { name: string; url: string }[];
     articleMeta?: {
       publishedTime: string;
@@ -33,10 +34,11 @@ export interface Props {
 }
 
 const {
-  head: { title, description, ogImage, ogType, url, profilePage, breadcrumbs, articleMeta, articleSchema },
+  head: { title, description, ogImage, ogType, url, profilePage, noindex, breadcrumbs, articleMeta, articleSchema },
 } = Astro.props as Props;
 
 const socialImage = ogImage || AppConfig.ogImage;
+const pageUrl = url || `${AppConfig.site_url}/`;
 const breadcrumbSchema = breadcrumbs ? generateBreadcrumbSchema(breadcrumbs) : null;
 const articleJsonLd = articleSchema ? generateArticleSchema(articleSchema) : null;
 ---
@@ -47,18 +49,25 @@ const articleJsonLd = articleSchema ? generateArticleSchema(articleSchema) : nul
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="msvalidate.01" content="A3AA1AEE6C57EE63539E74E67696D204" />
     <meta name="yandex-verification" content="80c2ec5bdd10aed3" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta
+      name="robots"
+      content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
+    />
     <meta property="og:type" content={ogType || 'website'} />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content={AppConfig.site_name} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={url || AppConfig.site_url} />
+    <meta property="og:url" content={pageUrl} />
     <meta property="og:image" content={socialImage} />
-    <meta property="og:image:alt" content={AppConfig.title} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content={title} />
+    {socialImage === AppConfig.ogImage && (
+      <>
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />
+      </>
+    )}
 
     {articleMeta && (
       <>
@@ -71,22 +80,26 @@ const articleJsonLd = articleSchema ? generateArticleSchema(articleSchema) : nul
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:widgets:new-embed-design" content="on" />
     <meta name="twitter:site" content={AppConfig.twitter_handle} />
-    <meta name="twitter:url" content={url || AppConfig.site_url} />
+    <meta name="twitter:url" content={pageUrl} />
     <meta name="twitter:creator" content={AppConfig.twitter_handle} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
-    <meta name="twitter:image:alt" content={AppConfig.title} />
+    <meta name="twitter:image:alt" content={title} />
 
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content={AppConfig.author} />
     <meta name="keywords" content={AppConfig.keywords} />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Akhil G Krishnan Blog RSS Feed" />
-    <link rel="canonical" href={url || AppConfig.site_url} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="alternate" hreflang="en" href={url || AppConfig.site_url} />
-    <link rel="alternate" hreflang="x-default" href={url || AppConfig.site_url} />
+    {!noindex && (
+      <>
+        <link rel="canonical" href={pageUrl} />
+        <link rel="alternate" hreflang="en" href={pageUrl} />
+        <link rel="alternate" hreflang="x-default" href={pageUrl} />
+      </>
+    )}
     <meta name="geo.region" content="IN-KL" />
     <meta name="geo.placename" content="Kerala, India" />
     <meta name="geo.position" content="8.8932;76.6141" />

@@ -33,7 +33,8 @@ const ProjectCard = (props: ProjectCardProps) => {
               className="aspect-square size-28 rounded border border-terminal-gray-700 transition-transform hover:scale-105"
               src={project.data.imgSrc}
               alt={project.data.imgAlt}
-              loading="eager"
+              loading="lazy"
+              decoding="async"
             />
           </a>
         </div>

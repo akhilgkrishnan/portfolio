@@ -4,7 +4,7 @@ description: 'ToolJet is an open-source low-code framework to build and deploy i
 link: 'https://github.com/ToolJet/ToolJet/commits?author=akhilgkrishnan'
 imgSrc: '/assets/images/projects/tooljet.png'
 startDate: 2021-08-09T00:00:00Z
-imgAlt: 'Project Maps'
+imgAlt: 'ToolJet logo'
 openSource: true
 category: NestJS, React, Typescript
 runningOrder: 4

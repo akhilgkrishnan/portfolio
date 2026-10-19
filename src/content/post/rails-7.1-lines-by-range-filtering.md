@@ -5,6 +5,6 @@ description: Rails 7.1 introduces line range filtering for running specific test
 pubDate: 2023-08-14T00:00:00Z
 url: "https://blog.saeloun.com/2023/08/14/rails-7-filter-test-by-line-range/"
 imgSrc: '/assets/images/blogs/rails-banner.webp'
-imgAlt: 'Image post 4'
+imgAlt: 'Rails 7.1 test line range filtering'
 ---
 

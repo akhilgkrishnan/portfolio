@@ -46,9 +46,13 @@ const articleMeta = {
 ---
 
 <Base
-  head={{ title, description: content.description, ogImage, ogType: 'article', url: postUrl, breadcrumbs, articleMeta, articleSchema }}
+  head={{ title, description: content.description, ogImage, ogType: 'article', url: postUrl, noindex: true, breadcrumbs, articleMeta, articleSchema }}
 >
   <BlogPost frontmatter={content}>
+    <p>{content.description}</p>
+    <p>
+      <a href={content.url} target="_blank" rel="noopener">Read the full article on the Saeloun blog &rarr;</a>
+    </p>
     <slot />
   </BlogPost>
 

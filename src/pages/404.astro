@@ -8,7 +8,7 @@ const title = `404 - Page Not Found${titleSuffix}`;
 const description = "Sorry, the page you're looking for doesn't exist. Browse our portfolio projects, technical blog, or return to the homepage.";
 ---
 
-<Base head={{ title, description }}>
+<Base head={{ title, description, noindex: true }}>
   <Section>
     <div class="flex min-h-[60vh] items-center justify-center">
       <div class="terminal-window max-w-2xl w-full">
